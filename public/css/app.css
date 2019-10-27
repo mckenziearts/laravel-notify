@@ -11578,3 +11578,16 @@ pre[class*=language-] {
   margin-top: 0;
 }
 
+button.btn {
+  border-radius: 2rem;
+  box-shadow: 0px 4px 16px 0px rgba(153, 153, 153, 0.15);
+  outline: none;
+}
+
+button.btn:hover,
+button.btn:visited,
+button.btn:focus {
+  box-shadow: 0px 9px 16px 0px rgba(153, 153, 153, 0.25) !important;
+  outline: none;
+}
+

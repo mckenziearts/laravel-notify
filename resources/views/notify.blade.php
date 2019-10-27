@@ -46,6 +46,10 @@
             <h4># Basic Usage</h4>
             <p>From your application, call the flash method with a message and type.</p>
             <pre><code class="language-php">notify()->flash('You have successfully reconnected', 'success', 'Connection Found');</code></pre>
+            <div class="buttons mt-3">
+                <button class="btn btn-success connectify-btn-sucess" type="button">Success Notification</button>
+                <button class="btn btn-danger connectify-btn-danger" type="button">Danger Notification</button>
+            </div>
         </div>
     </div>
 
@@ -109,6 +113,12 @@
             <h4># Basic Usage</h4>
             <p>From your application, call the flash method with a message and type.</p>
             <pre><code class="language-php">notify()->flash('You have successfully reconnected', 'success', 'Connection Found');</code></pre>
+            <div class="buttons mt-3">
+                <button class="btn btn-success notify-btn-sucess mb-2" type="button">Success Notification</button>
+                <button class="btn btn-info notify-btn-info mb-2" type="button">Info Notification</button>
+                <button class="btn btn-warning notify-btn-warning mb-2" type="button">Warning Notification</button>
+                <button class="btn btn-danger notify-btn-danger mb-2" type="button">Danger Notification</button>
+            </div>
         </div>
     </div>
 
@@ -136,6 +146,10 @@
             <h4># Basic Usage</h4>
             <p>From your application, call the flash method with a message and type.</p>
             <pre><code class="language-php">notify()->flash('You have successfully reconnected', 'success', 'Connection Found');</code></pre>
+            <div class="buttons mt-3">
+                <button class="btn btn-success drake-btn-sucess" type="button">Success Notification</button>
+                <button class="btn btn-danger drake-btn-danger" type="button">Danger Notification</button>
+            </div>
         </div>
     </div>
 
@@ -173,6 +187,10 @@
             <h4># Basic Usage</h4>
             <p>From your application, call the flash method with a message and type.</p>
             <pre><code class="language-php">notify()->flash('You have successfully reconnected', 'success', 'Connection Found');</code></pre>
+            <div class="buttons mt-3">
+                <button class="btn btn-success smiley-btn-sucess" type="button">Success Notification</button>
+                <button class="btn btn-danger smiley-btn-danger" type="button">Danger Notification</button>
+            </div>
         </div>
     </div>
 

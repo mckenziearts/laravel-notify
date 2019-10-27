@@ -1,4 +1,4 @@
-  /*
+@import url(https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,800,800i,900,900i);  /*
     Flaticon icon font: Flaticon
     Creation date: 20/03/2017 20:02
     */
@@ -565,6 +565,7 @@
   border-radius: 4px;
   box-shadow: 0px 0px 13px 0px rgba(82, 63, 105, 0.1);
   margin-bottom: 20px;
+  font-family: "Nunito", sans-serif;
   border-top: 5px solid;
 }
 
@@ -688,6 +689,7 @@
   border-radius: 4px;
   box-shadow: 0px 0px 13px 0px rgba(82, 63, 105, 0.1);
   margin-bottom: 20px;
+  font-family: "Nunito", sans-serif;
   border-left: 5px solid;
 }
 
@@ -805,6 +807,7 @@
   border-radius: 10px;
   background-size: cover;
   margin-bottom: 20px;
+  font-family: "Nunito", sans-serif;
 }
 
 .drake-alert .drake-icon {
@@ -905,6 +908,7 @@
   border-radius: 4px;
   box-shadow: 0px 0px 13px 0px rgba(82, 63, 105, 0.1);
   margin-bottom: 20px;
+  font-family: "Nunito", sans-serif;
 }
 
 .smiley-alert .smiley-icon {
