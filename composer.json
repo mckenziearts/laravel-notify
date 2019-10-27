@@ -1,0 +1,35 @@
+{
+  "name": "mckenziearts/laravel-notify",
+  "description": "Flexible flash notifications for Laravel",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Arthur Monney",
+      "email": "monneylobe@gmail.com",
+      "homepage": "https://arthurmonney.com"
+    }
+  ],
+  "homepage": "https://github.com/mckenziearts/laravel-notify",
+  "keywords": ["Laravel", "laravel-notify"],
+  "require": {
+    "php": ">=7.1",
+    "illuminate/support": "~5|~6|~7"
+  },
+  "autoload": {
+    "psr-4": {
+      "Mckenziearts\\Notify\\": "src/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Mckenziearts\\Notify\\LaravelNotifyServiceProvider"
+      ],
+      "aliases": {
+        "Notify": "Mckenziearts\\Notify\\Facades\\LaravelNotify"
+      }
+    }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}

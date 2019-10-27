@@ -1,0 +1,29 @@
+// Overwrite Bootstrap's variables here
+// You can find them in node_modules/bootstrap/scss/_variables.scss
+// Copy the variables you need into this file, don't modify files under node_modules/
+
+
+// Changing the body background and text
+$body-bg: #f2f3f8;
+$body-color: #393939;
+$font-family-base: 'Nunito', sans-serif;
+
+// Navbar
+//
+$navbar-light-color: #4d4d4d;
+$primary: #FF718C;
+$dark: #282828;
+
+$text-muted: #808080;
+
+$alert-color: #969696;
+
+// Notify global color
+$notify-success: #47D764;
+$notify-info: #2E86EB;
+$notify-warning: #FFC022;
+$notify-danger: #ED3063;
+
+// Connectify variable
+$connectify-success: #61C631;
+$connectify-error: #ED3063;
