@@ -5,26 +5,22 @@
 [comment]: # ([![Build Status][ico-travis]][link-travis])
 
 ## Introduction
+
 Laravel Notify is a package that lets you add custom notifications to your project. 
 A diverse range of notification design is available and many are coming soon.
 
 <p align="center">
-<img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1539110860/Screen_Shot_2018-10-09_at_1.47.23_PM.png">
+<img src="https://ibb.co/NppDHvQ">
 </p>
 
 
 ## Work In Progress
+
 This package is still under active development.
 
 ## Change log
 
 Please see the [changelog](changelog.md) for more information on what has changed recently.
-
-## Testing
-
-``` bash
-$ composer test
-```
 
 ## Contributing
 
