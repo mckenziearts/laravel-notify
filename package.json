@@ -17,5 +17,8 @@
     "sass": "^1.15.2",
     "sass-loader": "^7.1.0",
     "vue-template-compiler": "^2.6.10"
+  },
+  "dependencies": {
+    "animate.css": "^3.7.2"
   }
 }
