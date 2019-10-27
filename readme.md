@@ -1,21 +1,20 @@
-# Laravel Notify
+<p align="center"><img src="https://arthurmonney.com/images/laravel-notify.svg"></p>
 
-[![Latest Version on Packagist][ico-version]][link-packagist]
-[![Total Downloads][ico-downloads]][link-downloads]
-[![Build Status][ico-travis]][link-travis]
-[![StyleCI][ico-styleci]][link-styleci]
+[//]: # ([![Latest Version on Packagist][ico-version]][link-packagist])
+[//]: # ([![Total Downloads][ico-downloads]][link-downloads])
+[comment]: # ([![Build Status][ico-travis]][link-travis])
 
-This is where your description should go. Take a look at [contributing.md](contributing.md) to see a to do list.
+## Introduction
+Laravel Notify is a package that lets you add custom notifications to your project. 
+A diverse range of notification design is available and many are coming soon.
 
-## Installation
+<p align="center">
+<img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1539110860/Screen_Shot_2018-10-09_at_1.47.23_PM.png">
+</p>
 
-Via Composer
 
-``` bash
-$ composer require mckenziearts/laravel-notify
-```
-
-## Usage
+## Work In Progress
+This package is still under active development.
 
 ## Change log
 
@@ -51,7 +50,5 @@ license. Please see the [license file](license.md) for more information.
 
 [link-packagist]: https://packagist.org/packages/mckenziearts/laravel-notify
 [link-downloads]: https://packagist.org/packages/mckenziearts/laravel-notify
-[link-travis]: https://travis-ci.org/mckenziearts/laravel-notify
-[link-styleci]: https://styleci.io/repos/12345678
 [link-author]: https://arthurmonney.com
 [link-contributors]: ../../contributors
