@@ -1,4 +1,4 @@
-<p align="center"><img style="width: 50%;" src="https://arthurmonney.com/images/laravel-notify.svg"></p>
+<p align="center"><img src="https://arthurmonney.com/images/laravel-notify.svg"></p>
 
 [//]: # ([![Latest Version on Packagist][ico-version]][link-packagist])
 [//]: # ([![Total Downloads][ico-downloads]][link-downloads])
@@ -10,7 +10,7 @@ Laravel Notify is a package that lets you add custom notifications to your proje
 A diverse range of notification design is available and many are coming soon.
 
 <p align="center">
-<img src="https://i.ibb.co/6bb9fMV/Screenshot-2019-10-27-at-02-53-48.png">
+<img src="https://pix.watch/2w77wM/0K00Kk.png">
 </p>
 
 
