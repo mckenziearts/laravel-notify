@@ -26,6 +26,3 @@ before_script:
   - composer require "illuminate/support:${LARAVEL_VERSION}"
   - yarn install
   - yarn run dev
-
-script:
-  - vendor/bin/phpunit --no-coverage
