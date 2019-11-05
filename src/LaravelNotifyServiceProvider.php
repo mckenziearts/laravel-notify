@@ -2,6 +2,7 @@
 
 namespace Mckenziearts\Notify;
 
+use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\ServiceProvider;
 
 class LaravelNotifyServiceProvider extends ServiceProvider
@@ -15,9 +16,14 @@ class LaravelNotifyServiceProvider extends ServiceProvider
     {
         $this->publishes([
             __DIR__.'/../public' => public_path('vendor/mckenziearts/laravel-notify'),
-        ], 'notify.assets');
+        ], 'notify-assets');
+        $this->publishes([
+            __DIR__ . '/../config/notify.php' => config_path('notify.php'),
+        ], 'notify-config');
+
         $this->loadViewsFrom(__DIR__.'/../resources/views', 'notify');
         $this->loadRoutesFrom(__DIR__.'/routes.php');
+        $this->registerBladeDirective();
     }
 
     /**
@@ -32,6 +38,22 @@ class LaravelNotifyServiceProvider extends ServiceProvider
         // Register the service the package provides.
         $this->app->singleton('notify', function ($app) {
             return $app->make(LaravelNotify::class);
+        });
+    }
+
+    /**
+     * Register Notify Blade
+     *
+     * @retrun void
+     */
+    public function registerBladeDirective()
+    {
+        Blade::directive('notifyCss', function () {
+            return '<?php echo notifyCss(); ?>';
+        });
+
+        Blade::directive('notifyJs', function () {
+            return '<?php echo notifyJs(); ?>';
         });
     }
 
