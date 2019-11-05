@@ -6,9 +6,13 @@
  */
 @import "icons";
 @import "variables";
+@import "~animate.css";
 
 @mixin notify() {
-  position: relative;
+  position: fixed;
+  top: 30px;
+  right: 20px;
+  z-index: 200;
   display: flex;
   justify-content: space-between;
   width: 500px;
@@ -115,7 +119,7 @@
   }
 
   // connectify error status
-  &.connectify-danger {
+  &.connectify-error {
     border-color: $connectify-error;
 
     .connectify-text {
@@ -197,7 +201,7 @@
     }
   }
 
-  &.notify-danger {
+  &.notify-error {
     border-color: $notify-danger;
 
     .notify-alert-icon {
@@ -225,7 +229,10 @@
 
 // Drake Alert
 .drake-alert {
-  position: relative;
+  position: fixed;
+  top: 30px;
+  right: 20px;
+  z-index: 200;
   display: flex;
   padding: 20px;
   height: 200px;
@@ -288,7 +295,7 @@
     }
   }
 
-  &.drake-danger {
+  &.drake-error {
     justify-content: flex-end;
     background-image: url('./images/drake-error.jpg');
     background-position: center center;
@@ -336,6 +343,7 @@
 
     .title {
       font-weight: 600;
+      text-transform: capitalize;
     }
   }
 
@@ -353,7 +361,7 @@
     }
   }
 
-  &.smiley-danger {
+  &.smiley-error {
     .smiley-text .title {
       color: $notify-danger;
     }

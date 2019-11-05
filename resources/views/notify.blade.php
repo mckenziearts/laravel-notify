@@ -23,7 +23,7 @@
                             </button>
                         </div>
                     </div>
-                    <div class="connectify-alert connectify-danger" role="alert">
+                    <div class="connectify-alert connectify-error" role="alert">
                         <div class="connectify-icon">
                             <i class="flaticon-cancel"></i><span>Error</span>
                         </div>
@@ -46,10 +46,6 @@
             <h4># Basic Usage</h4>
             <p>From your application, call the flash method with a message and type.</p>
             <pre><code class="language-php">notify()->flash('You have successfully reconnected', 'success', 'Connection Found');</code></pre>
-            <div class="buttons mt-3">
-                <button class="btn btn-success connectify-btn-sucess" type="button">Success Notification</button>
-                <button class="btn btn-danger connectify-btn-danger" type="button">Danger Notification</button>
-            </div>
         </div>
     </div>
 
@@ -94,10 +90,10 @@
                             </button>
                         </div>
                     </div>
-                    <div class="notify-alert notify-danger" role="alert">
+                    <div class="notify-alert notify-error" role="alert">
                         <div class="notify-alert-icon"><i class="flaticon2-delete"></i></div>
                         <div class="notify-alert-text">
-                            <h4>Danger</h4>
+                            <h4>Error</h4>
                             <p>Anyone with access can view your invited visitor</p>
                         </div>
                         <div class="notify-alert-close">
@@ -113,12 +109,6 @@
             <h4># Basic Usage</h4>
             <p>From your application, call the flash method with a message and type.</p>
             <pre><code class="language-php">notify()->flash('You have successfully reconnected', 'success', 'Connection Found');</code></pre>
-            <div class="buttons mt-3">
-                <button class="btn btn-success notify-btn-sucess mb-2" type="button">Success Notification</button>
-                <button class="btn btn-info notify-btn-info mb-2" type="button">Info Notification</button>
-                <button class="btn btn-warning notify-btn-warning mb-2" type="button">Warning Notification</button>
-                <button class="btn btn-danger notify-btn-danger mb-2" type="button">Danger Notification</button>
-            </div>
         </div>
     </div>
 
@@ -133,7 +123,7 @@
                             <h4>Success</h4>
                         </div>
                     </div>
-                    <div class="drake-alert drake-danger" role="alert">
+                    <div class="drake-alert drake-error" role="alert">
                         <div class="drake-icon">
                             <span><i class="flaticon2-cross"></i></span>
                             <h4>Try Again</h4>
@@ -146,10 +136,6 @@
             <h4># Basic Usage</h4>
             <p>From your application, call the flash method with a message and type.</p>
             <pre><code class="language-php">notify()->flash('You have successfully reconnected', 'success', 'Connection Found');</code></pre>
-            <div class="buttons mt-3">
-                <button class="btn btn-success drake-btn-sucess" type="button">Success Notification</button>
-                <button class="btn btn-danger drake-btn-danger" type="button">Danger Notification</button>
-            </div>
         </div>
     </div>
 
@@ -169,10 +155,10 @@
                             </button>
                         </div>
                     </div>
-                    <div class="smiley-alert smiley-danger" role="alert">
+                    <div class="smiley-alert smiley-error" role="alert">
                         <div class="smiley-icon"><span>🙅🏽‍♂️</span></div>
                         <div class="smiley-text">
-                            <p><span class="title">Sorry!</span>, it seems your file is too big, try reducing the file size and try again.</p>
+                            <p><span class="title">Error!</span>, it seems your file is too big, try reducing the file size and try again.</p>
                         </div>
                         <div class="smiley-close">
                             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -187,11 +173,9 @@
             <h4># Basic Usage</h4>
             <p>From your application, call the flash method with a message and type.</p>
             <pre><code class="language-php">notify()->flash('You have successfully reconnected', 'success', 'Connection Found');</code></pre>
-            <div class="buttons mt-3">
-                <button class="btn btn-success smiley-btn-sucess" type="button">Success Notification</button>
-                <button class="btn btn-danger smiley-btn-danger" type="button">Danger Notification</button>
-            </div>
         </div>
     </div>
+
+    @include('notify::messages')
 
 @endsection

@@ -28,6 +28,15 @@ a {
     padding: 40px;
     border-radius: 4px;
   }
+
+  .connectify-alert,
+  .notify-alert,
+  .drake-alert,
+  .smiley-alert {
+    position: relative;
+    top: 0;
+    right: 0;
+  }
 }
 
 pre[class*="language-"] {
