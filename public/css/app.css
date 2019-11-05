@@ -11573,6 +11573,15 @@ a:hover {
   border-radius: 4px;
 }
 
+.card .connectify-alert,
+.card .notify-alert,
+.card .drake-alert,
+.card .smiley-alert {
+  position: relative;
+  top: 0;
+  right: 0;
+}
+
 pre[class*=language-] {
   border: none;
   margin-top: 0;
