@@ -18,6 +18,36 @@ A diverse range of notification design is available and many are coming soon.
 
 This package is still under active development.
 
+## Installation 
+
+You can install the package using composer
+
+```sh
+$ composer require mckenziearts/laravel-notify
+```
+
+Then add the service provider to `config/app.php`. In Laravel versions 5.5 and beyond, this step can be skipped if package auto-discovery is enabled.
+
+```php
+'providers' => [
+    ...
+    Mckenziearts\Notify\LaravelNotifyServiceProvider::class
+    ...
+];
+```
+
+You can publish the configuration file and assets by running:
+ 
+```sh
+$ php artisan vendor:publish --provider='Mckenziearts\Notify\LaravelNotifyServiceProvider'
+```
+
+Now that we have published a few new files to our application we need to reload them with the following command:
+
+```sh
+$ composer dump-autoload
+```
+
 ## Change log
 
 Please see the [changelog](changelog.md) for more information on what has changed recently.
