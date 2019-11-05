@@ -1,8 +1,8 @@
 <p align="center"><img src="https://arthurmonney.com/images/laravel-notify.svg"></p>
 
-[//]: # ([![Latest Version on Packagist][ico-version]][link-packagist])
-[//]: # ([![Total Downloads][ico-downloads]][link-downloads])
-[comment]: # ([![Build Status][ico-travis]][link-travis])
+[![Latest Version on Packagist][ico-version]][link-packagist]
+[![Total Downloads][ico-downloads]][link-downloads]
+[![Build Status][ico-travis]][link-travis]
 
 ## Introduction
 
@@ -179,5 +179,6 @@ license. Please see the [license file](license.md) for more information.
 
 [link-packagist]: https://packagist.org/packages/mckenziearts/laravel-notify
 [link-downloads]: https://packagist.org/packages/mckenziearts/laravel-notify
+[link-travis]: https://travis-ci.org/mckenziearts/laravel-notify
 [link-author]: https://arthurmonney.com
 [link-contributors]: ../../contributors
