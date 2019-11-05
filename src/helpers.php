@@ -1,28 +1,38 @@
 <?php
 
+if (! function_exists('notify')) {
+    /**
+     * Notify
+     *
+     * @param string|null $message
+     * @return \Mckenziearts\Notify\LaravelNotify
+     */
+    function notify(string $message = null)
+    {
+        $notify = app('notify');
+
+        if (! is_null($message)) {
+            return $notify->success($message);
+        }
+
+        return $notify;
+    }
+}
+
 if (! function_exists('connectify')) {
     /**
      * Connectify
      *
+     * @param string $type
      * @param string $title
-     * @param string|null $message
+     * @param string $message
+     * @return \Mckenziearts\Notify\LaravelNotify
      */
-    function connectify(string $title = '', string $message = null)
+    function connectify(string $type, string $title, string $message)
     {
+        $notify = app('notify')->connect($type, $title, $message);
 
-    }
-}
-
-if (! function_exists('toastify')) {
-    /**
-     * Toastify
-     *
-     * @param string $title
-     * @param string|null $message
-     */
-    function toastify(string $title = '', string $message = null)
-    {
-
+        return $notify;
     }
 }
 
@@ -30,12 +40,14 @@ if (! function_exists('drakify')) {
     /**
      * Drakify
      *
-     * @param string $title
-     * @param string|null $message
+     * @param string $type
+     * @return \Mckenziearts\Notify\LaravelNotify
      */
-    function drakify(string $title = '', string $message = null)
+    function drakify(string $type)
     {
+        $notify = app('notify')->drake($type);
 
+        return $notify;
     }
 }
 
@@ -43,12 +55,15 @@ if (! function_exists('smilify')) {
     /**
      * Smilify
      *
-     * @param string $title
+     * @param string $type
      * @param string|null $message
+     * @return \Mckenziearts\Notify\LaravelNotify
      */
-    function smilify(string $title = '', string $message = null)
+    function smilify(string $type, string $message)
     {
+        $notify = app('notify')->smiley($type, $message);
 
+        return $notify;
     }
 }
 
@@ -58,7 +73,7 @@ if (! function_exists('notifyJs')) {
      */
     function notifyJs(): string
     {
-        return '<script type="text/javascript" src="'. asset('vendor/mckenziearts/laravel-notify/js/notify.js') .'"></script>';
+        return '<script type="text/javascript" src="' . asset('vendor/mckenziearts/laravel-notify/js/notify.js') . '"></script>';
     }
 }
 
@@ -68,6 +83,6 @@ if (! function_exists('notifyCss')) {
      */
     function notifyCss(): string
     {
-        return '<link rel="stylesheet" type="text/css" href="'. asset('vendor/mckenziearts/laravel-notify/css/notify.css') .'"/>';
+        return '<link rel="stylesheet" type="text/css" href="' . asset('vendor/mckenziearts/laravel-notify/css/notify.css') . '"/>';
     }
 }
