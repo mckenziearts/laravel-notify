@@ -4,8 +4,6 @@ sudo: true
 
 php:
   - 7.1
-  - 7.2
-  - 7.3
 
 env:
   matrix:
