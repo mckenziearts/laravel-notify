@@ -9,7 +9,7 @@ return [
     |
     | You can change the theme of notifications by specifying the desired theme.
     | By default the theme white is activated, but you can change it by
-    | specifying the dark mode. if null white theme is active. To change theme
+    | specifying the dark mode. if null `white` theme is active. To change theme
     | update the global variable to `dark`
     |
     */
@@ -27,6 +27,21 @@ return [
     |
     */
 
-    'demo' => true
+    'demo' => true,
+
+    /*
+    |--------------------------------------------------------------------------
+    | Animate Module (use animate.css)
+    |--------------------------------------------------------------------------
+    |
+    | Use animate.css to animate the notice.
+    |
+    */
+
+    'animate' => [
+        'in_class' => 'bounceInRight', // The class to use to animate the notice in.
+        'out_class' => 'bounceOutRight', // The class to use to animate the notice out.
+        'timeout'   => 5000 // Number of seconds before the notice disappears
+    ],
 
 ];
