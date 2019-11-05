@@ -45,7 +45,12 @@
         <div class="col-md-5">
             <h4># Basic Usage</h4>
             <p>From your application, call the flash method with a message and type.</p>
-            <pre><code class="language-php">notify()->flash('You have successfully reconnected', 'success', 'Connection Found');</code></pre>
+            <pre>
+                <code class="language-php">connectify('success', 'Connection Found', 'Success Message Here');</code>
+            </pre>
+            <pre>
+                <code class="language-php">connectify('error', 'No Connection Found', 'Error Message Here');</code>
+            </pre>
         </div>
     </div>
 
@@ -108,7 +113,10 @@
         <div class="col-md-5">
             <h4># Basic Usage</h4>
             <p>From your application, call the flash method with a message and type.</p>
-            <pre><code class="language-php">notify()->flash('You have successfully reconnected', 'success', 'Connection Found');</code></pre>
+            <pre><code class="language-php">notify()->success('You have successfully logged in');</code></pre>
+            <pre><code class="language-php">notify()->info('You have new subscribers');</code></pre>
+            <pre><code class="language-php">notify()->warning('Please charge your mobile phone');</code></pre>
+            <pre><code class="language-php">notify()->error('Some error here please try again');</code></pre>
         </div>
     </div>
 
@@ -135,7 +143,8 @@
         <div class="col-md-5">
             <h4># Basic Usage</h4>
             <p>From your application, call the flash method with a message and type.</p>
-            <pre><code class="language-php">notify()->flash('You have successfully reconnected', 'success', 'Connection Found');</code></pre>
+            <pre><code class="language-php">drakify('success');</code></pre>
+            <pre><code class="language-php">drakify('error');</code></pre>
         </div>
     </div>
 
@@ -172,7 +181,8 @@
         <div class="col-md-5">
             <h4># Basic Usage</h4>
             <p>From your application, call the flash method with a message and type.</p>
-            <pre><code class="language-php">notify()->flash('You have successfully reconnected', 'success', 'Connection Found');</code></pre>
+            <pre><code class="language-php">smilify('success', 'You have successfully reconnected');</code></pre>
+            <pre><code class="language-php">smilify('error', 'Bad request appear please try again');</code></pre>
         </div>
     </div>
 
