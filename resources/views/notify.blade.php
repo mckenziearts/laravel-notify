@@ -7,7 +7,7 @@
         <div class="col-md-7">
             <div class="card align-items-center">
                 <div class="card-body">
-                    <div class="connectify-alert connectify-success" role="alert">
+                    <div class="connectify-alert connectify-success {{ config('notify.theme') }}" role="alert">
                         <div class="connectify-icon">
                             <i class="flaticon-like"></i><span>Success</span>
                         </div>
@@ -23,7 +23,7 @@
                             </button>
                         </div>
                     </div>
-                    <div class="connectify-alert connectify-error" role="alert">
+                    <div class="connectify-alert connectify-error {{ config('notify.theme') }}" role="alert">
                         <div class="connectify-icon">
                             <i class="flaticon-cancel"></i><span>Error</span>
                         </div>
@@ -59,7 +59,7 @@
         <div class="col-md-7">
             <div class="card align-items-center">
                 <div class="card-body">
-                    <div class="notify-alert notify-success" role="alert">
+                    <div class="notify-alert notify-success {{ config('notify.theme') }}" role="alert">
                         <div class="notify-alert-icon"><i class="flaticon2-check-mark"></i></div>
                         <div class="notify-alert-text">
                             <h4>Success</h4>
@@ -71,7 +71,7 @@
                             </button>
                         </div>
                     </div>
-                    <div class="notify-alert notify-info" role="alert">
+                    <div class="notify-alert notify-info {{ config('notify.theme') }}" role="alert">
                         <div class="notify-alert-icon"><i class="flaticon-exclamation-1"></i></div>
                         <div class="notify-alert-text">
                             <h4>Info</h4>
@@ -83,7 +83,7 @@
                             </button>
                         </div>
                     </div>
-                    <div class="notify-alert notify-warning" role="alert">
+                    <div class="notify-alert notify-warning {{ config('notify.theme') }}" role="alert">
                         <div class="notify-alert-icon"><i class="flaticon-warning-sign"></i></div>
                         <div class="notify-alert-text">
                             <h4>Warning</h4>
@@ -95,7 +95,7 @@
                             </button>
                         </div>
                     </div>
-                    <div class="notify-alert notify-error" role="alert">
+                    <div class="notify-alert notify-error {{ config('notify.theme') }}" role="alert">
                         <div class="notify-alert-icon"><i class="flaticon2-delete"></i></div>
                         <div class="notify-alert-text">
                             <h4>Error</h4>
@@ -153,7 +153,7 @@
         <div class="col-md-7">
             <div class="card align-items-center">
                 <div class="card-body">
-                    <div class="smiley-alert smiley-success" role="alert">
+                    <div class="smiley-alert smiley-success {{ config('notify.theme') }}" role="alert">
                         <div class="smiley-icon"><span>👍</span></div>
                         <div class="smiley-text">
                             <p><span class="title">Success!</span>, your file has been successfully uploaded!</p>
@@ -164,7 +164,7 @@
                             </button>
                         </div>
                     </div>
-                    <div class="smiley-alert smiley-error" role="alert">
+                    <div class="smiley-alert smiley-error {{ config('notify.theme') }}" role="alert">
                         <div class="smiley-icon"><span>🙅🏽‍♂️</span></div>
                         <div class="smiley-text">
                             <p><span class="title">Error!</span>, it seems your file is too big, try reducing the file size and try again.</p>
