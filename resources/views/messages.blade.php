@@ -59,6 +59,8 @@
 
 @endif
 
+{{ session()->forget('notify.message') }}
+
 <script>
 
     var notify = {
