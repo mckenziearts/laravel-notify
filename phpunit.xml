@@ -10,13 +10,8 @@
          processIsolation="false"
          stopOnFailure="false">
     <testsuites>
-        <testsuite name="Package">
+        <testsuite name="Package Test Suite">
             <directory suffix=".php">./tests/</directory>
         </testsuite>
     </testsuites>
-    <filter>
-        <whitelist>
-            <directory>src/</directory>
-        </whitelist>
-    </filter>
 </phpunit>
