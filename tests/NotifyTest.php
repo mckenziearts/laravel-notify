@@ -14,13 +14,4 @@ class NotifyTest extends TestCase
         $this->session = Mockery::spy('Mckenziearts\Notify\Storage\Session');
         $this->notify = new LaravelNotify($this->session);
     }
-
-    /** @test */
-    public function it_display_info_notify()
-    {
-        $this->notify->success('Success Notification');
-        $message = 'Success Notification';
-
-        $this->assertEquals('Success Notification', $message);
-    }
 }
