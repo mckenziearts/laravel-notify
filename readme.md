@@ -20,7 +20,7 @@ A diverse range of notification design is available and many are coming soon.
 
 ## Work In Progress
 
-This package is still under active development.
+This package is still under active development. If you need Android version please try this package [Aesthetic Dialogs](https://github.com/gabriel-TheCode/AestheticDialogs). Happy Coding 👨🏾‍💻
 
 ## Installation 
 
@@ -84,8 +84,8 @@ An complete example:
     <body>
         
         
-        @notifyJs
         @include('notify::messages')
+        @notifyJs
     </body>
 </html>
 ```
