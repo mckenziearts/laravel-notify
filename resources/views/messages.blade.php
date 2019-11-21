@@ -19,7 +19,7 @@
         <div class="smiley-alert smiley-{{ session()->get('notify.type') }} {{ config('notify.theme') }} animated {{ config('notify.animate.in_class') }}" role="alert">
             <div class="smiley-icon"><span>{{ session()->get('notify.icon') }}</span></div>
             <div class="smiley-text">
-                <p><span class="title">{{ session()->get('notify.type') }}!</span> {{ session()->get('notify.message') }}</p>
+                <p><span class="title">{{ session()->get('notify.type') }}!</span> <br/> {{ session()->get('notify.message') }}</p>
             </div>
             <div class="smiley-close">
                 <button type="button" class="close" data-dismiss="alert" aria-label="Close">
