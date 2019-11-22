@@ -15,7 +15,9 @@
   z-index: 200;
   display: flex;
   justify-content: space-between;
-  width: 500px;
+  align-items: center;
+  width: 400px;
+  height: 45px;
   flex-direction: row;
   padding: 20px;
   background-color: #fff;
@@ -34,20 +36,25 @@
     text-transform: uppercase;
     font-size: 14px;
     font-weight: 700;
+    margin: 0 !important;
   }
 
   p {
     color: $alert-color;
-    margin-bottom: 0;
+    margin: 0 !important;
   }
 }
 
 @mixin button() {
+  position: absolute;
+  top: 20px;
+  right: 20px;
   button.close {
     padding: 0;
     background-color: transparent;
     border: 0;
     outline: none;
+    cursor: pointer;
 
     &:visited, &:focus {
       outline: none;
@@ -77,7 +84,7 @@
     justify-content: space-between;
     background: transparent;
     border-radius: 30px;
-    height: 45px;
+    height: 5px;
     padding: 20px;
     text-transform: uppercase;
     color: #fff;
@@ -235,8 +242,8 @@
   z-index: 200;
   display: flex;
   padding: 20px;
-  height: 200px;
-  width: 500px;
+  height: 120px;
+  width: 300px;
   border-radius: 10px;
   background-size: cover;
   margin-bottom: 20px;
@@ -251,15 +258,15 @@
     z-index: 2;
 
     span {
-      width: 70px;
-      height: 70px;
+      width: 32px;
+      height: 50px;
       border-radius: 50%;
       background-color: #fff;
       display: flex;
       justify-content: center;
       align-items: center;
       text-align: center;
-      font-size: 20px;
+      font-size: 15px;
       margin-bottom: 10px;
     }
 

@@ -13,6 +13,26 @@ const drakiky = document.querySelector('.drake-alert');
 if (notification) {
   const button = document.querySelector('.notify-alert button, .smiley-alert button, .connectify-alert button');
 
+  switch (notify.position) {
+    case "top-left":
+      notification.setAttribute('style', "right: 0; left: 50px");
+      break;
+    case "bottom-right":
+      notification.setAttribute('style', "top: 80%;");
+      break;
+    case "bottom-left":
+      notification.setAttribute('style', "top: 80%; left: 50px");
+      break;
+    case "center-top":
+      notification.setAttribute('style', "right: 50%; transform: translate(50%)");
+      break;
+    case "center-bottom":
+      notification.setAttribute('style', "top: 80%; right: 50%; transform: translate(50%);");
+      break;
+    default:
+      notification.setAttribute('style', '');
+  }
+
   button.addEventListener('click', function (e) {
     e.stopPropagation();
     e.preventDefault();
@@ -26,7 +46,6 @@ if (notification) {
       notification.classList.add(notify.animatedOut);
     }
   }, notify.timeout);
-
 }
 
 if (drakiky) {
