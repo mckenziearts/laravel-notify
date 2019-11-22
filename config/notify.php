@@ -43,4 +43,27 @@ return [
         'timeout'   => 5000 // Number of seconds before the notice disappears
     ],
 
+    /*
+    |--------------------------------------------------------------------------
+    | Notify Position
+    |--------------------------------------------------------------------------
+    |
+    | The position string option is used to describe both vertical and horizontal alignment.
+    | Element notifications and Global notifications can be vertically repositioned
+    | to: "top", "middle" or "bottom" and horizontally repositioned to: "left", "center" or "right".
+    | If we don't provide a position option the default alignments are "top right".
+    | `Don't work on drakify notification`
+    |
+    | Available positions:
+    | - "top-right"
+    | - "top-left"
+    | - "bottom-right"
+    | - "bottom-left"
+    | - "center-top"
+    | - "center-bottom"
+    |
+    */
+
+    'position' => 'top-right',
+
 ];
