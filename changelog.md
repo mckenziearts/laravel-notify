@@ -21,3 +21,10 @@ All notable changes to `laravel-notify` will be documented in this file.
 ## Version 1.0.4
 ### Updated
 - webpack.mix.js file to set correct path to display assets
+
+## Version 1.0.5
+### Added
+- notification position configuration in `config/notify.php` to set where notification should display.
+
+### Updated
+- notify style and javascript
