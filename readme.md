@@ -155,6 +155,13 @@ Laravel Notify use animate.css to set smooth animation to display and hide notif
 ],
 ```
 
+You can now choose where the notification should appear with the `position` variable in the configuration file. By default
+the `top-right` position is enable.
+
+```php
+'position' => 'top-right',
+```
+
 ## Change log
 
 Please see the [changelog](changelog.md) for more information on what has changed recently.
