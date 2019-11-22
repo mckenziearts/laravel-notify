@@ -66,7 +66,8 @@
     var notify = {
         timeout: "{{ config('notify.animate.timeout') }}",
         animatedIn: "{{ config('notify.animate.in_class') }}",
-        animatedOut: "{{ config('notify.animate.out_class') }}"
+        animatedOut: "{{ config('notify.animate.out_class') }}",
+        position: "{{ config('notify.position') }}"
     }
 
 </script>
