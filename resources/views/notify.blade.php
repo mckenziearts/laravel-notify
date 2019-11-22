@@ -186,6 +186,4 @@
         </div>
     </div>
 
-    @include('notify::messages')
-
 @endsection
