@@ -133,7 +133,7 @@ Some awesome stuff. To active `dark mode` update the `theme` config, or add glob
 Got result like that
 
 <p align="center">
-<img src="https://pix.watch/d5TpFl/Z7ert9.png">
+<img src="https://i.ibb.co/FVR99PJ/Screenshot-2019-12-11-at-23-12-20.png">
 </p>
 
 Laravel Notify use animate.css to set smooth animation to display and hide notify element.
