@@ -68,7 +68,7 @@ if (! function_exists('smilify')) {
 }
 if (! function_exists('emotify')) {
     /**
-     * Smilify
+     * Emotify
      *
      * @param string $type
      * @param string|null $message
