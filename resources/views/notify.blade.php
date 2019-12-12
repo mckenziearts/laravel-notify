@@ -186,4 +186,42 @@
         </div>
     </div>
 
+    <h2><i class="flaticon-alert"></i> Emoticon <small class="text-primary">Notification</small></h2>
+    <div class="row mb-5">
+        <div class="col-md-7">
+            <div class="card align-items-center">
+                <div class="card-body">
+                    <div class="emoticon-alert emoticon-success" role="alert">
+                        <div class="emoticon-icon"><span></span></div>
+                        <div class="emoticon-text">
+                            <p>You are awesome. Your data successfully saved. Great Job :) !</p>
+                        </div>
+                        <div class="emoticon-close">
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true"><i class="flaticon2-cross"></i></span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="emoticon-alert emoticon-error" role="alert">
+                        <div class="emoticon-icon"><span></span></div>
+                        <div class="emoticon-text">
+                            <p>It seems your file is too big, try reducing the file size and try again.</p>
+                        </div>
+                        <div class="emoticon-close">
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true"><i class="flaticon2-cross"></i></span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-5">
+            <h4># Basic Usage</h4>
+            <p>From your application, call the flash method with a message and type.</p>
+            <pre><code class="language-php">emotify('success', 'You have successfully done it!');</code></pre>
+            <pre><code class="language-php">emotify('error', 'Bad request appear please try again');</code></pre>
+        </div>
+    </div>
+
 @endsection
