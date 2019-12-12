@@ -66,6 +66,21 @@ if (! function_exists('smilify')) {
         return $notify;
     }
 }
+if (! function_exists('emotify')) {
+    /**
+     * Smilify
+     *
+     * @param string $type
+     * @param string|null $message
+     * @return \Mckenziearts\Notify\LaravelNotify
+     */
+    function emotify(string $type, string $message)
+    {
+        $notify = app('notify')->emotify($type, $message);
+
+        return $notify;
+    }
+}
 
 if (! function_exists('notifyJs')) {
     /**

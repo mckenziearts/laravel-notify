@@ -109,6 +109,20 @@ class LaravelNotify
     }
 
     /**
+     * Return a smiley notify
+     *
+     * @param string $type
+     * @param string $message
+     * @return $this
+     */
+    public function emotify(string $type, string $message) : LaravelNotify
+    {
+        $this->flash($message, $type, null, 'emotify');
+
+        return $this;
+    }
+
+    /**
      * Return a drake notify
      *
      * @param string $type
@@ -128,9 +142,9 @@ class LaravelNotify
      * Flash a message.
      *
      * @param  string $message
-     * @param  string $type
-     * @param  string $icon
-     * @param  string $model
+     * @param  string|null $type
+     * @param  string|null $icon
+     * @param  string|null $model
      * @param  string|null $title
      *
      * @return void
