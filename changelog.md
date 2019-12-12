@@ -30,5 +30,9 @@ All notable changes to `laravel-notify` will be documented in this file.
 - notify style and javascript
 
 ## Version 1.0.6
-### Update
+### Updated
 - Notify height
+
+## Version 1.1
+### Added
+- Emotify Notification
