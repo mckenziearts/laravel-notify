@@ -7,11 +7,11 @@
  * @link  https://github.com/mckenziearts/laravel-notify
  */
 
-const notification = document.querySelector('.notify-alert, .smiley-alert, .connectify-alert');
+const notification = document.querySelector('.notify-alert, .smiley-alert, .connectify-alert, .emoticon-alert');
 const drakiky = document.querySelector('.drake-alert');
 
 if (notification) {
-  const button = document.querySelector('.notify-alert button, .smiley-alert button, .connectify-alert button');
+  const button = document.querySelector('.notify-alert button, .smiley-alert button, .connectify-alert button, .emoticon-alert button');
 
   switch (notify.position) {
     case "top-left":
