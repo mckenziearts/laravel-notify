@@ -57,6 +57,20 @@
         </div>
     @endif
 
+    @if (session()->get('notify.model') === 'emotify')
+        <div class="emoticon-alert emoticon-{{ session()->get('notify.type') }} animated {{ config('notify.animate.in_class') }}" role="alert">
+            <div class="emoticon-icon"><span></span></div>
+            <div class="emoticon-text">
+                <p>{{ session()->get('notify.message') }}</p>
+            </div>
+            <div class="emoticon-close">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true"><i class="flaticon2-cross"></i></span>
+                </button>
+            </div>
+        </div>
+    @endif
+
 @endif
 
 {{ session()->forget('notify.message') }}
