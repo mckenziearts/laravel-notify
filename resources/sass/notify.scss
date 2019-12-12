@@ -242,7 +242,7 @@
   z-index: 200;
   display: flex;
   padding: 20px;
-  height: 120px;
+  height: 130px;
   width: 300px;
   border-radius: 10px;
   background-size: cover;
@@ -258,7 +258,7 @@
     z-index: 2;
 
     span {
-      width: 32px;
+      width: 50px;
       height: 50px;
       border-radius: 50%;
       background-color: #fff;
@@ -266,7 +266,7 @@
       justify-content: center;
       align-items: center;
       text-align: center;
-      font-size: 15px;
+      font-size: 20px;
       margin-bottom: 10px;
     }
 
@@ -388,6 +388,61 @@
         color: #fff;
         text-shadow: none;
       }
+    }
+  }
+}
+
+// Emoticon Alert
+.emoticon-alert {
+  @include notify();
+
+  .emoticon-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    span {
+      background-size: cover;
+      background: no-repeat center center;
+      width: 50px;
+      height: 50px;
+    }
+  }
+
+  .emoticon-text {
+    @include text();
+    margin: 0 20px;
+    font-size: 17px;
+
+    p {
+      color: #eee;
+    }
+  }
+
+  .emoticon-close {
+    @include button();
+
+    .close {
+      font-size: 16px;
+      color: #eee;
+    }
+  }
+
+  &.emoticon-success {
+    background: rgb(54,138,9);
+    background: linear-gradient(45deg, rgba(54,138,9,0.8) 0%, rgba(31,80,5,1) 65%);
+
+    .emoticon-icon span {
+      background-image: url("./images/success.svg");
+    }
+  }
+
+  &.emoticon-error {
+    background: rgb(238,48,99);
+    background: linear-gradient(45deg, rgba(238,48,99,1) 0%, rgba(204,24,65,1) 65%);
+
+    .emoticon-icon span {
+      background-image: url("./images/error.svg");
     }
   }
 }
