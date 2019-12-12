@@ -120,6 +120,12 @@ drakify('error') // for error alert
 smilify('success', 'You are successfully reconnected')
 ```
 
+5. `emotify` notification, a simple custom toast notification using vector emoticon
+
+```php
+emotify('success', 'You are awesome, your data was successfully created')
+```
+
 ## Config
 
 Config file are located at `config/notify.php` after publishing provider element.
