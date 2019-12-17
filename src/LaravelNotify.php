@@ -31,7 +31,7 @@ class LaravelNotify
      * @param  string  $message
      * @return $this
      */
-    public function info(string $message): LaravelNotify
+    public function info(string $message): self
     {
         $this->flash($message, 'info', 'flaticon-exclamation-1', 'toast');
 
@@ -44,7 +44,7 @@ class LaravelNotify
      * @param  string  $message
      * @return $this
      */
-    public function success(string $message): LaravelNotify
+    public function success(string $message): self
     {
         $this->flash($message, 'success', 'flaticon2-check-mark', 'toast');
 
@@ -57,7 +57,7 @@ class LaravelNotify
      * @param  string  $message
      * @return $this
      */
-    public function error(string $message): LaravelNotify
+    public function error(string $message): self
     {
         $this->flash($message, 'error', 'flaticon2-delete', 'toast');
 
@@ -70,7 +70,7 @@ class LaravelNotify
      * @param  string  $message
      * @return $this
      */
-    public function warning(string $message): LaravelNotify
+    public function warning(string $message): self
     {
         $this->flash($message, 'warning', 'flaticon-warning-sign', 'toast');
 
@@ -78,14 +78,14 @@ class LaravelNotify
     }
 
     /**
-     * Return a Connect Notification
+     * Return a Connect Notification.
      *
      * @param  string  $type
      * @param  string  $title
      * @param  string  $message
      * @return $this
      */
-    public function connect(string $type, string $title, string $message): LaravelNotify
+    public function connect(string $type, string $title, string $message): self
     {
         $icon = ($type === 'success') ? 'flaticon-like' : 'flaticon-cancel';
 
@@ -95,13 +95,13 @@ class LaravelNotify
     }
 
     /**
-     * Return a smiley notify
+     * Return a smiley notify.
      *
      * @param  string  $type
      * @param  string  $message
      * @return $this
      */
-    public function smiley(string $type, string $message): LaravelNotify
+    public function smiley(string $type, string $message): self
     {
         $icon = ($type === 'success') ? '👍' : '🙅🏽‍♂';
 
@@ -111,13 +111,13 @@ class LaravelNotify
     }
 
     /**
-     * Return a smiley notify
+     * Return a smiley notify.
      *
      * @param  string  $type
      * @param  string  $message
      * @return $this
      */
-    public function emotify(string $type, string $message): LaravelNotify
+    public function emotify(string $type, string $message): self
     {
         $this->flash($message, $type, null, 'emotify');
 
@@ -125,12 +125,12 @@ class LaravelNotify
     }
 
     /**
-     * Return a drake notify
+     * Return a drake notify.
      *
      * @param  string  $type
      * @return $this
      */
-    public function drake(string $type): LaravelNotify
+    public function drake(string $type): self
     {
         $icon = ($type === 'success') ? 'flaticon2-check-mark' : 'flaticon2-cross';
         $message = ($type === 'success') ? 'Success' : 'Try Again';
@@ -156,11 +156,11 @@ class LaravelNotify
      * @return LaravelNotify
      * @throws Exception
      */
-    public function preset(string $presetName, array $overrideValues = []): LaravelNotify
+    public function preset(string $presetName, array $overrideValues = []): self
     {
         $presetValues = config('notify.preset-messages.'.$presetName);
 
-        if (!$presetValues) {
+        if (! $presetValues) {
             throw new MissingPresetNotificationException('A preset message does not exist with the name: '.$presetName);
         }
 
@@ -193,7 +193,7 @@ class LaravelNotify
             'type'    => $type,
             'icon'    => $icon,
             'model'   => $model,
-            'title'   => $title
+            'title'   => $title,
         ];
 
         $this->session->flash('notify', $notifications);

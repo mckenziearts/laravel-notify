@@ -21,7 +21,7 @@ return [
     | Demo URL
     |--------------------------------------------------------------------------
     |
-    | if true you can acces to the demo documentation of the notify package
+    | if true you can access to the demo documentation of the notify package
     | here: http://localhost:8000/notify/demo, by default is true
     |
     */
@@ -40,7 +40,7 @@ return [
     'animate' => [
         'in_class'  => 'bounceInRight', // The class to use to animate the notice in.
         'out_class' => 'bounceOutRight', // The class to use to animate the notice out.
-        'timeout'   => 5000 // Number of seconds before the notice disappears
+        'timeout'   => 5000, // Number of seconds before the notice disappears
     ],
 
     /*
@@ -83,7 +83,7 @@ return [
             'icon'    => 'flaticon2-check-mark',
             'model'   => 'connect',
             'title'   => 'User Updated',
-        ]
+        ],
     ],
 
 ];

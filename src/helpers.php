@@ -2,7 +2,7 @@
 
 if (! function_exists('notify')) {
     /**
-     * Notify
+     * Notify.
      *
      * @param string|null $message
      * @return \Mckenziearts\Notify\LaravelNotify
@@ -21,7 +21,7 @@ if (! function_exists('notify')) {
 
 if (! function_exists('connectify')) {
     /**
-     * Connectify
+     * Connectify.
      *
      * @param string $type
      * @param string $title
@@ -38,7 +38,7 @@ if (! function_exists('connectify')) {
 
 if (! function_exists('drakify')) {
     /**
-     * Drakify
+     * Drakify.
      *
      * @param string $type
      * @return \Mckenziearts\Notify\LaravelNotify
@@ -53,7 +53,7 @@ if (! function_exists('drakify')) {
 
 if (! function_exists('smilify')) {
     /**
-     * Smilify
+     * Smilify.
      *
      * @param string $type
      * @param string|null $message
@@ -68,7 +68,7 @@ if (! function_exists('smilify')) {
 }
 if (! function_exists('emotify')) {
     /**
-     * Emotify
+     * Emotify.
      *
      * @param string $type
      * @param string|null $message
@@ -88,7 +88,7 @@ if (! function_exists('notifyJs')) {
      */
     function notifyJs(): string
     {
-        return '<script type="text/javascript" src="' . asset('vendor/mckenziearts/laravel-notify/js/notify.js') . '"></script>';
+        return '<script type="text/javascript" src="'.asset('vendor/mckenziearts/laravel-notify/js/notify.js').'"></script>';
     }
 }
 
@@ -98,6 +98,6 @@ if (! function_exists('notifyCss')) {
      */
     function notifyCss(): string
     {
-        return '<link rel="stylesheet" type="text/css" href="' . asset('vendor/mckenziearts/laravel-notify/css/notify.css') . '"/>';
+        return '<link rel="stylesheet" type="text/css" href="'.asset('vendor/mckenziearts/laravel-notify/css/notify.css').'"/>';
     }
 }

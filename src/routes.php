@@ -12,9 +12,7 @@
 */
 
 if (config('notify.demo')) {
-
     Route::get('notify/demo', function () {
         return view('notify::notify');
     });
-
 }

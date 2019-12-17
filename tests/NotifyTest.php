@@ -1,7 +1,7 @@
 <?php
 
-use PHPUnit\Framework\TestCase;
 use Mckenziearts\Notify\LaravelNotify;
+use PHPUnit\Framework\TestCase;
 
 class NotifyTest extends TestCase
 {
