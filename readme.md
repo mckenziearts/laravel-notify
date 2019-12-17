@@ -92,7 +92,7 @@ An complete example:
 
 ### Type of notifications
  
-Laravel Notify actually display 4 types of notifications
+Laravel Notify actually display 5 types of notifications
 
 1. `toast` notification, who is default notification for Laravel Notify
 
@@ -124,6 +124,31 @@ smilify('success', 'You are successfully reconnected')
 
 ```php
 emotify('success', 'You are awesome, your data was successfully created')
+```
+
+#### Preset Notifications
+
+If you have a specific notification that is used across multiple different places in your system, you can define it
+as a preset notification in your config file. This makes it easier to maintain commonly used notifications in one place. 
+Read how to define preset messages in the [Config](#config) section below.
+
+As an example, to use a preset notification you have defined called 'common-notification', use the following:
+
+```php
+notify()->preset('common-notification')
+``` 
+
+You can override any of the values that are set in the config if you need to. For example, this could be useful if you 
+have a common notification across, but you want to change the icon in one particular place that it's used without having
+to manually write out a new notification.
+
+To do this, simply pass in an array that has the key of the attribute that you want to override and the value you want
+to override it with.
+
+As an example, we could override the 'title' of our 'common-notification' by using the following:
+
+```php
+notify()->preset('common-notification', ['title' => 'This is the overridden title'])
 ```
 
 ## Config
@@ -167,6 +192,29 @@ the `top-right` position is enable.
 ```php
 'position' => 'top-right',
 ```
+
+You can define preset notifications in the config file using the following structure:
+
+```php
+'preset-messages' => [
+    'user-updated' => [
+        'message' => 'The user has been updated successfully.',
+        'type'    => 'success',
+        'icon'    => 'flaticon2-check-mark',
+        'model'   => 'connect',
+        'title'   => 'User Updated',
+    ],
+    'user-deleted' => [
+        'message' => 'The user has been deleted successfully.',
+        'type'    => 'success',
+        'icon'    => 'flaticon2-check-mark',
+        'model'   => 'connect',
+        'title'   => 'User Deleted',
+    ],
+],
+```
+
+The example above shows the config for two preset notifications: 'user-updated' and 'user-deleted'.
 
 ## Change log
 

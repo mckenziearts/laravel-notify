@@ -38,7 +38,7 @@ return [
     */
 
     'animate' => [
-        'in_class' => 'bounceInRight', // The class to use to animate the notice in.
+        'in_class'  => 'bounceInRight', // The class to use to animate the notice in.
         'out_class' => 'bounceOutRight', // The class to use to animate the notice out.
         'timeout'   => 5000 // Number of seconds before the notice disappears
     ],
@@ -65,5 +65,25 @@ return [
     */
 
     'position' => 'top-right',
+
+    /*
+    |--------------------------------------------------------------------------
+    | Preset Messages
+    |--------------------------------------------------------------------------
+    |
+    | Define any preset messages here that can be reused.
+    |
+    */
+
+    'preset-messages' => [
+        // An example preset 'user updated' Connectify notification.
+        'user-updated' => [
+            'message' => 'The user has been updated successfully.',
+            'type'    => 'success',
+            'icon'    => 'flaticon2-check-mark',
+            'model'   => 'connect',
+            'title'   => 'User Updated',
+        ]
+    ],
 
 ];
