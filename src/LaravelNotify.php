@@ -2,6 +2,8 @@
 
 namespace Mckenziearts\Notify;
 
+use Exception;
+use Mckenziearts\Notify\Exceptions\MissingPresetNotificationException;
 use Mckenziearts\Notify\Storage\Session;
 
 class LaravelNotify
@@ -16,7 +18,7 @@ class LaravelNotify
     /**
      * Create a new notify instance.
      *
-     * @param Session $session
+     * @param  Session  $session
      */
     public function __construct(Session $session)
     {
@@ -26,10 +28,10 @@ class LaravelNotify
     /**
      * Flash an information message.
      *
-     * @param string $message
+     * @param  string  $message
      * @return $this
      */
-    public function info(string $message) : LaravelNotify
+    public function info(string $message): LaravelNotify
     {
         $this->flash($message, 'info', 'flaticon-exclamation-1', 'toast');
 
@@ -39,10 +41,10 @@ class LaravelNotify
     /**
      * Flash a success message.
      *
-     * @param  string $message
+     * @param  string  $message
      * @return $this
      */
-    public function success(string $message) : LaravelNotify
+    public function success(string $message): LaravelNotify
     {
         $this->flash($message, 'success', 'flaticon2-check-mark', 'toast');
 
@@ -52,10 +54,10 @@ class LaravelNotify
     /**
      * Flash an error message.
      *
-     * @param  string $message
+     * @param  string  $message
      * @return $this
      */
-    public function error(string $message) : LaravelNotify
+    public function error(string $message): LaravelNotify
     {
         $this->flash($message, 'error', 'flaticon2-delete', 'toast');
 
@@ -65,10 +67,10 @@ class LaravelNotify
     /**
      * Flash a warning message.
      *
-     * @param  string $message
+     * @param  string  $message
      * @return $this
      */
-    public function warning(string $message) : LaravelNotify
+    public function warning(string $message): LaravelNotify
     {
         $this->flash($message, 'warning', 'flaticon-warning-sign', 'toast');
 
@@ -78,12 +80,12 @@ class LaravelNotify
     /**
      * Return a Connect Notification
      *
-     * @param string $type
-     * @param string $title
-     * @param string $message
+     * @param  string  $type
+     * @param  string  $title
+     * @param  string  $message
      * @return $this
      */
-    public function connect(string $type, string $title, string $message) : LaravelNotify
+    public function connect(string $type, string $title, string $message): LaravelNotify
     {
         $icon = ($type === 'success') ? 'flaticon-like' : 'flaticon-cancel';
 
@@ -95,11 +97,11 @@ class LaravelNotify
     /**
      * Return a smiley notify
      *
-     * @param string $type
-     * @param string $message
+     * @param  string  $type
+     * @param  string  $message
      * @return $this
      */
-    public function smiley(string $type, string $message) : LaravelNotify
+    public function smiley(string $type, string $message): LaravelNotify
     {
         $icon = ($type === 'success') ? '👍' : '🙅🏽‍♂';
 
@@ -111,11 +113,11 @@ class LaravelNotify
     /**
      * Return a smiley notify
      *
-     * @param string $type
-     * @param string $message
+     * @param  string  $type
+     * @param  string  $message
      * @return $this
      */
-    public function emotify(string $type, string $message) : LaravelNotify
+    public function emotify(string $type, string $message): LaravelNotify
     {
         $this->flash($message, $type, null, 'emotify');
 
@@ -125,10 +127,10 @@ class LaravelNotify
     /**
      * Return a drake notify
      *
-     * @param string $type
+     * @param  string  $type
      * @return $this
      */
-    public function drake(string $type) : LaravelNotify
+    public function drake(string $type): LaravelNotify
     {
         $icon = ($type === 'success') ? 'flaticon2-check-mark' : 'flaticon2-cross';
         $message = ($type === 'success') ? 'Success' : 'Try Again';
@@ -139,13 +141,48 @@ class LaravelNotify
     }
 
     /**
+     * Return a preset message that is defined in the config
+     * file. If you need to override any of the values, you
+     * can pass an array with the key-value pairs of what
+     * you want to override.
+     *
+     * Example: To override the 'message' variable, the array
+     *          could have the following structure:
+     *
+     *          ['message' => 'Your new message here!']
+     *
+     * @param  string  $presetName
+     * @param  array  $overrideValues
+     * @return LaravelNotify
+     * @throws Exception
+     */
+    public function preset(string $presetName, array $overrideValues = []): LaravelNotify
+    {
+        $presetValues = config('notify.preset-messages.'.$presetName);
+
+        if (!$presetValues) {
+            throw new MissingPresetNotificationException('A preset message does not exist with the name: '.$presetName);
+        }
+
+        $this->flash(
+            $overrideValues['message'] ?? $presetValues['message'],
+            $overrideValues['type'] ?? $presetValues['type'] ?? null,
+            $overrideValues['icon'] ?? $presetValues['icon'] ?? null,
+            $overrideValues['model'] ?? $presetValues['model'] ?? null,
+            $overrideValues['title'] ?? $presetValues['title'] ?? null
+        );
+
+        return $this;
+    }
+
+    /**
      * Flash a message.
      *
-     * @param  string $message
-     * @param  string|null $type
-     * @param  string|null $icon
-     * @param  string|null $model
-     * @param  string|null $title
+     * @param  string  $message
+     * @param  string|null  $type
+     * @param  string|null  $icon
+     * @param  string|null  $model
+     * @param  string|null  $title
      *
      * @return void
      */
@@ -153,10 +190,10 @@ class LaravelNotify
     {
         $notifications = [
             'message' => $message,
-            'type' => $type,
-            'icon' => $icon,
-            'model' => $model,
-            'title' => $title
+            'type'    => $type,
+            'icon'    => $icon,
+            'model'   => $model,
+            'title'   => $title
         ];
 
         $this->session->flash('notify', $notifications);
