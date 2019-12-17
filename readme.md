@@ -1,6 +1,7 @@
 <p align="center"><img src="https://arthurmonney.com/images/laravel-notify.svg"></p>
 
 <p align="center">
+<a href="https://github.styleci.io/repos/217758926"><img src="https://github.styleci.io/repos/217758926/shield?branch=master" alt="StyleCI"></a>
 <a href="https://travis-ci.org/mckenziearts/laravel-notify"><img src="https://img.shields.io/travis/mckenziearts/laravel-notify/master.svg?style=flat-square" alt="Build Status"></a>
 <a href="https://packagist.org/packages/mckenziearts/laravel-notify"><img src="https://poser.pugx.org/mckenziearts/laravel-notify/d/total.svg" alt="Total Downloads"></a>
 <a href="https://packagist.org/packages/mckenziearts/laravel-notify"><img src="https://poser.pugx.org/mckenziearts/laravel-notify/v/stable.svg" alt="Latest Stable Version"></a>

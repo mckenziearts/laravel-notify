@@ -36,3 +36,7 @@ All notable changes to `laravel-notify` will be documented in this file.
 ## Version 1.1
 ### Added
 - Emotify Notification
+
+## Version 1.1.1
+### Added
+- Preset notification
