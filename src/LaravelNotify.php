@@ -29,11 +29,12 @@ class LaravelNotify
      * Flash an information message.
      *
      * @param  string  $message
+     * @param  string|null  $title
      * @return $this
      */
-    public function info(string $message): self
+    public function info(string $message, string $title = null): self
     {
-        $this->flash($message, 'info', 'flaticon-exclamation-1', 'toast');
+        $this->flash($message, 'info', 'flaticon-exclamation-1', 'toast', $title);
 
         return $this;
     }
@@ -42,11 +43,12 @@ class LaravelNotify
      * Flash a success message.
      *
      * @param  string  $message
+     * @param  string|null  $title
      * @return $this
      */
-    public function success(string $message): self
+    public function success(string $message, string $title = null): self
     {
-        $this->flash($message, 'success', 'flaticon2-check-mark', 'toast');
+        $this->flash($message, 'success', 'flaticon2-check-mark', 'toast', $title);
 
         return $this;
     }
@@ -55,11 +57,12 @@ class LaravelNotify
      * Flash an error message.
      *
      * @param  string  $message
+     * @param  string|null  $title
      * @return $this
      */
-    public function error(string $message): self
+    public function error(string $message, string $title = null): self
     {
-        $this->flash($message, 'error', 'flaticon2-delete', 'toast');
+        $this->flash($message, 'error', 'flaticon2-delete', 'toast', $title);
 
         return $this;
     }
@@ -68,11 +71,12 @@ class LaravelNotify
      * Flash a warning message.
      *
      * @param  string  $message
+     * @param  string|null  $title
      * @return $this
      */
-    public function warning(string $message): self
+    public function warning(string $message, string $title = null): self
     {
-        $this->flash($message, 'warning', 'flaticon-warning-sign', 'toast');
+        $this->flash($message, 'warning', 'flaticon-warning-sign', 'toast', $title);
 
         return $this;
     }

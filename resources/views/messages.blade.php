@@ -4,7 +4,7 @@
         <div class="notify-alert notify-{{ session()->get('notify.type') }} {{ config('notify.theme') }} animated {{ config('notify.animate.in_class') }}" role="alert">
             <div class="notify-alert-icon"><i class="{{ session()->get('notify.icon') }}"></i></div>
             <div class="notify-alert-text">
-                <h4>{{ session()->get('notify.type') }}</h4>
+                <h4>{{ session()->get('notify.title') ?? session()->get('notify.type') }}</h4>
                 <p>{{ session()->get('notify.message') }}</p>
             </div>
             <div class="notify-alert-close">
