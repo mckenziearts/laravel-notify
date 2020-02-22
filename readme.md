@@ -98,7 +98,7 @@ Laravel Notify actually display 5 types of notifications
 1. `toast` notification, who is default notification for Laravel Notify
 
 ```php
-notify()->success('Welcome to Laravel Notify ⚡️')
+notify()->success('Welcome to Laravel Notify ⚡️') or notify()->success('Welcome to Laravel Notify ⚡️', 'My custom title')
 ```
  
 2. `connectify` notification, example of basic usage

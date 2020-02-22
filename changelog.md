@@ -40,3 +40,7 @@ All notable changes to `laravel-notify` will be documented in this file.
 ## Version 1.1.1
 ### Added
 - Preset notification
+
+## Version 1.1.2
+### Added
+- Custom notification title
