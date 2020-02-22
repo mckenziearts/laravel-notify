@@ -9,7 +9,7 @@ class NotifyTest extends TestCase
 
     protected $notify;
 
-    public function setUp() : void
+    public function setUp(): void
     {
         $this->session = Mockery::spy('Mckenziearts\Notify\Storage\Session');
         $this->notify = new LaravelNotify($this->session);
