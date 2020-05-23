@@ -31,9 +31,7 @@ if (! function_exists('connectify')) {
      */
     function connectify(string $type, string $title, string $message)
     {
-        $notify = app('notify')->connect($type, $title, $message);
-
-        return $notify;
+        return app('notify')->connect($type, $title, $message);
     }
 }
 
@@ -46,9 +44,7 @@ if (! function_exists('drakify')) {
      */
     function drakify(string $type)
     {
-        $notify = app('notify')->drake($type);
-
-        return $notify;
+        return app('notify')->drake($type);
     }
 }
 
@@ -62,9 +58,7 @@ if (! function_exists('smilify')) {
      */
     function smilify(string $type, string $message)
     {
-        $notify = app('notify')->smiley($type, $message);
-
-        return $notify;
+        return app('notify')->smiley($type, $message);
     }
 }
 if (! function_exists('emotify')) {
@@ -77,9 +71,7 @@ if (! function_exists('emotify')) {
      */
     function emotify(string $type, string $message)
     {
-        $notify = app('notify')->emotify($type, $message);
-
-        return $notify;
+        return app('notify')->emotify($type, $message);
     }
 }
 

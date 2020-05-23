@@ -14,16 +14,12 @@ class LaravelNotifyServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $this->publishes([
-            __DIR__.'/../public' => public_path('vendor/mckenziearts/laravel-notify'),
-        ], 'notify-assets');
-        $this->publishes([
-            __DIR__.'/../config/notify.php' => config_path('notify.php'),
-        ], 'notify-config');
+        $this->registerBladeDirective();
+        $this->registerPublishables();
+        $this->registerComponents();
 
         $this->loadViewsFrom(__DIR__.'/../resources/views', 'notify');
         $this->loadRoutesFrom(__DIR__.'/routes.php');
-        $this->registerBladeDirective();
     }
 
     /**
@@ -55,6 +51,33 @@ class LaravelNotifyServiceProvider extends ServiceProvider
         Blade::directive('notifyJs', function () {
             return '<?php echo notifyJs(); ?>';
         });
+    }
+
+    /**
+     *
+     * Register Notify Blade Component.
+     *
+     * @return void
+     */
+    public function registerComponents()
+    {
+        Blade::component(NotifyComponent::class, 'notify');
+    }
+
+    /**
+     * Register Publishable files.
+     *
+     * @return void
+     */
+    public function registerPublishables()
+    {
+        $this->publishes([
+            __DIR__.'/../public' => public_path('vendor/mckenziearts/laravel-notify'),
+        ], 'notify-assets');
+
+        $this->publishes([
+            __DIR__.'/../config/notify.php' => config_path('notify.php'),
+        ], 'notify-config');
     }
 
     /**
