@@ -1,5 +1,7 @@
 const mix = require('laravel-mix');
 
+require('laravel-mix-tailwind');
+
 /*
  |--------------------------------------------------------------------------
  | Mix Asset Management
@@ -16,5 +18,11 @@ mix.setPublicPath('public');
 mix.setResourceRoot('../')
 mix.js('resources/js/app.js', 'public/js')
 mix.js('resources/js/notify.js', 'public/js')
+  .sass('resources/sass/app.scss', 'public/css')
   .sass('resources/sass/notify.scss', 'public/css')
-  .sass('resources/sass/app.scss', 'public/css');
+  .tailwind("./tailwind.config.js")
+  .sourceMaps();
+
+if (mix.inProduction()) {
+  mix.version();
+}
