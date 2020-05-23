@@ -12,5 +12,5 @@
 */
 
 if (config('notify.demo')) {
-    Route::view('notify/demo','notify::notify');
+    Route::view('notify/demo', 'notify::notify');
 }
