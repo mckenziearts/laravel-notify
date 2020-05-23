@@ -1,4 +1,4 @@
-<p align="center"><img src="https://arthurmonney.com/images/laravel-notify.svg"></p>
+<p align="center"><img src="https://laravelcm.com/img/brand/laravel-notify.svg"></p>
 
 <p align="center">
 <a href="https://github.styleci.io/repos/217758926"><img src="https://github.styleci.io/repos/217758926/shield?branch=master" alt="StyleCI"></a>
