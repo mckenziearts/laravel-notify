@@ -59,6 +59,8 @@ $ composer dump-autoload
 2. Add scripts links with `@notifyJs`
 3. use `notify()` helper function inside your controller to set a toast notification for info, success, warning or error
 4. Include notify partial to your master layout `@include('notify::messages')`
+5.If your in Livewire , use `@include('notify::messages')` inside your blade component, say if you have  counter component and you want to
+give message when operation is succesfully, you should include `@include('notify::messages')` inside the blade counter component😂😂😂😋😍😍
 
 ### Basic
 
