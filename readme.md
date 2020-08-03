@@ -44,7 +44,7 @@ Then add the service provider to `config/app.php`. In Laravel versions 5.5 and b
 You can publish the configuration file and assets by running:
  
 ```sh
-$ php artisan vendor:publish --provider='Mckenziearts\Notify\LaravelNotifyServiceProvider'
+$ php artisan vendor:publish --provider="Mckenziearts\Notify\LaravelNotifyServiceProvider"
 ```
 
 Now that we have published a few new files to our application we need to reload them with the following command:
