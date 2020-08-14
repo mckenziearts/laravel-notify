@@ -23,6 +23,7 @@
     "bootstrap": "^4.3.1",
     "laravel-mix": "^4.0.7",
     "laravel-mix-tailwind": "^0.1.0",
-    "tailwindcss": "^1.4.6"
+    "tailwindcss": "^1.4.6",
+    "tailwindcss-plugins": "^0.3.0"
   }
 }
