@@ -1,4 +1,4 @@
-<svg viewBox="0 0 382 437" class="logo" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 382 437" class="w-auto h-12">
     <defs>
         <linearGradient x1="50%" y1="71.7337308%" x2="50%" y2="8.6934923%" id="linearGradient-1">
             <stop stop-color="#000000" offset="0%"></stop>

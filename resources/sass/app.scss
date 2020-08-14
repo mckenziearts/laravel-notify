@@ -1,8 +1,27 @@
-/*! Laravel Notification Template Demo
+/**
+ * Laravel Notification Template Demo
+ * This injects Tailwind's base styles, which is a combination of
+ * Normalize.css and some additional base styles.
  *
- *  Built on top of Bootstrap 4 (https://getbootstrap.com)
+ * You can see the styles here:
+ * https://unpkg.com/tailwindcss/dist/base.css
  */
-@import "variables";
-@import "~bootstrap/scss/bootstrap";
+@tailwind base;
+
+/**
+ * This injects any component classes registered by plugins.
+ */
+@tailwind components;
+
 @import "prism.css";
-@import "style";
+
+pre[class*="language-"] {
+  border: none;
+  margin-top: 0;
+}
+
+/**
+ * This injects all of Tailwind's utility classes, generated based on your
+ * config file.
+ */
+@tailwind utilities;

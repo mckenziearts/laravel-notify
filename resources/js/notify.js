@@ -1,3 +1,5 @@
+import "alpinejs";
+
 /**
  * Notify
  *
