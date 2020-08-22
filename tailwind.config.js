@@ -19,6 +19,10 @@ module.exports = {
         warning: '#FFC022',
         danger: '#ED3063',
       },
+      inset: {
+        '0': 0,
+        '-14': '-3.5rem',
+      },
       zIndex: {
         60: '60',
         70: '70',
@@ -29,14 +33,20 @@ module.exports = {
       fontFamily: {
         body: ["Inter var", ...defaultTheme.fontFamily.sans],
       },
-      gradients: (theme) => ({
-        'gradient-green': ['60deg', theme('colors.green.600'), theme('colors.success')],
-      }),
+    },
+    backgroundImage: {
+      'gradient-to-t': 'linear-gradient(to top, var(--gradient-color-stops))',
+      'gradient-to-tr': 'linear-gradient(to top right, var(--gradient-color-stops))',
+      'gradient-to-r': 'linear-gradient(to right, var(--gradient-color-stops))',
+      'gradient-to-br': 'linear-gradient(to bottom right, var(--gradient-color-stops))',
+      'gradient-to-b': 'linear-gradient(to bottom, var(--gradient-color-stops))',
+      'gradient-to-bl': 'linear-gradient(to bottom left, var(--gradient-color-stops))',
+      'gradient-to-l': 'linear-gradient(to left, var(--gradient-color-stops))',
+      'gradient-to-tl': 'linear-gradient(to top left, var(--gradient-color-stops))',
     },
   },
   variants: {},
   plugins: [
     require('@tailwindcss/ui'),
-    require('tailwindcss-plugins/gradients'),
   ],
 }
