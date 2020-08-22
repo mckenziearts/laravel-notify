@@ -41,7 +41,7 @@
         @yield('content')
     </main>
 
-    <footer class="mt-10 mx-auto max-w-screen-xl px-4 sm:px-6 py-5 lg:px-8">
+    <footer class="mx-auto max-w-screen-xl px-4 sm:px-6 py-5 lg:px-8">
         <div class="flex items-center space-x-2 text-gray-500">
             <p>&copy; {{ date('Y') }} - <a href="https://github.com/mckenziearts/laravel-notify" class="font-medium" target="_blank">Laravel <span class="text-pink-600 font-semibold">Notify</span></a> v2.0</p>
             <a class="github-button" href="https://github.com/mckenziearts/laravel-notify/issues" data-icon="octicon-issue-opened" aria-label="Issue mckenziearts/laravel-notify on GitHub">Issues</a>
