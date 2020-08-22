@@ -139,7 +139,7 @@
                             From your controller, call the flash method with a message and danger type.
                         </p>
                         <pre>
-                            <code class="language-php">connectify('danger', 'Network Not Found', 'Connection could not be established. Please try again!');</code>
+                            <code class="language-php">connectify('error', 'Network Not Found', 'Connection could not be established. Please try again!');</code>
                         </pre>
                         <div class="mt-4">
                             <div class="max-w-md w-full bg-white shadow-lg rounded-lg pointer-events-auto border-t-4 border-red-600">
@@ -422,12 +422,12 @@
                         </div>
                     </div>
                     <div
-                            x-show="drake_notification === 'danger'"
-                            x-description="Notification panel, show/hide based on alert state."
-                            x-transition:enter="transform ease-out duration-300 transition"
-                            x-transition:enter-start="translate-y-2 opacity-0 sm:translate-y-0 sm:translate-x-2"
-                            x-transition:enter-end="translate-y-0 opacity-100 sm:translate-x-0"
-                            style="display: none"
+                        x-show="drake_notification === 'danger'"
+                        x-description="Notification panel, show/hide based on alert state."
+                        x-transition:enter="transform ease-out duration-300 transition"
+                        x-transition:enter-start="translate-y-2 opacity-0 sm:translate-y-0 sm:translate-x-2"
+                        x-transition:enter-end="translate-y-0 opacity-100 sm:translate-x-0"
+                        style="display: none"
                     >
                         <h5 class="text-lg leading-6 font-medium text-gray-900">Danger Notification</h5>
                         <p class="mt-2 mb-4 text-base leading-6 text-gray-50">
