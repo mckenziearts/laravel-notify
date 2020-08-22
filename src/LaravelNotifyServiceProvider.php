@@ -61,7 +61,7 @@ class LaravelNotifyServiceProvider extends ServiceProvider
      */
     public function registerComponents()
     {
-        Blade::component(NotifyComponent::class, 'notify');
+        Blade::component(NotifyComponent::class, 'notify-messages');
     }
 
     /**
