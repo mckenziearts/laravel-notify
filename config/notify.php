@@ -33,6 +33,7 @@ return [
     |--------------------------------------------------------------------------
     |
     | Define any preset messages here that can be reused.
+    | Available model: connect, drake, emotify, smiley, toast
     |
     */
 
@@ -41,7 +42,6 @@ return [
         'user-updated' => [
             'message' => 'The user has been updated successfully.',
             'type'    => 'success',
-            'icon'    => 'flaticon2-check-mark',
             'model'   => 'connect',
             'title'   => 'User Updated',
         ],
