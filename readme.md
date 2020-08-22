@@ -8,20 +8,25 @@
 <a href="https://packagist.org/packages/mckenziearts/laravel-notify"><img src="https://poser.pugx.org/mckenziearts/laravel-notify/license.svg" alt="License"></a>
 </p>
 
-
 ## Introduction
 
 Laravel Notify is a package that lets you add custom notifications to your project. 
-A diverse range of notification design is available and many are coming soon.
+A diverse range of notification design is available.
 
 <p align="center">
-<img src="https://i.ibb.co/yknfXzX/laravel-notify.png">
+<img src="https://i.imgur.com/mZVVn3L.png">
 </p>
 
+## Version Guidance
 
-## Work In Progress
+| Version | Laravel version       |  Status         | Branch | Install                                             |
+|---------|-----------------------|-----------------|--------|-----------------------------------------------------|
+| 1.x     | 5.5, 5.6, 5.7, 6.0    | EOL             | 1.0    | composer require mckenziearts/laravel-notify 1.*    |
+| 2.x     | >= 7.0                | Latest          | 2.0    | composer require mckenziearts/laravel-notify        |
 
-This package is still under active development. If you need Android version please try this package [Aesthetic Dialogs](https://github.com/gabriel-TheCode/AestheticDialogs). Happy Coding 👨🏾‍💻
+## Android Version
+
+If you need Android version please try this package [Aesthetic Dialogs](https://github.com/gabriel-TheCode/AestheticDialogs). Happy Coding 👨🏾‍💻
 
 ## Installation 
 
@@ -60,6 +65,12 @@ $ composer dump-autoload
 3. use `notify()` helper function inside your controller to set a toast notification for info, success, warning or error
 4. Include notify partial to your master layout `@include('notify::messages')`
 
+If you are on Laravel 7 or greater, you can use the tag syntax.
+
+```html
+<x:notify-messages />
+```
+
 ### Basic
 
 Within your controllers, before you perform a redirect call the `notify` method with a message.
@@ -86,6 +97,8 @@ An complete example:
         
         
         @include('notify::messages')
+        // Laravel 7 or greater
+        <x:notify-messages />
         @notifyJs
     </body>
 </html>
@@ -162,38 +175,6 @@ Some awesome stuff. To active `dark mode` update the `theme` config, or add glob
 'theme' => env('NOTIFY_THEME', 'dark'),
 ```
 
-Got result like that
-
-<p align="center">
-<img src="https://i.ibb.co/FVR99PJ/Screenshot-2019-12-11-at-23-12-20.png">
-</p>
-
-Laravel Notify use animate.css to set smooth animation to display and hide notify element.
-
-```php
-/*
-|--------------------------------------------------------------------------
-| Animate Module (use animate.css)
-|--------------------------------------------------------------------------
-|
-| Use animate.css to animate the notice.
-|
-*/
-
-'animate' => [
-    'in_class' => 'bounceInRight', // The class to use to animate the notice in.
-    'out_class' => 'bounceOutRight', // The class to use to animate the notice out.
-    'timeout'   => 5000 // Number of seconds before the notice disappears
-],
-```
-
-You can now choose where the notification should appear with the `position` variable in the configuration file. By default
-the `top-right` position is enable.
-
-```php
-'position' => 'top-right',
-```
-
 You can define preset notifications in the config file using the following structure:
 
 ```php
@@ -201,14 +182,12 @@ You can define preset notifications in the config file using the following struc
     'user-updated' => [
         'message' => 'The user has been updated successfully.',
         'type'    => 'success',
-        'icon'    => 'flaticon2-check-mark',
         'model'   => 'connect',
         'title'   => 'User Updated',
     ],
     'user-deleted' => [
         'message' => 'The user has been deleted successfully.',
         'type'    => 'success',
-        'icon'    => 'flaticon2-check-mark',
         'model'   => 'connect',
         'title'   => 'User Deleted',
     ],
@@ -246,5 +225,5 @@ license. Please see the [license file](license.md) for more information.
 [link-packagist]: https://packagist.org/packages/mckenziearts/laravel-notify
 [link-downloads]: https://packagist.org/packages/mckenziearts/laravel-notify
 [link-travis]: https://travis-ci.org/mckenziearts/laravel-notify
-[link-author]: https://arthurmonney.com
+[link-author]: https://arthurmonney.me
 [link-contributors]: ../../contributors
