@@ -1,7 +1,7 @@
 @if (session()->get('notify.model') === 'drake')
     <div class="fixed inset-0 flex items-end justify-center px-4 py-6 pointer-events-none sm:p-6 sm:items-start sm:justify-end">
         <div
-            x-data="{ show: false }"
+            x-data="{ show: true }"
             x-show="show; setTimeout(() => { show = false }, 4000)"
             x-description="Notification panel, show/hide based on alert state."
             x-transition:enter="transform ease-out duration-300 transition"
