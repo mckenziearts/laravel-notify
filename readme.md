@@ -219,6 +219,10 @@ If you use and enjoy Laravel Notify you can encourage the author by
 * [Donating today](https://www.paypal.com/paypalme/jvquilichini?locale.x=fr_FR)!.
 * Star the project :star:.
 
+### Donors list:
+
+1. **[Charlie J](https://github.com/Chazza)** - (10,00 $ USD) - `Donation made with love by Charlie from United Kingdom` - 9 October 2020
+
 ## License
 
 license. Please see the [license file](license.md) for more information.
