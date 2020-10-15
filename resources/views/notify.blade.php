@@ -1,4 +1,4 @@
-@extends('layout.app')
+@extends('notify::layout.app')
 
 @section('content')
 
