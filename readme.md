@@ -113,13 +113,18 @@ Laravel Notify actually display 5 types of notifications
 notify()->success('Welcome to Laravel Notify ⚡️') or notify()->success('Welcome to Laravel Notify ⚡️', 'My custom title')
 ```
  
-2. `connectify` notification, example of basic usage
+2. Similarly to a success notification, you can also easily show an error:
+```php
+notify()->error('This is an error message!')
+```
+
+3. `connectify` notification, example of basic usage
 
 ```php
 connectify('success', 'Connection Found', 'Success Message Here')
 ```
 
-3. `drakify` (😎) notification, displays an alert only
+4. `drakify` (😎) notification, displays an alert only
 
 ```php
 drakify('success') // for success alert 
@@ -127,13 +132,13 @@ or
 drakify('error') // for error alert 
 ```
 
-4. `smilify` notification, displays a simple custom toast notification using the smiley (😊) emoticon
+5. `smilify` notification, displays a simple custom toast notification using the smiley (😊) emoticon
 
 ```php
 smilify('success', 'You are successfully reconnected')
 ```
 
-5. `emotify` notification, displays a simple custom toast notification using a vector emoticon
+6. `emotify` notification, displays a simple custom toast notification using a vector emoticon
 
 ```php
 emotify('success', 'You are awesome, your data was successfully created')
