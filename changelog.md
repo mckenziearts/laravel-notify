@@ -2,17 +2,19 @@
 
 All notable changes to `laravel-notify` will be documented in this file.
 
-## Version 2.1
+## Version 2.2
 
 ### Added
 - Notify timeout
-- Add Support for Laravel 8 and PHP 7.4
+- Add Support for PHP 7.4
 
 ### Updated
 - Upgrade to Tailwind v2
 
-### Fixed
-- Fix issue where Tailwind style erase site default style.
+## Version 2.1
+
+### Added
+- Add Support for Laravel 8
 
 ## Version 2.0
 Version 2 is Here 🤩 ! Laravel Notify is a package that lets you add custom notifications to your project. 
