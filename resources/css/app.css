@@ -1,4 +1,5 @@
 @import url('https://rsms.me/inter/inter.css');
+@import "prism.css";
 
 /**
  * Laravel Notification Template Demo
@@ -9,21 +10,11 @@
  * https://unpkg.com/tailwindcss/dist/base.css
  */
 @tailwind base;
-
-/**
- * This injects any component classes registered by plugins.
- */
 @tailwind components;
-
-@import "prism.css";
 
 pre[class*="language-"] {
   border: none;
   margin-top: 0;
 }
 
-/**
- * This injects all of Tailwind's utility classes, generated based on your
- * config file.
- */
 @tailwind utilities;
