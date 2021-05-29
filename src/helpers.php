@@ -1,14 +1,9 @@
 <?php
 
+use Mckenziearts\Notify\LaravelNotify;
+
 if (! function_exists('notify')) {
-    /**
-     * Notify.
-     *
-     * @param  string|null  $message
-     * @param  string|null  $title
-     * @return \Mckenziearts\Notify\LaravelNotify
-     */
-    function notify(string $message = null, string $title = null)
+    function notify(string $message = null, string $title = null): LaravelNotify
     {
         $notify = app('notify');
 
@@ -21,55 +16,27 @@ if (! function_exists('notify')) {
 }
 
 if (! function_exists('connectify')) {
-    /**
-     * Connectify.
-     *
-     * @param  string  $type
-     * @param  string  $title
-     * @param  string  $message
-     * @return \Mckenziearts\Notify\LaravelNotify
-     */
-    function connectify(string $type, string $title, string $message)
+    function connectify(string $type, string $title, string $message): LaravelNotify
     {
         return app('notify')->connect($type, $title, $message);
     }
 }
 
 if (! function_exists('drakify')) {
-    /**
-     * Drakify.
-     *
-     * @param  string  $type
-     * @return \Mckenziearts\Notify\LaravelNotify
-     */
-    function drakify(string $type)
+    function drakify(string $type): LaravelNotify
     {
         return app('notify')->drake($type);
     }
 }
 
 if (! function_exists('smilify')) {
-    /**
-     * Smilify.
-     *
-     * @param  string  $type
-     * @param  string|null  $message
-     * @return \Mckenziearts\Notify\LaravelNotify
-     */
-    function smilify(string $type, string $message)
+    function smilify(string $type, string $message): LaravelNotify
     {
         return app('notify')->smiley($type, $message);
     }
 }
 if (! function_exists('emotify')) {
-    /**
-     * Emotify.
-     *
-     * @param  string  $type
-     * @param  string|null  $message
-     * @return \Mckenziearts\Notify\LaravelNotify
-     */
-    function emotify(string $type, string $message)
+    function emotify(string $type, string $message): LaravelNotify
     {
         return app('notify')->emotify($type, $message);
     }

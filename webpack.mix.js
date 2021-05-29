@@ -13,14 +13,12 @@ require('laravel-mix-tailwind');
  */
 
 mix.setPublicPath('public');
-
 mix.setResourceRoot('../')
+
 mix.js('resources/js/app.js', 'public/js')
-mix.js('resources/js/notify.js', 'public/js')
-  .sass('resources/sass/app.scss', 'public/css')
-  .sass('resources/sass/notify.scss', 'public/css')
-  .tailwind("./tailwind.config.js")
-  .sourceMaps();
+  .js('resources/js/notify.js', 'public/js')
+  .postCss('resources/css/app.css', 'public/css', [require('tailwindcss')])
+  .postCss('resources/css/notify.css', 'public/css', [require('tailwindcss')]);
 
 if (mix.inProduction()) {
   mix.version();
