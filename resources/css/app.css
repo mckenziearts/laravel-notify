@@ -1,7 +1,7 @@
-// import font
 @import url('https://rsms.me/inter/inter.css');
 
 /**
+ * Laravel Notification Template Demo
  * This injects Tailwind's base styles, which is a combination of
  * Normalize.css and some additional base styles.
  *
@@ -15,29 +15,15 @@
  */
 @tailwind components;
 
-/**
- * Here you would add any of your custom component classes; stuff that you'd
- * want loaded *before* the utilities so that the utilities could still
- * override them.
- *
- * Example:
- *
- * .btn { ... }
- * .form-input { ... }
- */
+@import "prism.css";
+
+pre[class*="language-"] {
+  border: none;
+  margin-top: 0;
+}
 
 /**
  * This injects all of Tailwind's utility classes, generated based on your
  * config file.
  */
 @tailwind utilities;
-
-/**
- * Here you would add any custom utilities you need that don't come out of the
- * box with Tailwind.
- *
- * Example :
- *
- * .bg-pattern-graph-paper { ... }
- * .skew-45 { ... }
- */

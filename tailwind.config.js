@@ -1,16 +1,6 @@
-const defaultTheme = require('tailwindcss/defaultTheme');
-
 module.exports = {
-  purge: {
-    enable: true,
-    content: [
-      './resources/views/**/*.php',
-    ],
-    options: {
-      defaultExtractor: (content) => content.match(/[\w-/.:]+(?<!:)/g) || [],
-      whitelistPatterns: [/-active$/, /-enter$/, /-leave-to$/, /show$/],
-    },
-  },
+  mode: 'jit',
+  purge: ['./resources/views/**/*.php'],
   theme: {
     extend: {
       colors: {
@@ -30,9 +20,6 @@ module.exports = {
         90: '90',
         100: '100',
       },
-      fontFamily: {
-        body: ["Inter var", ...defaultTheme.fontFamily.sans],
-      },
     },
     backgroundImage: {
       'gradient-to-t': 'linear-gradient(to top, var(--gradient-color-stops))',
@@ -46,7 +33,5 @@ module.exports = {
     },
   },
   variants: {},
-  plugins: [
-    require('@tailwindcss/ui'),
-  ],
+  plugins: [],
 }
