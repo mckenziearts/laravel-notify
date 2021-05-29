@@ -11,7 +11,7 @@ class Session
      *
      * @var \Illuminate\Session\Store
      */
-    protected $session;
+    protected Store $session;
 
     public function __construct(Store $session)
     {
@@ -21,10 +21,10 @@ class Session
     /**
      * Set a session key and value.
      *
-     * @param  mixed $key
-     * @param  string $data
+     * @param  string  $key
+     * @param  array  $data
      */
-    public function flash($key, $data = null)
+    public function flash(string $key, array $data = [])
     {
         $this->session->flash($key, $data);
     }

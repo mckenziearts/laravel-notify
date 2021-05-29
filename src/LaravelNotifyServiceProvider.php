@@ -7,12 +7,7 @@ use Illuminate\Support\ServiceProvider;
 
 class LaravelNotifyServiceProvider extends ServiceProvider
 {
-    /**
-     * Perform post-registration booting of services.
-     *
-     * @return void
-     */
-    public function boot()
+    public function boot(): void
     {
         $this->registerBladeDirective();
         $this->registerPublishables();
@@ -22,12 +17,7 @@ class LaravelNotifyServiceProvider extends ServiceProvider
         $this->loadRoutesFrom(__DIR__.'/routes.php');
     }
 
-    /**
-     * Register any package services.
-     *
-     * @return void
-     */
-    public function register()
+    public function register(): void
     {
         $this->mergeConfigFrom(__DIR__.'/../config/notify.php', 'notify');
 
@@ -37,12 +27,7 @@ class LaravelNotifyServiceProvider extends ServiceProvider
         });
     }
 
-    /**
-     * Register Notify Blade.
-     *
-     * @retrun void
-     */
-    public function registerBladeDirective()
+    public function registerBladeDirective(): void
     {
         Blade::directive('notifyCss', function () {
             return '<?php echo notifyCss(); ?>';
@@ -53,13 +38,7 @@ class LaravelNotifyServiceProvider extends ServiceProvider
         });
     }
 
-    /**
-     *
-     * Register Notify Blade Component.
-     *
-     * @return void
-     */
-    public function registerComponents()
+    public function registerComponents(): void
     {
         Blade::component(NotifyComponent::class, 'notify-messages');
     }
@@ -69,7 +48,7 @@ class LaravelNotifyServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    public function registerPublishables()
+    public function registerPublishables(): void
     {
         $this->publishes([
             __DIR__.'/../public' => public_path('vendor/mckenziearts/laravel-notify'),
@@ -80,12 +59,7 @@ class LaravelNotifyServiceProvider extends ServiceProvider
         ], 'notify-config');
     }
 
-    /**
-     * Get the services provided by the provider.
-     *
-     * @return array
-     */
-    public function provides()
+    public function provides(): array
     {
         return [];
     }

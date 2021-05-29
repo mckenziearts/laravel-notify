@@ -8,6 +8,6 @@ class NotifyComponent extends Component
 {
     public function render()
     {
-        return view('notify::messages');
+        return view('notify::components.notify');
     }
 }

@@ -8,12 +8,7 @@ use Mckenziearts\Notify\Storage\Session;
 
 class LaravelNotify
 {
-    /**
-     * Session storage.
-     *
-     * @var \Mckenziearts\Notify\Storage\Session
-     */
-    protected $session;
+    protected Session $session;
 
     /**
      * Create a new notify instance.
@@ -190,7 +185,7 @@ class LaravelNotify
      *
      * @return void
      */
-    public function flash($message, $type = null, $icon = null, string $model = null, string $title = null)
+    public function flash(string $message, $type = null, $icon = null, string $model = null, string $title = null): void
     {
         $notifications = [
             'message' => $message,
@@ -208,7 +203,7 @@ class LaravelNotify
      *
      * @return string
      */
-    public function message()
+    public function message(): string
     {
         return $this->session->get('notify.message');
     }
@@ -218,7 +213,7 @@ class LaravelNotify
      *
      * @return string
      */
-    public function type()
+    public function type(): string
     {
         return $this->session->get('notify.type');
     }
