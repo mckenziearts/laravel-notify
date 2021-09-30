@@ -51,7 +51,7 @@
 
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="{{ asset('vendor/mckenziearts/laravel-notify/js/app.js') }}"></script>
-    @include('notify::messages')
+    @include('notify::components.notify')
     @notifyJs
 
 </body>

@@ -9,7 +9,7 @@
 
 ## Introduction
 
-Laravel Notify is a package that lets you add custom notifications to your project. 
+Laravel Notify is a package that lets you add custom notifications to your project.
 A diverse range of notification design is available.
 
 <p align="center">
@@ -27,7 +27,7 @@ A diverse range of notification design is available.
 
 If you need Android version please try this package [Aesthetic Dialogs](https://github.com/gabriel-TheCode/AestheticDialogs). Happy Coding 👨🏾‍💻
 
-## Installation 
+## Installation
 
 You can install the package using composer
 
@@ -46,7 +46,7 @@ Then add the service provider to `config/app.php`. In Laravel versions 5.5 and b
 ```
 
 You can publish the configuration file and assets by running:
- 
+
 ```sh
 $ php artisan vendor:publish --provider="Mckenziearts\Notify\LaravelNotifyServiceProvider"
 ```
@@ -57,12 +57,12 @@ Now that we have published a few new files to our application we need to reload 
 $ composer dump-autoload
 ```
 
-## Usage 
+## Usage
 
 1. Add styles links with `@notifyCss`
 2. Add scripts links with `@notifyJs`
 3. use `notify()` helper function inside your controller to set a toast notification for info, success, warning or error
-4. Include notify partial to your master layout `@include('notify::messages')`
+4. Include notify partial to your master layout `@include('notify::components.notify')`
 
 If you are on Laravel 7 or greater, you can use the tag syntax.
 
@@ -93,8 +93,8 @@ An complete example:
         @notifyCss
     </head>
     <body>
-        
-        
+
+
         @include('notify::messages')
         // Laravel 7 or greater
         <x:notify-messages />
@@ -104,7 +104,7 @@ An complete example:
 ```
 
 ### Type of notifications
- 
+
 Laravel Notify actually display 5 types of notifications
 
 1. `toast` notification, (The default notification for Laravel Notify)
@@ -112,7 +112,7 @@ Laravel Notify actually display 5 types of notifications
 ```php
 notify()->success('Welcome to Laravel Notify ⚡️') or notify()->success('Welcome to Laravel Notify ⚡️', 'My custom title')
 ```
- 
+
 2. `connectify` notification, example of basic usage
 
 ```php
@@ -122,9 +122,9 @@ connectify('success', 'Connection Found', 'Success Message Here')
 3. `drakify` (😎) notification, displays an alert only
 
 ```php
-drakify('success') // for success alert 
+drakify('success') // for success alert
 or
-drakify('error') // for error alert 
+drakify('error') // for error alert
 ```
 
 4. `smilify` notification, displays a simple custom toast notification using the smiley (😊) emoticon
@@ -142,16 +142,16 @@ emotify('success', 'You are awesome, your data was successfully created')
 #### Preset Notifications
 
 If you have a specific notification that is used across multiple different places in your system, you can define it
-as a preset notification in your config file. This makes it easier to maintain commonly used notifications in one place. 
+as a preset notification in your config file. This makes it easier to maintain commonly used notifications in one place.
 Read how to define preset messages in the [Config](#config) section below.
 
 As an example, to use a preset notification you have defined called 'common-notification', use the following:
 
 ```php
 notify()->preset('common-notification')
-``` 
+```
 
-You can override any of the values that are set in the config if you need to. For example, this could be useful if you 
+You can override any of the values that are set in the config if you need to. For example, this could be useful if you
 have a common notification across, but you want to change the icon in one particular place that it's used without having
 to manually write out a new notification.
 
