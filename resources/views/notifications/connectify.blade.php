@@ -1,7 +1,10 @@
-@if (session()->get('notify.model') === 'connect')
+@php
+    $notify = session()->pull('notify') ?: null;
+@endphp
+@if ($notify && $notify['model'] === 'connect')
     <div class="notify fixed inset-0 flex items-end justify-center px-4 py-6 pointer-events-none sm:p-6 sm:items-start sm:justify-end">
         <div
-            x-data="{ show: @if(session()->get('notify.model') === 'connect') true @else false @endif }"
+            x-data="{ show: @if($notify['model'] === 'connect') true @else false @endif }"
             x-show="show"
             x-transition:enter="transform ease-out duration-300 transition"
             x-transition:enter-start="translate-y-2 opacity-0 sm:translate-y-0 sm:translate-x-2"
@@ -9,19 +12,19 @@
             x-transition:leave="transition ease-in duration-100"
             x-transition:leave-start="opacity-100"
             x-transition:leave-end="opacity-0"
-            class="max-w-sm w-full @if(config('notify.theme') === 'light') bg-white @else bg-gray-800 @endif shadow-lg rounded-lg pointer-events-auto border-t-4 @if(session()->get('notify.type') === 'success') border-green-600 @endif @if(session()->get('notify.type') === 'error') border-red-600 @endif"
+            class="max-w-sm w-full @if(config('notify.theme') === 'light') bg-white @else bg-gray-800 @endif shadow-lg rounded-lg pointer-events-auto border-t-4 @if($notify['type'] === 'success') border-green-600 @endif @if($notify['type'] === 'error') border-red-600 @endif"
         >
             <div class="relative rounded-lg shadow-xs overflow-hidden">
                 <div class="p-4">
                     <div class="flex items-start">
-                        @if(session()->get('notify.type') === 'success')
+                        @if($notify['type'] === 'success')
                             <div class="inline-flex items-center bg-gradient-to-r from-green-600 to-green-800 p-2 text-white text-sm rounded-full flex-shrink-0">
                                 <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="wifi w-5 h-5">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.111 16.404a5.5 5.5 0 017.778 0M12 20h.01m-7.08-7.071c3.904-3.905 10.236-3.905 14.141 0M1.394 9.393c5.857-5.857 15.355-5.857 21.213 0"/>
                                 </svg>
                             </div>
                         @endif
-                        @if(session()->get('notify.type') === 'error')
+                        @if($notify['type'] === 'error')
                             <div class="inline-flex items-center bg-gradient-to-r from-red-600 to-red-800 p-2 text-white text-sm rounded-full flex-shrink-0">
                                 <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="x w-5 h-5">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
@@ -29,11 +32,11 @@
                             </div>
                         @endif
                         <div class="ml-6 w-0 flex-1">
-                            <p class="text-base leading-5 font-medium @if(session()->get('notify.type') === 'error') text-red-600 @else text-green-600 @endif">
-                                {{ session()->get('notify.title') }}
+                            <p class="text-base leading-5 font-medium @if($notify['type']=== 'error') text-red-600 @else text-green-600 @endif">
+                                {{ $notify['title']}}
                             </p>
                             <p class="mt-1 text-sm leading-5 text-gray-500">
-                                {{ session()->get('notify.message') }}
+                                {{ $notify['message'] }}
                             </p>
                         </div>
                         <div class="ml-4 flex-shrink-0 flex">

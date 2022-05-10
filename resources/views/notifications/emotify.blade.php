@@ -1,7 +1,10 @@
-@if (session()->get('notify.model') === 'emotify')
+@php
+    $notify = session()->pull('notify') ?: null;
+@endphp
+@if ($notify && $notify['model'] === 'emotify')
     <div class="notify fixed inset-0 flex items-end justify-center px-4 py-6 pointer-events-none sm:p-6 sm:items-start sm:justify-end">
         <div
-            x-data="{ show: @if(session()->get('notify.model') === 'emotify') true @else false @endif }"
+            x-data="{ show: @if($notify['model'] === 'emotify') true @else false @endif }"
             x-show="show"
             x-transition:enter="transform ease-out duration-300 transition"
             x-transition:enter-start="translate-y-2 opacity-0 sm:translate-y-0 sm:translate-x-2"
@@ -9,12 +12,12 @@
             x-transition:leave="transition ease-in duration-100"
             x-transition:leave-start="opacity-100"
             x-transition:leave-end="opacity-0"
-            class="max-w-sm w-full shadow-lg rounded-lg pointer-events-auto @if(session()->get('notify.type') === 'success') bg-gradient-to-r from-teal-500 via-green-500 to-green-800 @endif @if(session()->get('notify.type') === 'error') bg-gradient-to-r from-orange-500 via-red-500 to-red-800 @endif"
+            class="max-w-sm w-full shadow-lg rounded-lg pointer-events-auto @if($notify['type'] === 'success') bg-gradient-to-r from-teal-500 via-green-500 to-green-800 @endif @if($notify['type'] === 'error') bg-gradient-to-r from-orange-500 via-red-500 to-red-800 @endif"
         >
             <div class="relative rounded-lg shadow-xs overflow-hidden">
                 <div class="p-4">
                     <div class="flex items-start">
-                        @if(session()->get('notify.type') === 'success')
+                        @if($notify['type'] === 'success')
                             <div class="inline-flex items-center text-white text-2xl rounded-full flex-shrink-0">
                                 <svg fill="none" viewBox="0 0 40 40" stroke="currentColor" class="emoticon-success w-12 h-12">
                                     <path d="M19.995 4.5A15.498 15.498 0 0 1 32.89 28.606 15.5 15.5 0 1 1 19.995 4.5z" fill="#F7F7F7" stroke="#137230" />
@@ -27,7 +30,7 @@
                                 </svg>
                             </div>
                         @endif
-                        @if(session()->get('notify.type') === 'error')
+                        @if($notify['type'] === 'error')
                             <div class="inline-flex items-center text-white text-2xl rounded-full flex-shrink-0">
                                 <svg fill="none" viewBox="0 0 40 40" stroke="currentColor" class="emoticon-error w-12 h-12">
                                     <path d="M30.96 9.04c6.053 6.053 6.053 15.867 0 21.92-6.053 6.053-15.867 6.053-21.92 0-6.053-6.053-6.053-15.867 0-21.92 6.053-6.053 15.867-6.053 21.92 0z" fill="#F7F7F7" stroke="#E52828"/>
@@ -38,7 +41,7 @@
                         @endif
                         <div class="ml-6 w-0 flex-1">
                             <p class="text-sm leading-5 text-white">
-                                {{ session()->get('notify.message') }}
+                                {{ $notify['message'] }}
                             </p>
                         </div>
                         <div class="ml-4 flex-shrink-0 flex">

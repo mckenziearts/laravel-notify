@@ -1,7 +1,10 @@
-@if (session()->get('notify.model') === 'smiley')
+@php
+    $notify = session()->pull('notify') ?: null;
+@endphp
+@if ($notify && $notify['model'] === 'smiley')
     <div class="notify fixed inset-0 flex items-end justify-center px-4 py-6 pointer-events-none sm:p-6 sm:items-start sm:justify-end">
         <div
-            x-data="{ show: @if(session()->get('notify.model') === 'smiley') true @else false @endif }"
+            x-data="{ show: @if($notify['model'] === 'smiley') true @else false @endif }"
             x-init="setTimeout(() => { show = true }, 500)"
             x-show="show"
             x-description="Notification panel, show/hide based on alert state."
@@ -16,22 +19,22 @@
             <div class="relative rounded-lg shadow-xs overflow-hidden">
                 <div class="p-4">
                     <div class="flex items-start">
-                        @if(session()->get('notify.type') === 'success')
+                        @if($notify['type'] === 'success')
                             <div class="inline-flex items-center text-white text-2xl rounded-full flex-shrink-0">
                                 <span>👍</span>
                             </div>
                         @endif
-                        @if(session()->get('notify.type') === 'error')
+                        @if($notify['type'] === 'error')
                             <div class="inline-flex items-center text-white text-2xl rounded-full flex-shrink-0">
                                 <span>🙅🏽‍♂️</span>
                             </div>
                         @endif
                         <div class="ml-6 w-0 flex-1">
-                            <p class="text-base leading-5 font-medium capitalize @if(session()->get('notify.type') === 'error') text-red-600 @else text-green-600 @endif">
-                                {{ session()->get('notify.type') }} !
+                            <p class="text-base leading-5 font-medium capitalize @if($notify['type'] === 'error') text-red-600 @else text-green-600 @endif">
+                                {{ $notify['type'] }} !
                             </p>
                             <p class="mt-1 text-sm leading-5 @if(config('notify.theme') === 'light') text-gray-500 @else text-white @endif">
-                                {{ session()->get('notify.message') }}
+                                {{ $notify['message'] }}
                             </p>
                         </div>
                         <div class="ml-4 flex-shrink-0 flex">

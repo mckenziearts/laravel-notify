@@ -24,8 +24,8 @@ class Session
      * @param  string  $key
      * @param  array  $data
      */
-    public function flash(string $key, array $data = [])
+    public function put(string $key, array $data = [])
     {
-        $this->session->flash($key, $data);
+        $this->session->put($key, $data);
     }
 }

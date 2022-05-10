@@ -21,7 +21,7 @@ class LaravelNotify
     }
 
     /**
-     * Flash an information message.
+     * put an information message.
      *
      * @param  string  $message
      * @param  string|null  $title
@@ -29,13 +29,13 @@ class LaravelNotify
      */
     public function info(string $message, string $title = null): self
     {
-        $this->flash($message, 'info', 'flaticon-exclamation-1', 'toast', $title);
+        $this->put($message, 'info', 'flaticon-exclamation-1', 'toast', $title);
 
         return $this;
     }
 
     /**
-     * Flash a success message.
+     * put a success message.
      *
      * @param  string  $message
      * @param  string|null  $title
@@ -43,13 +43,13 @@ class LaravelNotify
      */
     public function success(string $message, string $title = null): self
     {
-        $this->flash($message, 'success', 'flaticon2-check-mark', 'toast', $title);
+        $this->put($message, 'success', 'flaticon2-check-mark', 'toast', $title);
 
         return $this;
     }
 
     /**
-     * Flash an error message.
+     * put an error message.
      *
      * @param  string  $message
      * @param  string|null  $title
@@ -57,13 +57,13 @@ class LaravelNotify
      */
     public function error(string $message, string $title = null): self
     {
-        $this->flash($message, 'error', 'flaticon2-delete', 'toast', $title);
+        $this->put($message, 'error', 'flaticon2-delete', 'toast', $title);
 
         return $this;
     }
 
     /**
-     * Flash a warning message.
+     * put a warning message.
      *
      * @param  string  $message
      * @param  string|null  $title
@@ -71,7 +71,7 @@ class LaravelNotify
      */
     public function warning(string $message, string $title = null): self
     {
-        $this->flash($message, 'warning', 'flaticon-warning-sign', 'toast', $title);
+        $this->put($message, 'warning', 'flaticon-warning-sign', 'toast', $title);
 
         return $this;
     }
@@ -88,7 +88,7 @@ class LaravelNotify
     {
         $icon = ($type === 'success') ? 'flaticon-like' : 'flaticon-cancel';
 
-        $this->flash($message, $type, $icon, 'connect', $title);
+        $this->put($message, $type, $icon, 'connect', $title);
 
         return $this;
     }
@@ -104,7 +104,7 @@ class LaravelNotify
     {
         $icon = ($type === 'success') ? '👍' : '🙅🏽‍♂';
 
-        $this->flash($message, $type, $icon, 'smiley');
+        $this->put($message, $type, $icon, 'smiley');
 
         return $this;
     }
@@ -118,7 +118,7 @@ class LaravelNotify
      */
     public function emotify(string $type, string $message): self
     {
-        $this->flash($message, $type, null, 'emotify');
+        $this->put($message, $type, null, 'emotify');
 
         return $this;
     }
@@ -134,7 +134,7 @@ class LaravelNotify
         $icon = ($type === 'success') ? 'flaticon2-check-mark' : 'flaticon2-cross';
         $message = ($type === 'success') ? 'Success' : 'Try Again';
 
-        $this->flash($message, $type, $icon, 'drake');
+        $this->put($message, $type, $icon, 'drake');
 
         return $this;
     }
@@ -163,7 +163,7 @@ class LaravelNotify
             throw new MissingPresetNotificationException('A preset message does not exist with the name: '.$presetName);
         }
 
-        $this->flash(
+        $this->put(
             $overrideValues['message'] ?? $presetValues['message'],
             $overrideValues['type'] ?? $presetValues['type'] ?? null,
             $overrideValues['icon'] ?? $presetValues['icon'] ?? null,
@@ -175,7 +175,7 @@ class LaravelNotify
     }
 
     /**
-     * Flash a message.
+     * put a message.
      *
      * @param  string  $message
      * @param  string|null  $type
@@ -185,7 +185,7 @@ class LaravelNotify
      *
      * @return void
      */
-    public function flash(string $message, $type = null, $icon = null, string $model = null, string $title = null): void
+    public function put(string $message, $type = null, $icon = null, string $model = null, string $title = null): void
     {
         $notifications = [
             'message' => $message,
@@ -195,7 +195,7 @@ class LaravelNotify
             'title'   => $title,
         ];
 
-        $this->session->flash('notify', $notifications);
+        $this->session->put('notify', $notifications);
     }
 
     /**
