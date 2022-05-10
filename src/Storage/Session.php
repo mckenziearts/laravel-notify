@@ -26,6 +26,8 @@ class Session
      */
     public function put(string $key, array $data = [])
     {
-        $this->session->put($key, $data);
+        $dataArray = $this->session->get($key) ?: [];
+        $dataArray[] = $data;
+        $this->session->put($key, $dataArray);
     }
 }
