@@ -5,6 +5,9 @@
  * You can see the styles here:
  * https://unpkg.com/tailwindcss/dist/base.css
  */
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+
+#laravel-notify {
+  @import "~tailwindcss/base";
+  @import "~tailwindcss/components";
+  @import "~tailwindcss/utilities";
+}

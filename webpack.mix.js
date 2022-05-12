@@ -18,7 +18,12 @@ mix.setResourceRoot('../')
 mix.js('resources/js/app.js', 'public/js')
   .js('resources/js/notify.js', 'public/js')
   .postCss('resources/css/app.css', 'public/css', [require('tailwindcss')])
-  .postCss('resources/css/notify.css', 'public/css', [require('tailwindcss')]);
+  .sass('resources/css/notify.scss', 'public/css', [], [
+    require('postcss-import'),
+    require('tailwindcss'),
+    require('postcss-nested'), // or require('postcss-nesting')
+    require('autoprefixer')
+  ]);
 
 if (mix.inProduction()) {
   mix.version();
