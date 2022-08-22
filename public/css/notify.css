@@ -1,2 +1,1387 @@
-/*! tailwindcss v2.1.2 | MIT License | https://tailwindcss.com*/
-/*! modern-normalize v1.1.0 | MIT License | https://github.com/sindresorhus/modern-normalize */html{-moz-tab-size:4;-o-tab-size:4;tab-size:4;line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji}hr{height:0;color:inherit}abbr[title]{-webkit-text-decoration:underline dotted;text-decoration:underline dotted}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace,SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit}button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;line-height:1.15;margin:0}button,select{text-transform:none}[type=button],[type=reset],[type=submit],button{-webkit-appearance:button}::-moz-focus-inner{border-style:none;padding:0}:-moz-focusring{outline:1px dotted ButtonText}:-moz-ui-invalid{box-shadow:none}legend{padding:0}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}button{background-color:transparent;background-image:none}button:focus{outline:1px dotted;outline:5px auto -webkit-focus-ring-color}fieldset,ol,ul{margin:0;padding:0}ol,ul{list-style:none}html{font-family:ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;line-height:1.5}body{font-family:inherit;line-height:inherit}*,:after,:before{box-sizing:border-box;border:0 solid #e5e7eb}hr{border-top-width:1px}img{border-style:solid}textarea{resize:vertical}input::-moz-placeholder, textarea::-moz-placeholder{opacity:1;color:#9ca3af}input:-ms-input-placeholder, textarea:-ms-input-placeholder{opacity:1;color:#9ca3af}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}table{border-collapse:collapse}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}button,input,optgroup,select,textarea{padding:0;line-height:inherit;color:inherit}code,kbd,pre,samp{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}*{--tw-shadow:0 0 transparent;--tw-ring-inset:var(--tw-empty,/*!*/ /*!*/);--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgba(59,130,246,0.5);--tw-ring-offset-shadow:0 0 transparent;--tw-ring-shadow:0 0 transparent}.pointer-events-auto{pointer-events:auto}.pointer-events-none{pointer-events:none}.relative{position:relative}.absolute{position:absolute}.fixed{position:fixed}.inset-0{top:0;right:0;bottom:0;left:0}.left-full{left:100%}.top-0{top:0}.left-1\/2{left:50%}.right-full{right:100%}.z-10{z-index:10}.mx-auto{margin-left:auto;margin-right:auto}.-mx-4{margin-left:-1rem;margin-right:-1rem}.-ml-0\.5{margin-left:-.125rem}.mr-1\.5{margin-right:.375rem}.-ml-0{margin-left:0}.mr-1{margin-right:.25rem}.mt-1{margin-top:.25rem}.mt-3{margin-top:.75rem}.mt-5{margin-top:1.25rem}.mt-12{margin-top:3rem}.mt-32{margin-top:8rem}.mt-10{margin-top:2.5rem}.ml-2{margin-left:.5rem}.mt-2{margin-top:.5rem}.mb-4{margin-bottom:1rem}.mt-4{margin-top:1rem}.ml-6{margin-left:1.5rem}.ml-4{margin-left:1rem}.mt-8{margin-top:2rem}.mt-6{margin-top:1.5rem}.mt-16{margin-top:4rem}.ml-3{margin-left:.75rem}.ml-1{margin-left:.25rem}.block{display:block}.flex{display:flex}.inline-flex{display:inline-flex}.hidden{display:none}.h-2{height:.5rem}.h-4{height:1rem}.h-5{height:1.25rem}.h-48{height:12rem}.h-10{height:2.5rem}.h-6{height:1.5rem}.h-12{height:3rem}.h-screen{height:100vh}.h-8{height:2rem}.h-40{height:10rem}.w-2{width:.5rem}.w-full{width:100%}.w-4{width:1rem}.w-5{width:1.25rem}.w-0{width:0}.w-10{width:2.5rem}.w-6{width:1.5rem}.w-12{width:3rem}.w-8{width:2rem}.w-auto{width:auto}.max-w-screen-xl{max-width:1280px}.max-w-xl{max-width:36rem}.max-w-md{max-width:28rem}.max-w-sm{max-width:24rem}.max-w-2xl{max-width:42rem}.flex-1{flex:1 1 0%}.flex-shrink-0{flex-shrink:0}.transform{--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;transform:translateX(var(--tw-translate-x)) translateY(var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.origin-top{transform-origin:top}.-translate-x-1\/2{--tw-translate-x:-50%}.-translate-y-10{--tw-translate-y:-2.5rem}.-translate-y-8{--tw-translate-y:-2rem}.translate-y-2{--tw-translate-y:0.5rem}.translate-y-0{--tw-translate-y:0px}.translate-x-1\/2{--tw-translate-x:50%}.translate-y-12{--tw-translate-y:3rem}.translate-y-16{--tw-translate-y:4rem}.scale-75{--tw-scale-x:.75;--tw-scale-y:.75}@-webkit-keyframes bounce{0%,to{transform:translateY(-25%);-webkit-animation-timing-function:cubic-bezier(.8,0,1,1);animation-timing-function:cubic-bezier(.8,0,1,1)}50%{transform:none;-webkit-animation-timing-function:cubic-bezier(0,0,.2,1);animation-timing-function:cubic-bezier(0,0,.2,1)}}@keyframes bounce{0%,to{transform:translateY(-25%);-webkit-animation-timing-function:cubic-bezier(.8,0,1,1);animation-timing-function:cubic-bezier(.8,0,1,1)}50%{transform:none;-webkit-animation-timing-function:cubic-bezier(0,0,.2,1);animation-timing-function:cubic-bezier(0,0,.2,1)}}.animate-bounce{-webkit-animation:bounce 1s infinite;animation:bounce 1s infinite}.cursor-pointer{cursor:pointer}.flex-col{flex-direction:column}.items-center{align-items:center}.items-start{align-items:flex-start}.items-end{align-items:flex-end}.justify-center{justify-content:center}.justify-end{justify-content:flex-end}.justify-between{justify-content:space-between}.space-x-6>:not([hidden])~:not([hidden]){--tw-space-x-reverse:0;margin-right:calc(1.5rem*var(--tw-space-x-reverse));margin-left:calc(1.5rem*(1 - var(--tw-space-x-reverse)))}.space-y-4>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1rem*var(--tw-space-y-reverse))}.space-y-3>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.75rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.75rem*var(--tw-space-y-reverse))}.space-y-5>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1.25rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1.25rem*var(--tw-space-y-reverse))}.space-x-2>:not([hidden])~:not([hidden]){--tw-space-x-reverse:0;margin-right:calc(0.5rem*var(--tw-space-x-reverse));margin-left:calc(0.5rem*(1 - var(--tw-space-x-reverse)))}.overflow-hidden{overflow:hidden}.rounded-full{border-radius:9999px}.rounded-md{border-radius:.375rem}.rounded-lg{border-radius:.5rem}.rounded{border-radius:.25rem}.border{border-width:1px}.border-t-4{border-top-width:4px}.border-l-4{border-left-width:4px}.border-b{border-bottom-width:1px}.border-transparent{border-color:transparent}.border-green-600{--tw-border-opacity:1;border-color:rgba(5,150,105,var(--tw-border-opacity))}.border-red-600{--tw-border-opacity:1;border-color:rgba(220,38,38,var(--tw-border-opacity))}.border-yellow-400{--tw-border-opacity:1;border-color:rgba(251,191,36,var(--tw-border-opacity))}.border-blue-600{--tw-border-opacity:1;border-color:rgba(37,99,235,var(--tw-border-opacity))}.border-gray-200{--tw-border-opacity:1;border-color:rgba(229,231,235,var(--tw-border-opacity))}.bg-white{--tw-bg-opacity:1;background-color:rgba(255,255,255,var(--tw-bg-opacity))}.bg-pink-100{--tw-bg-opacity:1;background-color:rgba(252,231,243,var(--tw-bg-opacity))}.bg-pink-600{--tw-bg-opacity:1;background-color:rgba(219,39,119,var(--tw-bg-opacity))}.bg-green-600{--tw-bg-opacity:1;background-color:rgba(5,150,105,var(--tw-bg-opacity))}.bg-yellow-400{--tw-bg-opacity:1;background-color:rgba(251,191,36,var(--tw-bg-opacity))}.bg-blue-600{--tw-bg-opacity:1;background-color:rgba(37,99,235,var(--tw-bg-opacity))}.bg-red-600{--tw-bg-opacity:1;background-color:rgba(220,38,38,var(--tw-bg-opacity))}.bg-green-500{--tw-bg-opacity:1;background-color:rgba(16,185,129,var(--tw-bg-opacity))}.bg-red-500{--tw-bg-opacity:1;background-color:rgba(239,68,68,var(--tw-bg-opacity))}.bg-gray-900{--tw-bg-opacity:1;background-color:rgba(17,24,39,var(--tw-bg-opacity))}.bg-red-100{--tw-bg-opacity:1;background-color:rgba(254,226,226,var(--tw-bg-opacity))}.bg-gray-800{--tw-bg-opacity:1;background-color:rgba(31,41,55,var(--tw-bg-opacity))}.bg-gray-50{--tw-bg-opacity:1;background-color:rgba(249,250,251,var(--tw-bg-opacity))}.bg-gradient-to-r{background-image:linear-gradient(90deg,var(--gradient-color-stops))}.from-green-600{--tw-gradient-from:#059669;--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to,rgba(5,150,105,0))}.from-red-600{--tw-gradient-from:#dc2626;--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to,rgba(220,38,38,0))}.via-green-500{--tw-gradient-stops:var(--tw-gradient-from),#10b981,var(--tw-gradient-to,rgba(16,185,129,0))}.via-red-500{--tw-gradient-stops:var(--tw-gradient-from),#ef4444,var(--tw-gradient-to,rgba(239,68,68,0))}.to-green-800{--tw-gradient-to:#065f46}.to-red-800{--tw-gradient-to:#991b1b}.p-4{padding:1rem}.p-2{padding:.5rem}.p-1{padding:.25rem}.px-4{padding-left:1rem;padding-right:1rem}.py-8{padding-top:2rem;padding-bottom:2rem}.px-3{padding-left:.75rem;padding-right:.75rem}.py-1{padding-top:.25rem;padding-bottom:.25rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.py-3{padding-top:.75rem;padding-bottom:.75rem}.py-16{padding-top:4rem;padding-bottom:4rem}.py-12{padding-top:3rem;padding-bottom:3rem}.py-6{padding-top:1.5rem;padding-bottom:1.5rem}.py-5{padding-top:1.25rem;padding-bottom:1.25rem}.text-right{text-align:right}.text-base{font-size:1rem;line-height:1.5rem}.text-4xl{font-size:2.25rem;line-height:2.5rem}.text-2xl{font-size:1.5rem;line-height:2rem}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-sm{font-size:.875rem;line-height:1.25rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-3xl{font-size:1.875rem;line-height:2.25rem}.font-medium{font-weight:500}.font-extrabold{font-weight:800}.font-semibold{font-weight:600}.capitalize{text-transform:capitalize}.leading-5{line-height:1.25rem}.leading-10{line-height:2.5rem}.leading-8{line-height:2rem}.leading-7{line-height:1.75rem}.leading-6{line-height:1.5rem}.tracking-tight{letter-spacing:-.025em}.text-gray-200{--tw-text-opacity:1;color:rgba(229,231,235,var(--tw-text-opacity))}.text-pink-800{--tw-text-opacity:1;color:rgba(157,23,77,var(--tw-text-opacity))}.text-pink-400{--tw-text-opacity:1;color:rgba(244,114,182,var(--tw-text-opacity))}.text-gray-900{--tw-text-opacity:1;color:rgba(17,24,39,var(--tw-text-opacity))}.text-gray-600{--tw-text-opacity:1;color:rgba(75,85,99,var(--tw-text-opacity))}.text-white{--tw-text-opacity:1;color:rgba(255,255,255,var(--tw-text-opacity))}.text-gray-50{--tw-text-opacity:1;color:rgba(249,250,251,var(--tw-text-opacity))}.text-gray-500{--tw-text-opacity:1;color:rgba(107,114,128,var(--tw-text-opacity))}.text-pink-600{--tw-text-opacity:1;color:rgba(219,39,119,var(--tw-text-opacity))}.text-gray-700{--tw-text-opacity:1;color:rgba(55,65,81,var(--tw-text-opacity))}.text-green-600{--tw-text-opacity:1;color:rgba(5,150,105,var(--tw-text-opacity))}.text-gray-400{--tw-text-opacity:1;color:rgba(156,163,175,var(--tw-text-opacity))}.text-red-600{--tw-text-opacity:1;color:rgba(220,38,38,var(--tw-text-opacity))}.text-yellow-400{--tw-text-opacity:1;color:rgba(251,191,36,var(--tw-text-opacity))}.text-blue-600{--tw-text-opacity:1;color:rgba(37,99,235,var(--tw-text-opacity))}.text-gray-300{--tw-text-opacity:1;color:rgba(209,213,219,var(--tw-text-opacity))}.text-red-800{--tw-text-opacity:1;color:rgba(153,27,27,var(--tw-text-opacity))}.text-gray-100{--tw-text-opacity:1;color:rgba(243,244,246,var(--tw-text-opacity))}.text-pink-500{--tw-text-opacity:1;color:rgba(236,72,153,var(--tw-text-opacity))}.opacity-0{opacity:0}.opacity-100{opacity:1}.opacity-75{opacity:.75}.shadow{--tw-shadow:0 1px 3px 0 rgba(0,0,0,0.1),0 1px 2px 0 rgba(0,0,0,0.06)}.shadow,.shadow-lg{box-shadow:var(--tw-ring-offset-shadow,0 0 transparent),var(--tw-ring-shadow,0 0 transparent),var(--tw-shadow)}.shadow-lg{--tw-shadow:0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -2px rgba(0,0,0,0.05)}.transition{transition-property:background-color,border-color,color,fill,stroke,opacity,box-shadow,transform,filter,-webkit-backdrop-filter;transition-property:background-color,border-color,color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter;transition-property:background-color,border-color,color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter,-webkit-backdrop-filter;transition-timing-function:cubic-bezier(.4,0,.2,1)}.duration-150,.transition{transition-duration:.15s}.duration-300{transition-duration:.3s}.duration-100{transition-duration:.1s}.ease-in-out{transition-timing-function:cubic-bezier(.4,0,.2,1)}.ease-out{transition-timing-function:cubic-bezier(0,0,.2,1)}.ease-in{transition-timing-function:cubic-bezier(.4,0,1,1)}.hover\:bg-pink-500:hover{--tw-bg-opacity:1;background-color:rgba(236,72,153,var(--tw-bg-opacity))}.hover\:text-gray-600:hover{--tw-text-opacity:1;color:rgba(75,85,99,var(--tw-text-opacity))}.focus\:text-gray-500:focus{--tw-text-opacity:1;color:rgba(107,114,128,var(--tw-text-opacity))}.focus\:text-gray-50:focus{--tw-text-opacity:1;color:rgba(249,250,251,var(--tw-text-opacity))}.focus\:outline-none:focus{outline:2px solid transparent;outline-offset:2px}@media (min-width:640px){.sm\:mx-auto{margin-left:auto;margin-right:auto}.sm\:mt-5{margin-top:1.25rem}.sm\:mt-8{margin-top:2rem}.sm\:flex{display:flex}.sm\:max-w-lg{max-width:32rem}.sm\:translate-y-0{--tw-translate-y:0px}.sm\:translate-x-2{--tw-translate-x:0.5rem}.sm\:translate-x-0{--tw-translate-x:0px}.sm\:scale-100{--tw-scale-x:1;--tw-scale-y:1}.sm\:items-start{align-items:flex-start}.sm\:justify-center{justify-content:center}.sm\:justify-end{justify-content:flex-end}.sm\:p-6{padding:1.5rem}.sm\:py-12{padding-top:3rem;padding-bottom:3rem}.sm\:px-6{padding-left:1.5rem;padding-right:1.5rem}.sm\:text-center{text-align:center}.sm\:text-6xl{font-size:3.75rem;line-height:1}.sm\:text-xl{font-size:1.25rem;line-height:1.75rem}.sm\:text-3xl{font-size:1.875rem;line-height:2.25rem}.sm\:text-4xl{font-size:2.25rem;line-height:2.5rem}.sm\:leading-none{line-height:1}.sm\:leading-9{line-height:2.25rem}.sm\:leading-10{line-height:2.5rem}}@media (min-width:768px){.md\:mx-auto{margin-left:auto;margin-right:auto}.md\:mt-0{margin-top:0}.md\:grid{display:grid}.md\:max-w-2xl{max-width:42rem}.md\:grid-cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}.md\:space-y-0>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0px*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0px*var(--tw-space-y-reverse))}.md\:py-20{padding-top:5rem;padding-bottom:5rem}.md\:py-4{padding-top:1rem;padding-bottom:1rem}.md\:px-10{padding-left:2.5rem;padding-right:2.5rem}.md\:text-lg{font-size:1.125rem;line-height:1.75rem}}@media (min-width:1024px){.lg\:col-span-6{grid-column:span 6/span 6}.lg\:col-start-2{grid-column-start:2}.lg\:col-start-1{grid-column-start:1}.lg\:mx-0{margin-left:0;margin-right:0}.lg\:mx-auto{margin-left:auto;margin-right:auto}.lg\:mt-0{margin-top:0}.lg\:block{display:block}.lg\:flex{display:flex}.lg\:grid{display:grid}.lg\:hidden{display:none}.lg\:max-w-none{max-width:none}.lg\:max-w-md{max-width:28rem}.lg\:max-w-screen-xl{max-width:1280px}.lg\:grid-flow-row-dense{grid-auto-flow:row dense}.lg\:grid-cols-12{grid-template-columns:repeat(12,minmax(0,1fr))}.lg\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}.lg\:items-center{align-items:center}.lg\:items-start{align-items:flex-start}.lg\:justify-start{justify-content:flex-start}.lg\:gap-8{gap:2rem}.lg\:gap-12{gap:3rem}.lg\:px-8{padding-left:2rem;padding-right:2rem}.lg\:py-24{padding-top:6rem;padding-bottom:6rem}.lg\:text-left{text-align:left}.lg\:text-center{text-align:center}.lg\:text-5xl{font-size:3rem;line-height:1}.lg\:text-lg{font-size:1.125rem;line-height:1.75rem}}@media (min-width:1280px){.xl\:py-24{padding-top:6rem;padding-bottom:6rem}.xl\:text-6xl{font-size:3.75rem;line-height:1}.xl\:text-xl{font-size:1.25rem;line-height:1.75rem}}
+/**
+ * This injects Tailwind's base styles, which is a combination of
+ * Normalize.css and some additional base styles.
+ *
+ * You can see the styles here:
+ * https://unpkg.com/tailwindcss/dist/base.css
+ */
+/**
+Use a better box model (opinionated).
+*/
+#laravel-notify *,
+#laravel-notify ::before,
+#laravel-notify ::after {
+	box-sizing: border-box;
+}
+/**
+Use a more readable tab size (opinionated).
+*/
+#laravel-notify html {
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	   tab-size: 4;
+}
+/**
+1. Correct the line height in all browsers.
+2. Prevent adjustments of font size after orientation changes in iOS.
+*/
+#laravel-notify html {
+	line-height: 1.15; /* 1 */
+	-webkit-text-size-adjust: 100%; /* 2 */
+}
+/**
+Remove the margin in all browsers.
+*/
+#laravel-notify body {
+	margin: 0;
+}
+/**
+Improve consistency of default fonts in all browsers. (https://github.com/sindresorhus/modern-normalize/issues/3)
+*/
+#laravel-notify body {
+	font-family:
+		system-ui,
+		-apple-system, /* Firefox supports this but not yet `system-ui` */
+		'Segoe UI',
+		Roboto,
+		Helvetica,
+		Arial,
+		sans-serif,
+		'Apple Color Emoji',
+		'Segoe UI Emoji';
+}
+/**
+1. Add the correct height in Firefox.
+2. Correct the inheritance of border color in Firefox. (https://bugzilla.mozilla.org/show_bug.cgi?id=190655)
+*/
+#laravel-notify hr {
+	height: 0; /* 1 */
+	color: inherit; /* 2 */
+}
+/**
+Add the correct text decoration in Chrome, Edge, and Safari.
+*/
+#laravel-notify abbr[title] {
+	-webkit-text-decoration: underline dotted;
+	        text-decoration: underline dotted;
+}
+/**
+Add the correct font weight in Edge and Safari.
+*/
+#laravel-notify b,
+#laravel-notify strong {
+	font-weight: bolder;
+}
+/**
+1. Improve consistency of default fonts in all browsers. (https://github.com/sindresorhus/modern-normalize/issues/3)
+2. Correct the odd 'em' font sizing in all browsers.
+*/
+#laravel-notify code,
+#laravel-notify kbd,
+#laravel-notify samp,
+#laravel-notify pre {
+	font-family:
+		ui-monospace,
+		SFMono-Regular,
+		Consolas,
+		'Liberation Mono',
+		Menlo,
+		monospace; /* 1 */
+	font-size: 1em; /* 2 */
+}
+/**
+Add the correct font size in all browsers.
+*/
+#laravel-notify small {
+	font-size: 80%;
+}
+/**
+Prevent 'sub' and 'sup' elements from affecting the line height in all browsers.
+*/
+#laravel-notify sub,
+#laravel-notify sup {
+	font-size: 75%;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
+/*
+Text-level semantics
+====================
+*/
+#laravel-notify sub {
+	bottom: -0.25em;
+}
+/*
+Grouping content
+================
+*/
+#laravel-notify sup {
+	top: -0.5em;
+}
+/**
+1. Remove text indentation from table contents in Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=999088, https://bugs.webkit.org/show_bug.cgi?id=201297)
+2. Correct table border color inheritance in all Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=935729, https://bugs.webkit.org/show_bug.cgi?id=195016)
+*/
+#laravel-notify table {
+	text-indent: 0; /* 1 */
+	border-color: inherit; /* 2 */
+}
+/**
+1. Change the font styles in all browsers.
+2. Remove the margin in Firefox and Safari.
+*/
+#laravel-notify button,
+#laravel-notify input,
+#laravel-notify optgroup,
+#laravel-notify select,
+#laravel-notify textarea {
+	font-family: inherit; /* 1 */
+	font-size: 100%; /* 1 */
+	line-height: 1.15; /* 1 */
+	margin: 0; /* 2 */
+}
+/**
+Remove the inheritance of text transform in Edge and Firefox.
+1. Remove the inheritance of text transform in Firefox.
+*/
+#laravel-notify button,
+#laravel-notify select { /* 1 */
+	text-transform: none;
+}
+/**
+Correct the inability to style clickable types in iOS and Safari.
+*/
+#laravel-notify button,
+#laravel-notify [type='button'],
+#laravel-notify [type='reset'],
+#laravel-notify [type='submit'] {
+	-webkit-appearance: button;
+}
+/**
+Remove the inner border and padding in Firefox.
+*/
+#laravel-notify ::-moz-focus-inner {
+	border-style: none;
+	padding: 0;
+}
+/**
+Restore the focus styles unset by the previous rule.
+*/
+#laravel-notify :-moz-focusring {
+	outline: 1px dotted ButtonText;
+}
+/**
+Remove the additional ':invalid' styles in Firefox.
+See: https://github.com/mozilla/gecko-dev/blob/2f9eacd9d3d995c937b4251a5557d95d494c9be1/layout/style/res/forms.css#L728-L737
+*/
+#laravel-notify :-moz-ui-invalid {
+	box-shadow: none;
+}
+/**
+Remove the padding so developers are not caught out when they zero out 'fieldset' elements in all browsers.
+*/
+#laravel-notify legend {
+	padding: 0;
+}
+/**
+Add the correct vertical alignment in Chrome and Firefox.
+*/
+#laravel-notify progress {
+	vertical-align: baseline;
+}
+/**
+Correct the cursor style of increment and decrement buttons in Safari.
+*/
+#laravel-notify ::-webkit-inner-spin-button,
+#laravel-notify ::-webkit-outer-spin-button {
+	height: auto;
+}
+/**
+1. Correct the odd appearance in Chrome and Safari.
+2. Correct the outline style in Safari.
+*/
+#laravel-notify [type='search'] {
+	-webkit-appearance: textfield; /* 1 */
+	outline-offset: -2px; /* 2 */
+}
+/**
+Remove the inner padding in Chrome and Safari on macOS.
+*/
+#laravel-notify ::-webkit-search-decoration {
+	-webkit-appearance: none;
+}
+/**
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Change font properties to 'inherit' in Safari.
+*/
+#laravel-notify ::-webkit-file-upload-button {
+	-webkit-appearance: button; /* 1 */
+	font: inherit; /* 2 */
+}
+/*
+Add the correct display in Chrome and Safari.
+*/
+#laravel-notify summary {
+	display: list-item;
+}
+/**
+ * Removes the default spacing and border for appropriate elements.
+ */
+#laravel-notify blockquote,
+#laravel-notify dl,
+#laravel-notify dd,
+#laravel-notify h1,
+#laravel-notify h2,
+#laravel-notify h3,
+#laravel-notify h4,
+#laravel-notify h5,
+#laravel-notify h6,
+#laravel-notify hr,
+#laravel-notify figure,
+#laravel-notify p,
+#laravel-notify pre {
+  margin: 0;
+}
+/**
+ * Manually forked from SUIT CSS Base: https://github.com/suitcss/base
+ * A thin layer on top of normalize.css that provides a starting point more
+ * suitable for web applications.
+ */
+#laravel-notify button {
+  background-color: transparent;
+  background-image: none;
+}
+/**
+ * Work around a Firefox/IE bug where the transparent `button` background
+ * results in a loss of the default `button` focus styles.
+ */
+#laravel-notify button:focus {
+  outline: 1px dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+}
+/*
+Interactive
+===========
+*/
+#laravel-notify fieldset {
+  margin: 0;
+  padding: 0;
+}
+/*
+Forms
+=====
+*/
+#laravel-notify ol,
+#laravel-notify ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+/**
+ * 1. Use the user's configured `sans` font-family (with Tailwind's default
+ *    sans-serif font stack as a fallback) as a sane default.
+ * 2. Use Tailwind's default "normal" line-height so the user isn't forced
+ *    to override it to ensure consistency even when using the default theme.
+ */
+#laravel-notify html {
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; /* 1 */
+  line-height: 1.5; /* 2 */
+}
+/**
+ * Inherit font-family and line-height from `html` so users can set them as
+ * a class directly on the `html` element.
+ */
+#laravel-notify body {
+  font-family: inherit;
+  line-height: inherit;
+}
+/**
+ * 1. Prevent padding and border from affecting element width.
+ *
+ *    We used to set this in the html element and inherit from
+ *    the parent element for everything else. This caused issues
+ *    in shadow-dom-enhanced elements like <details> where the content
+ *    is wrapped by a div with box-sizing set to `content-box`.
+ *
+ *    https://github.com/mozdevs/cssremedy/issues/4
+ *
+ *
+ * 2. Allow adding a border to an element by just adding a border-width.
+ *
+ *    By default, the way the browser specifies that an element should have no
+ *    border is by setting it's border-style to `none` in the user-agent
+ *    stylesheet.
+ *
+ *    In order to easily add borders to elements by just setting the `border-width`
+ *    property, we change the default border-style for all elements to `solid`, and
+ *    use border-width to hide them instead. This way our `border` utilities only
+ *    need to set the `border-width` property instead of the entire `border`
+ *    shorthand, making our border utilities much more straightforward to compose.
+ *
+ *    https://github.com/tailwindcss/tailwindcss/pull/116
+ */
+#laravel-notify *,
+#laravel-notify ::before,
+#laravel-notify ::after {
+  box-sizing: border-box; /* 1 */
+  border-width: 0; /* 2 */
+  border-style: solid; /* 2 */
+  border-color: #e5e7eb; /* 2 */
+}
+/*
+ * Ensure horizontal rules are visible by default
+ */
+#laravel-notify hr {
+  border-top-width: 1px;
+}
+/**
+ * Undo the `border-style: none` reset that Normalize applies to images so that
+ * our `border-{width}` utilities have the expected effect.
+ *
+ * The Normalize reset is unnecessary for us since we default the border-width
+ * to 0 on all elements.
+ *
+ * https://github.com/tailwindcss/tailwindcss/issues/362
+ */
+#laravel-notify img {
+  border-style: solid;
+}
+/**
+ * Tailwind custom reset styles
+ */
+#laravel-notify textarea {
+  resize: vertical;
+}
+/*
+Tabular data
+============
+*/
+#laravel-notify input::-moz-placeholder, #laravel-notify textarea::-moz-placeholder {
+  opacity: 1;
+  color: #9ca3af;
+}
+#laravel-notify input:-ms-input-placeholder, #laravel-notify textarea:-ms-input-placeholder {
+  opacity: 1;
+  color: #9ca3af;
+}
+#laravel-notify input::placeholder,
+#laravel-notify textarea::placeholder {
+  opacity: 1;
+  color: #9ca3af;
+}
+/*
+Sections
+========
+*/
+#laravel-notify button,
+#laravel-notify [role="button"] {
+  cursor: pointer;
+}
+/*
+Document
+========
+*/
+#laravel-notify table {
+  border-collapse: collapse;
+}
+/*! modern-normalize v1.1.0 | MIT License | https://github.com/sindresorhus/modern-normalize */
+#laravel-notify h1,
+#laravel-notify h2,
+#laravel-notify h3,
+#laravel-notify h4,
+#laravel-notify h5,
+#laravel-notify h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+/**
+ * Reset links to optimize for opt-in styling instead of
+ * opt-out.
+ */
+#laravel-notify a {
+  color: inherit;
+  text-decoration: inherit;
+}
+/**
+ * Reset form element properties that are easy to forget to
+ * style explicitly so you don't inadvertently introduce
+ * styles that deviate from your design system. These styles
+ * supplement a partial reset that is already applied by
+ * normalize.css.
+ */
+#laravel-notify button,
+#laravel-notify input,
+#laravel-notify optgroup,
+#laravel-notify select,
+#laravel-notify textarea {
+  padding: 0;
+  line-height: inherit;
+  color: inherit;
+}
+/**
+ * Use the configured 'mono' font family for elements that
+ * are expected to be rendered with a monospace font, falling
+ * back to the system monospace stack if there is no configured
+ * 'mono' font family.
+ */
+#laravel-notify pre,
+#laravel-notify code,
+#laravel-notify kbd,
+#laravel-notify samp {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+/**
+ * Make replaced elements `display: block` by default as that's
+ * the behavior you want almost all of the time. Inspired by
+ * CSS Remedy, with `svg` added as well.
+ *
+ * https://github.com/mozdevs/cssremedy/issues/14
+ */
+#laravel-notify img,
+#laravel-notify svg,
+#laravel-notify video,
+#laravel-notify canvas,
+#laravel-notify audio,
+#laravel-notify iframe,
+#laravel-notify embed,
+#laravel-notify object {
+  display: block;
+  vertical-align: middle;
+}
+/**
+ * Constrain images and videos to the parent width and preserve
+ * their intrinsic aspect ratio.
+ *
+ * https://github.com/mozdevs/cssremedy/issues/14
+ */
+#laravel-notify img,
+#laravel-notify video {
+  max-width: 100%;
+  height: auto;
+}
+/*! tailwindcss v2.1.2 | MIT License | https://tailwindcss.com
+ */
+#laravel-notify * {
+  --tw-shadow: 0 0 #0000;
+}
+#laravel-notify * {
+  --tw-ring-inset: var(--tw-empty,/*!*/ /*!*/);
+  --tw-ring-offset-width: 0px;
+  --tw-ring-offset-color: #fff;
+  --tw-ring-color: rgba(59, 130, 246, 0.5);
+  --tw-ring-offset-shadow: 0 0 #0000;
+  --tw-ring-shadow: 0 0 #0000;
+}
+#laravel-notify .pointer-events-auto {
+  pointer-events: auto;
+}
+#laravel-notify .pointer-events-none {
+  pointer-events: none;
+}
+#laravel-notify .relative {
+  position: relative;
+}
+#laravel-notify .absolute {
+  position: absolute;
+}
+#laravel-notify .fixed {
+  position: fixed;
+}
+#laravel-notify .inset-0 {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+#laravel-notify .left-full {
+  left: 100%;
+}
+#laravel-notify .top-0 {
+  top: 0;
+}
+#laravel-notify .left-1\/2 {
+  left: 50%;
+}
+#laravel-notify .right-full {
+  right: 100%;
+}
+#laravel-notify .z-10 {
+  z-index: 10;
+}
+#laravel-notify .mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+#laravel-notify .-mx-4 {
+  margin-left: -1rem;
+  margin-right: -1rem;
+}
+#laravel-notify .-ml-0\.5 {
+  margin-left: -0.125rem;
+}
+#laravel-notify .mr-1\.5 {
+  margin-right: 0.375rem;
+}
+#laravel-notify .-ml-0 {
+  margin-left: 0px;
+}
+#laravel-notify .mr-1 {
+  margin-right: 0.25rem;
+}
+#laravel-notify .mt-1 {
+  margin-top: 0.25rem;
+}
+#laravel-notify .mt-3 {
+  margin-top: 0.75rem;
+}
+#laravel-notify .mt-5 {
+  margin-top: 1.25rem;
+}
+#laravel-notify .mt-12 {
+  margin-top: 3rem;
+}
+#laravel-notify .mt-32 {
+  margin-top: 8rem;
+}
+#laravel-notify .mt-10 {
+  margin-top: 2.5rem;
+}
+#laravel-notify .ml-2 {
+  margin-left: 0.5rem;
+}
+#laravel-notify .mt-2 {
+  margin-top: 0.5rem;
+}
+#laravel-notify .mb-4 {
+  margin-bottom: 1rem;
+}
+#laravel-notify .mt-4 {
+  margin-top: 1rem;
+}
+#laravel-notify .ml-6 {
+  margin-left: 1.5rem;
+}
+#laravel-notify .ml-4 {
+  margin-left: 1rem;
+}
+#laravel-notify .mt-8 {
+  margin-top: 2rem;
+}
+#laravel-notify .mt-6 {
+  margin-top: 1.5rem;
+}
+#laravel-notify .mt-16 {
+  margin-top: 4rem;
+}
+#laravel-notify .ml-3 {
+  margin-left: 0.75rem;
+}
+#laravel-notify .ml-1 {
+  margin-left: 0.25rem;
+}
+#laravel-notify .block {
+  display: block;
+}
+#laravel-notify .flex {
+  display: flex;
+}
+#laravel-notify .inline-flex {
+  display: inline-flex;
+}
+#laravel-notify .hidden {
+  display: none;
+}
+#laravel-notify .h-2 {
+  height: 0.5rem;
+}
+#laravel-notify .h-4 {
+  height: 1rem;
+}
+#laravel-notify .h-5 {
+  height: 1.25rem;
+}
+#laravel-notify .h-48 {
+  height: 12rem;
+}
+#laravel-notify .h-10 {
+  height: 2.5rem;
+}
+#laravel-notify .h-6 {
+  height: 1.5rem;
+}
+#laravel-notify .h-12 {
+  height: 3rem;
+}
+#laravel-notify .h-screen {
+  height: 100vh;
+}
+#laravel-notify .h-8 {
+  height: 2rem;
+}
+#laravel-notify .h-40 {
+  height: 10rem;
+}
+#laravel-notify .w-2 {
+  width: 0.5rem;
+}
+#laravel-notify .w-full {
+  width: 100%;
+}
+#laravel-notify .w-4 {
+  width: 1rem;
+}
+#laravel-notify .w-5 {
+  width: 1.25rem;
+}
+#laravel-notify .w-0 {
+  width: 0px;
+}
+#laravel-notify .w-10 {
+  width: 2.5rem;
+}
+#laravel-notify .w-6 {
+  width: 1.5rem;
+}
+#laravel-notify .w-12 {
+  width: 3rem;
+}
+#laravel-notify .w-8 {
+  width: 2rem;
+}
+#laravel-notify .w-auto {
+  width: auto;
+}
+#laravel-notify .max-w-screen-xl {
+  max-width: 1280px;
+}
+#laravel-notify .max-w-xl {
+  max-width: 36rem;
+}
+#laravel-notify .max-w-md {
+  max-width: 28rem;
+}
+#laravel-notify .max-w-sm {
+  max-width: 24rem;
+}
+#laravel-notify .max-w-2xl {
+  max-width: 42rem;
+}
+#laravel-notify .flex-1 {
+  flex: 1 1 0%;
+}
+#laravel-notify .flex-shrink-0 {
+  flex-shrink: 0;
+}
+#laravel-notify .transform {
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  transform: translateX(var(--tw-translate-x)) translateY(var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+#laravel-notify .origin-top {
+  transform-origin: top;
+}
+#laravel-notify .-translate-x-1\/2 {
+  --tw-translate-x: -50%;
+}
+#laravel-notify .-translate-y-10 {
+  --tw-translate-y: -2.5rem;
+}
+#laravel-notify .-translate-y-8 {
+  --tw-translate-y: -2rem;
+}
+#laravel-notify .translate-y-2 {
+  --tw-translate-y: 0.5rem;
+}
+#laravel-notify .translate-y-0 {
+  --tw-translate-y: 0px;
+}
+#laravel-notify .translate-x-1\/2 {
+  --tw-translate-x: 50%;
+}
+#laravel-notify .translate-y-12 {
+  --tw-translate-y: 3rem;
+}
+#laravel-notify .translate-y-16 {
+  --tw-translate-y: 4rem;
+}
+#laravel-notify .scale-75 {
+  --tw-scale-x: .75;
+  --tw-scale-y: .75;
+}
+@-webkit-keyframes bounce {
+  0%, 100% {
+    transform: translateY(-25%);
+    -webkit-animation-timing-function: cubic-bezier(0.8,0,1,1);
+            animation-timing-function: cubic-bezier(0.8,0,1,1);
+  }
+  50% {
+    transform: none;
+    -webkit-animation-timing-function: cubic-bezier(0,0,0.2,1);
+            animation-timing-function: cubic-bezier(0,0,0.2,1);
+  }
+}
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(-25%);
+    -webkit-animation-timing-function: cubic-bezier(0.8,0,1,1);
+            animation-timing-function: cubic-bezier(0.8,0,1,1);
+  }
+  50% {
+    transform: none;
+    -webkit-animation-timing-function: cubic-bezier(0,0,0.2,1);
+            animation-timing-function: cubic-bezier(0,0,0.2,1);
+  }
+}
+#laravel-notify .animate-bounce {
+  -webkit-animation: bounce 1s infinite;
+          animation: bounce 1s infinite;
+}
+#laravel-notify .cursor-pointer {
+  cursor: pointer;
+}
+#laravel-notify .flex-col {
+  flex-direction: column;
+}
+#laravel-notify .items-center {
+  align-items: center;
+}
+#laravel-notify .items-start {
+  align-items: flex-start;
+}
+#laravel-notify .items-end {
+  align-items: flex-end;
+}
+#laravel-notify .justify-center {
+  justify-content: center;
+}
+#laravel-notify .justify-end {
+  justify-content: flex-end;
+}
+#laravel-notify .justify-between {
+  justify-content: space-between;
+}
+#laravel-notify .space-x-6 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 0;
+  margin-right: calc(1.5rem * var(--tw-space-x-reverse));
+  margin-left: calc(1.5rem * calc(1 - var(--tw-space-x-reverse)));
+}
+#laravel-notify .space-y-4 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(1rem * var(--tw-space-y-reverse));
+}
+#laravel-notify .space-y-3 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(0.75rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(0.75rem * var(--tw-space-y-reverse));
+}
+#laravel-notify .space-y-5 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(1.25rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(1.25rem * var(--tw-space-y-reverse));
+}
+#laravel-notify .space-x-2 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 0;
+  margin-right: calc(0.5rem * var(--tw-space-x-reverse));
+  margin-left: calc(0.5rem * calc(1 - var(--tw-space-x-reverse)));
+}
+#laravel-notify .overflow-hidden {
+  overflow: hidden;
+}
+#laravel-notify .rounded-full {
+  border-radius: 9999px;
+}
+#laravel-notify .rounded-md {
+  border-radius: 0.375rem;
+}
+#laravel-notify .rounded-lg {
+  border-radius: 0.5rem;
+}
+#laravel-notify .rounded {
+  border-radius: 0.25rem;
+}
+#laravel-notify .border {
+  border-width: 1px;
+}
+#laravel-notify .border-t-4 {
+  border-top-width: 4px;
+}
+#laravel-notify .border-l-4 {
+  border-left-width: 4px;
+}
+#laravel-notify .border-b {
+  border-bottom-width: 1px;
+}
+#laravel-notify .border-transparent {
+  border-color: transparent;
+}
+#laravel-notify .border-green-600 {
+  --tw-border-opacity: 1;
+  border-color: rgba(5, 150, 105, var(--tw-border-opacity));
+}
+#laravel-notify .border-red-600 {
+  --tw-border-opacity: 1;
+  border-color: rgba(220, 38, 38, var(--tw-border-opacity));
+}
+#laravel-notify .border-yellow-400 {
+  --tw-border-opacity: 1;
+  border-color: rgba(251, 191, 36, var(--tw-border-opacity));
+}
+#laravel-notify .border-blue-600 {
+  --tw-border-opacity: 1;
+  border-color: rgba(37, 99, 235, var(--tw-border-opacity));
+}
+#laravel-notify .border-gray-200 {
+  --tw-border-opacity: 1;
+  border-color: rgba(229, 231, 235, var(--tw-border-opacity));
+}
+#laravel-notify .bg-white {
+  --tw-bg-opacity: 1;
+  background-color: rgba(255, 255, 255, var(--tw-bg-opacity));
+}
+#laravel-notify .bg-pink-100 {
+  --tw-bg-opacity: 1;
+  background-color: rgba(252, 231, 243, var(--tw-bg-opacity));
+}
+#laravel-notify .bg-pink-600 {
+  --tw-bg-opacity: 1;
+  background-color: rgba(219, 39, 119, var(--tw-bg-opacity));
+}
+#laravel-notify .bg-green-600 {
+  --tw-bg-opacity: 1;
+  background-color: rgba(5, 150, 105, var(--tw-bg-opacity));
+}
+#laravel-notify .bg-yellow-400 {
+  --tw-bg-opacity: 1;
+  background-color: rgba(251, 191, 36, var(--tw-bg-opacity));
+}
+#laravel-notify .bg-blue-600 {
+  --tw-bg-opacity: 1;
+  background-color: rgba(37, 99, 235, var(--tw-bg-opacity));
+}
+#laravel-notify .bg-red-600 {
+  --tw-bg-opacity: 1;
+  background-color: rgba(220, 38, 38, var(--tw-bg-opacity));
+}
+#laravel-notify .bg-green-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgba(16, 185, 129, var(--tw-bg-opacity));
+}
+#laravel-notify .bg-red-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgba(239, 68, 68, var(--tw-bg-opacity));
+}
+#laravel-notify .bg-gray-900 {
+  --tw-bg-opacity: 1;
+  background-color: rgba(17, 24, 39, var(--tw-bg-opacity));
+}
+#laravel-notify .bg-red-100 {
+  --tw-bg-opacity: 1;
+  background-color: rgba(254, 226, 226, var(--tw-bg-opacity));
+}
+#laravel-notify .bg-gray-800 {
+  --tw-bg-opacity: 1;
+  background-color: rgba(31, 41, 55, var(--tw-bg-opacity));
+}
+#laravel-notify .bg-gray-50 {
+  --tw-bg-opacity: 1;
+  background-color: rgba(249, 250, 251, var(--tw-bg-opacity));
+}
+#laravel-notify .bg-gradient-to-r {
+  background-image: linear-gradient(to right, var(--gradient-color-stops));
+}
+#laravel-notify .from-green-600 {
+  --tw-gradient-from: #059669;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(5, 150, 105, 0));
+}
+#laravel-notify .from-red-600 {
+  --tw-gradient-from: #dc2626;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(220, 38, 38, 0));
+}
+#laravel-notify .via-green-500 {
+  --tw-gradient-stops: var(--tw-gradient-from), #10b981, var(--tw-gradient-to, rgba(16, 185, 129, 0));
+}
+#laravel-notify .via-red-500 {
+  --tw-gradient-stops: var(--tw-gradient-from), #ef4444, var(--tw-gradient-to, rgba(239, 68, 68, 0));
+}
+#laravel-notify .to-green-800 {
+  --tw-gradient-to: #065f46;
+}
+#laravel-notify .to-red-800 {
+  --tw-gradient-to: #991b1b;
+}
+#laravel-notify .p-4 {
+  padding: 1rem;
+}
+#laravel-notify .p-2 {
+  padding: 0.5rem;
+}
+#laravel-notify .p-1 {
+  padding: 0.25rem;
+}
+#laravel-notify .px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+#laravel-notify .py-8 {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+#laravel-notify .px-3 {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+#laravel-notify .py-1 {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+#laravel-notify .px-6 {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+#laravel-notify .py-3 {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+#laravel-notify .py-16 {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+#laravel-notify .py-12 {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+#laravel-notify .py-6 {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+#laravel-notify .py-5 {
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+}
+#laravel-notify .text-right {
+  text-align: right;
+}
+#laravel-notify .text-base {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+#laravel-notify .text-4xl {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+}
+#laravel-notify .text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+#laravel-notify .text-lg {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+#laravel-notify .text-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+#laravel-notify .text-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+#laravel-notify .text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+#laravel-notify .font-medium {
+  font-weight: 500;
+}
+#laravel-notify .font-extrabold {
+  font-weight: 800;
+}
+#laravel-notify .font-semibold {
+  font-weight: 600;
+}
+#laravel-notify .capitalize {
+  text-transform: capitalize;
+}
+#laravel-notify .leading-5 {
+  line-height: 1.25rem;
+}
+#laravel-notify .leading-10 {
+  line-height: 2.5rem;
+}
+#laravel-notify .leading-8 {
+  line-height: 2rem;
+}
+#laravel-notify .leading-7 {
+  line-height: 1.75rem;
+}
+#laravel-notify .leading-6 {
+  line-height: 1.5rem;
+}
+#laravel-notify .tracking-tight {
+  letter-spacing: -0.025em;
+}
+#laravel-notify .text-gray-200 {
+  --tw-text-opacity: 1;
+  color: rgba(229, 231, 235, var(--tw-text-opacity));
+}
+#laravel-notify .text-pink-800 {
+  --tw-text-opacity: 1;
+  color: rgba(157, 23, 77, var(--tw-text-opacity));
+}
+#laravel-notify .text-pink-400 {
+  --tw-text-opacity: 1;
+  color: rgba(244, 114, 182, var(--tw-text-opacity));
+}
+#laravel-notify .text-gray-900 {
+  --tw-text-opacity: 1;
+  color: rgba(17, 24, 39, var(--tw-text-opacity));
+}
+#laravel-notify .text-gray-600 {
+  --tw-text-opacity: 1;
+  color: rgba(75, 85, 99, var(--tw-text-opacity));
+}
+#laravel-notify .text-white {
+  --tw-text-opacity: 1;
+  color: rgba(255, 255, 255, var(--tw-text-opacity));
+}
+#laravel-notify .text-gray-50 {
+  --tw-text-opacity: 1;
+  color: rgba(249, 250, 251, var(--tw-text-opacity));
+}
+#laravel-notify .text-gray-500 {
+  --tw-text-opacity: 1;
+  color: rgba(107, 114, 128, var(--tw-text-opacity));
+}
+#laravel-notify .text-pink-600 {
+  --tw-text-opacity: 1;
+  color: rgba(219, 39, 119, var(--tw-text-opacity));
+}
+#laravel-notify .text-gray-700 {
+  --tw-text-opacity: 1;
+  color: rgba(55, 65, 81, var(--tw-text-opacity));
+}
+#laravel-notify .text-green-600 {
+  --tw-text-opacity: 1;
+  color: rgba(5, 150, 105, var(--tw-text-opacity));
+}
+#laravel-notify .text-gray-400 {
+  --tw-text-opacity: 1;
+  color: rgba(156, 163, 175, var(--tw-text-opacity));
+}
+#laravel-notify .text-red-600 {
+  --tw-text-opacity: 1;
+  color: rgba(220, 38, 38, var(--tw-text-opacity));
+}
+#laravel-notify .text-yellow-400 {
+  --tw-text-opacity: 1;
+  color: rgba(251, 191, 36, var(--tw-text-opacity));
+}
+#laravel-notify .text-blue-600 {
+  --tw-text-opacity: 1;
+  color: rgba(37, 99, 235, var(--tw-text-opacity));
+}
+#laravel-notify .text-gray-300 {
+  --tw-text-opacity: 1;
+  color: rgba(209, 213, 219, var(--tw-text-opacity));
+}
+#laravel-notify .text-red-800 {
+  --tw-text-opacity: 1;
+  color: rgba(153, 27, 27, var(--tw-text-opacity));
+}
+#laravel-notify .text-gray-100 {
+  --tw-text-opacity: 1;
+  color: rgba(243, 244, 246, var(--tw-text-opacity));
+}
+#laravel-notify .text-pink-500 {
+  --tw-text-opacity: 1;
+  color: rgba(236, 72, 153, var(--tw-text-opacity));
+}
+#laravel-notify .opacity-0 {
+  opacity: 0;
+}
+#laravel-notify .opacity-100 {
+  opacity: 1;
+}
+#laravel-notify .opacity-75 {
+  opacity: 0.75;
+}
+#laravel-notify .shadow {
+  --tw-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+#laravel-notify .shadow-lg {
+  --tw-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+#laravel-notify .transition {
+  transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+  transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+#laravel-notify .duration-150 {
+  transition-duration: 150ms;
+}
+#laravel-notify .duration-300 {
+  transition-duration: 300ms;
+}
+#laravel-notify .duration-100 {
+  transition-duration: 100ms;
+}
+#laravel-notify .ease-in-out {
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+#laravel-notify .ease-out {
+  transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+}
+#laravel-notify .ease-in {
+  transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
+}
+.hover\:bg-pink-500:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgba(236, 72, 153, var(--tw-bg-opacity));
+}
+.hover\:text-gray-600:hover {
+  --tw-text-opacity: 1;
+  color: rgba(75, 85, 99, var(--tw-text-opacity));
+}
+.focus\:text-gray-500:focus {
+  --tw-text-opacity: 1;
+  color: rgba(107, 114, 128, var(--tw-text-opacity));
+}
+.focus\:text-gray-50:focus {
+  --tw-text-opacity: 1;
+  color: rgba(249, 250, 251, var(--tw-text-opacity));
+}
+.focus\:outline-none:focus {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+@media (min-width: 640px) {
+  .sm\:mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .sm\:mt-5 {
+    margin-top: 1.25rem;
+  }
+  .sm\:mt-8 {
+    margin-top: 2rem;
+  }
+  .sm\:flex {
+    display: flex;
+  }
+  .sm\:max-w-lg {
+    max-width: 32rem;
+  }
+  .sm\:translate-y-0 {
+    --tw-translate-y: 0px;
+  }
+  .sm\:translate-x-2 {
+    --tw-translate-x: 0.5rem;
+  }
+  .sm\:translate-x-0 {
+    --tw-translate-x: 0px;
+  }
+  .sm\:scale-100 {
+    --tw-scale-x: 1;
+    --tw-scale-y: 1;
+  }
+  .sm\:items-start {
+    align-items: flex-start;
+  }
+  .sm\:justify-center {
+    justify-content: center;
+  }
+  .sm\:justify-end {
+    justify-content: flex-end;
+  }
+  .sm\:p-6 {
+    padding: 1.5rem;
+  }
+  .sm\:py-12 {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+  .sm\:px-6 {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+  .sm\:text-center {
+    text-align: center;
+  }
+  .sm\:text-6xl {
+    font-size: 3.75rem;
+    line-height: 1;
+  }
+  .sm\:text-xl {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+  .sm\:text-3xl {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
+  .sm\:text-4xl {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+  .sm\:leading-none {
+    line-height: 1;
+  }
+  .sm\:leading-9 {
+    line-height: 2.25rem;
+  }
+  .sm\:leading-10 {
+    line-height: 2.5rem;
+  }
+}
+@media (min-width: 768px) {
+  .md\:mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .md\:mt-0 {
+    margin-top: 0px;
+  }
+  .md\:grid {
+    display: grid;
+  }
+  .md\:max-w-2xl {
+    max-width: 42rem;
+  }
+  .md\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .md\:space-y-0 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-y-reverse: 0;
+    margin-top: calc(0px * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(0px * var(--tw-space-y-reverse));
+  }
+  .md\:py-20 {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+  .md\:py-4 {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+  .md\:px-10 {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+  .md\:text-lg {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+}
+@media (min-width: 1024px) {
+  .lg\:col-span-6 {
+    grid-column: span 6 / span 6;
+  }
+  .lg\:col-start-2 {
+    grid-column-start: 2;
+  }
+  .lg\:col-start-1 {
+    grid-column-start: 1;
+  }
+  .lg\:mx-0 {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+  .lg\:mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .lg\:mt-0 {
+    margin-top: 0px;
+  }
+  .lg\:block {
+    display: block;
+  }
+  .lg\:flex {
+    display: flex;
+  }
+  .lg\:grid {
+    display: grid;
+  }
+  .lg\:hidden {
+    display: none;
+  }
+  .lg\:max-w-none {
+    max-width: none;
+  }
+  .lg\:max-w-md {
+    max-width: 28rem;
+  }
+  .lg\:max-w-screen-xl {
+    max-width: 1280px;
+  }
+  .lg\:grid-flow-row-dense {
+    grid-auto-flow: row dense;
+  }
+  .lg\:grid-cols-12 {
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+  }
+  .lg\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .lg\:items-center {
+    align-items: center;
+  }
+  .lg\:items-start {
+    align-items: flex-start;
+  }
+  .lg\:justify-start {
+    justify-content: flex-start;
+  }
+  .lg\:gap-8 {
+    gap: 2rem;
+  }
+  .lg\:gap-12 {
+    gap: 3rem;
+  }
+  .lg\:px-8 {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  .lg\:py-24 {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+  .lg\:text-left {
+    text-align: left;
+  }
+  .lg\:text-center {
+    text-align: center;
+  }
+  .lg\:text-5xl {
+    font-size: 3rem;
+    line-height: 1;
+  }
+  .lg\:text-lg {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+}
+@media (min-width: 1280px) {
+  .xl\:py-24 {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+  .xl\:text-6xl {
+    font-size: 3.75rem;
+    line-height: 1;
+  }
+  .xl\:text-xl {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+}
