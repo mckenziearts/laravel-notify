@@ -1,5 +1,5 @@
 @if (session()->get('notify.model') === 'connect')
-    <div class="notify fixed inset-0 flex items-end justify-center px-4 py-6 pointer-events-none sm:p-6 sm:items-start sm:justify-end">
+    <div class="notify fixed inset-0 flex items-end justify-end px-4 py-6 pointer-events-none sm:p-6 sm:items-start sm:justify-end">
         <div
             x-data="{ show: @if(session()->get('notify.model') === 'connect') true @else false @endif }"
             x-show="show"
