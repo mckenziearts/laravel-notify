@@ -9,12 +9,6 @@ use Mckenziearts\Notify\Storage\Session;
 class LaravelNotify
 {
     protected Session $session;
-
-    /**
-     * Create a new notify instance.
-     *
-     * @param  Session  $session
-     */
     public function __construct(Session $session)
     {
         $this->session = $session;
@@ -23,8 +17,6 @@ class LaravelNotify
     /**
      * Flash an information message.
      *
-     * @param  string  $message
-     * @param  string|null  $title
      * @return $this
      */
     public function info(string $message, string $title = null): self
@@ -37,8 +29,6 @@ class LaravelNotify
     /**
      * Flash a success message.
      *
-     * @param  string  $message
-     * @param  string|null  $title
      * @return $this
      */
     public function success(string $message, string $title = null): self
@@ -51,8 +41,6 @@ class LaravelNotify
     /**
      * Flash an error message.
      *
-     * @param  string  $message
-     * @param  string|null  $title
      * @return $this
      */
     public function error(string $message, string $title = null): self
@@ -65,8 +53,6 @@ class LaravelNotify
     /**
      * Flash a warning message.
      *
-     * @param  string  $message
-     * @param  string|null  $title
      * @return $this
      */
     public function warning(string $message, string $title = null): self
@@ -79,9 +65,6 @@ class LaravelNotify
     /**
      * Return a Connect Notification.
      *
-     * @param  string  $type
-     * @param  string  $title
-     * @param  string  $message
      * @return $this
      */
     public function connect(string $type, string $title, string $message): self
@@ -96,8 +79,6 @@ class LaravelNotify
     /**
      * Return a smiley notify.
      *
-     * @param  string  $type
-     * @param  string  $message
      * @return $this
      */
     public function smiley(string $type, string $message): self
@@ -112,8 +93,6 @@ class LaravelNotify
     /**
      * Return a smiley notify.
      *
-     * @param  string  $type
-     * @param  string  $message
      * @return $this
      */
     public function emotify(string $type, string $message): self
@@ -126,7 +105,6 @@ class LaravelNotify
     /**
      * Return a drake notify.
      *
-     * @param  string  $type
      * @return $this
      */
     public function drake(string $type): self
@@ -150,9 +128,6 @@ class LaravelNotify
      *
      *          ['message' => 'Your new message here!']
      *
-     * @param  string  $presetName
-     * @param  array  $overrideValues
-     * @return LaravelNotify
      * @throws Exception
      */
     public function preset(string $presetName, array $overrideValues = []): self
@@ -177,22 +152,17 @@ class LaravelNotify
     /**
      * Flash a message.
      *
-     * @param  string  $message
-     * @param  string|null  $type
-     * @param  string|null  $icon
-     * @param  string|null  $model
-     * @param  string|null  $title
-     *
-     * @return void
+     * @param string|null $type
+     * @param string|null $icon
      */
-    public function flash(string $message, $type = null, $icon = null, string $model = null, string $title = null): void
+    public function flash(string $message, string $type = null, string $icon = null, string $model = null, string $title = null): void
     {
         $notifications = [
             'message' => $message,
-            'type'    => $type,
-            'icon'    => $icon,
-            'model'   => $model,
-            'title'   => $title,
+            'type' => $type,
+            'icon' => $icon,
+            'model' => $model,
+            'title' => $title,
         ];
 
         $this->session->flash('notify', $notifications);
@@ -200,8 +170,6 @@ class LaravelNotify
 
     /**
      * Get the stored message.
-     *
-     * @return string
      */
     public function message(): string
     {
@@ -210,8 +178,6 @@ class LaravelNotify
 
     /**
      * Get the stored type.
-     *
-     * @return string
      */
     public function type(): string
     {

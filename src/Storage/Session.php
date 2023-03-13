@@ -6,11 +6,6 @@ use Illuminate\Session\Store;
 
 class Session
 {
-    /**
-     * Session storage.
-     *
-     * @var \Illuminate\Session\Store
-     */
     protected Store $session;
 
     public function __construct(Store $session)
@@ -18,13 +13,7 @@ class Session
         $this->session = $session;
     }
 
-    /**
-     * Set a session key and value.
-     *
-     * @param  string  $key
-     * @param  array  $data
-     */
-    public function flash(string $key, array $data = [])
+    public function flash(string $key, array $data = []): void
     {
         $this->session->flash($key, $data);
     }
