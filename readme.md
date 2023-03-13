@@ -83,7 +83,7 @@ public function store()
 }
 ```
 
-An complete example:
+A complete example:
 
 ```blade
 <!doctype html>
