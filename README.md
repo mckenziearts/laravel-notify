@@ -1,10 +1,9 @@
-<p align="center"><img src="https://laravel.cm/img/brand/laravel-notify.svg"></p>
+<p align="center"><img src="https://laravel.cm/images/laravel-notify.svg"></p>
 
 <p align="center">
-<a href="https://travis-ci.org/mckenziearts/laravel-notify"><img src="https://img.shields.io/travis/mckenziearts/laravel-notify/master.svg?style=flat-square" alt="Build Status"></a>
-<a href="https://packagist.org/packages/mckenziearts/laravel-notify"><img src="https://poser.pugx.org/mckenziearts/laravel-notify/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/mckenziearts/laravel-notify"><img src="https://poser.pugx.org/mckenziearts/laravel-notify/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/mckenziearts/laravel-notify"><img src="https://poser.pugx.org/mckenziearts/laravel-notify/license.svg" alt="License"></a>
+    <a href="https://packagist.org/packages/mckenziearts/laravel-notify"><img src="https://poser.pugx.org/mckenziearts/laravel-notify/d/total.svg" alt="Total Downloads"></a>
+    <a href="https://packagist.org/packages/mckenziearts/laravel-notify"><img src="https://poser.pugx.org/mckenziearts/laravel-notify/v/stable.svg" alt="Latest Stable Version"></a>
+    <a href="https://packagist.org/packages/mckenziearts/laravel-notify"><img src="https://poser.pugx.org/mckenziearts/laravel-notify/license.svg" alt="License"></a>
 </p>
 
 ## Introduction
@@ -13,15 +12,8 @@ Laravel Notify is a package that lets you add custom notifications to your proje
 A diverse range of notification design is available.
 
 <p align="center">
-<img src="https://i.imgur.com/mZVVn3L.png">
+    <img src="https://i.imgur.com/mZVVn3L.png">
 </p>
-
-## Version Guidance
-
-| Version | Laravel version       |  Status         | Branch | Install                                             |
-|---------|-----------------------|-----------------|--------|-----------------------------------------------------|
-| 1.x     | 5.5, 5.6, 5.7, 6.0    | EOL             | 1.0    | composer require mckenziearts/laravel-notify 1.*    |
-| 2.x     | >= 7.0                | Latest          | 2.0    | composer require mckenziearts/laravel-notify        |
 
 ## Android Version
 
