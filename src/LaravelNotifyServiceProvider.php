@@ -45,8 +45,6 @@ class LaravelNotifyServiceProvider extends ServiceProvider
 
     /**
      * Register Publishable files.
-     *
-     * @return void
      */
     public function registerPublishables(): void
     {
@@ -57,10 +55,5 @@ class LaravelNotifyServiceProvider extends ServiceProvider
         $this->publishes([
             __DIR__.'/../config/notify.php' => config_path('notify.php'),
         ], 'notify-config');
-    }
-
-    public function provides(): array
-    {
-        return [];
     }
 }
