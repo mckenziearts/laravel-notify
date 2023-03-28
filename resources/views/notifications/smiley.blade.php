@@ -24,7 +24,6 @@
                             @if(session()->get('notify.type') === 'error') <span>🙅🏽‍♂️</span> @endif
                         </div>
                         <div class="ml-6 w-0 flex-1">
-                            <x-notify::notify-title :title="session()->get('notify.type')" />
                             <x-notify::notify-content :content="session()->get('notify.message')" />
                         </div>
                         <div class="ml-4 shrink-0 flex">
