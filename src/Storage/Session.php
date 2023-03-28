@@ -4,7 +4,7 @@ namespace Mckenziearts\Notify\Storage;
 
 use Illuminate\Session\Store;
 
-class Session
+final class Session
 {
     protected Store $session;
 

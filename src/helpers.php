@@ -52,6 +52,6 @@ if (! function_exists('notifyJs')) {
 if (! function_exists('notifyCss')) {
     function notifyCss(): string
     {
-        return '<link rel="stylesheet" type="text/css" href="'.asset('vendor/mckenziearts/laravel-notify/css/notify.css').'"/>';
+        return '<link rel="stylesheet" type="text/css" href="'.asset('vendor/mckenziearts/laravel-notify/dist/notify.css').'"/>';
     }
 }

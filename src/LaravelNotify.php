@@ -6,7 +6,7 @@ use Exception;
 use Mckenziearts\Notify\Exceptions\MissingPresetNotificationException;
 use Mckenziearts\Notify\Storage\Session;
 
-class LaravelNotify
+final class LaravelNotify
 {
     protected Session $session;
 
