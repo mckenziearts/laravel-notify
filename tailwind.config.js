@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ['./resources/views/**/*.php'],
+  content: ['./resources/views/**/*.blade.php'],
   theme: {
     extend: {
       inset: {
