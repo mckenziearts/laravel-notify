@@ -1,6 +1,4 @@
 {
-    "/js/app.js": "/js/app.js",
-    "/js/notify.js": "/js/notify.js",
-    "/css/app.css": "/css/app.css",
-    "/css/notify.css": "/css/notify.css"
+    "/js/notify.js": "/js/notify.js?id=5a845f5a6d0b474b4f5e63bf941b6e1c",
+    "/dist/notify.css": "/dist/notify.css?id=098f683f0112ba9a3f65c8fa4f7b6056"
 }

@@ -27,7 +27,7 @@
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
                                     </svg>
                                 </span>
-                                <h4 class="text-white font-semibold text-xl leading-6">Success</h4>
+                                <h4 class="text-white font-semibold text-xl leading-6">{{ __('Success') }}</h4>
                             </div>
                         </div>
                     @else
@@ -38,7 +38,7 @@
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
                                     </svg>
                                 </span>
-                                <h4 class="text-white font-semibold text-xl leading-6">Error</h4>
+                                <h4 class="text-white font-semibold text-xl leading-6">{{ __('Error') }}</h4>
                             </div>
                         </div>
                     @endif
