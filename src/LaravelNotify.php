@@ -29,11 +29,6 @@ final class LaravelNotify
         return $this;
     }
 
-    /**
-     * Flash an error message.
-     *
-     * @return $this
-     */
     public function error(string $message, string $title = null): self
     {
         $this->flash($message, 'error', 'flaticon2-delete', 'toast', $title);
