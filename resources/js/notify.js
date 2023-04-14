@@ -8,7 +8,7 @@ if (notification) {
   }, notify.timeout )
 }
 
-if (window.Alpine === 'undefined') {
+if (typeof window.Alpine === 'undefined') {
   window.Alpine = Alpine
   Alpine.start()
 }
