@@ -8,5 +8,7 @@ if (notification) {
   }, notify.timeout )
 }
 
-window.Alpine = Alpine
-Alpine.start()
+if (window.Alpine === 'undefined') {
+  window.Alpine = Alpine
+  Alpine.start()
+}
