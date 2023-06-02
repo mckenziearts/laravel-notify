@@ -48,6 +48,7 @@ return [
             'type' => 'success',
             'model' => 'connect',
             'title' => 'User Updated',
+            'timeout' => 5000,
         ],
     ],
 

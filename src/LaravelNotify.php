@@ -99,13 +99,15 @@ final class LaravelNotify
             throw new MissingPresetNotificationException('A preset message does not exist with the name: '.$presetName);
         }
 
+        $type = $overrideValues['type'] ?? $presetValues['type'] ?? null;
+
         $this->flash(
             $overrideValues['message'] ?? $presetValues['message'],
-            $overrideValues['type'] ?? $presetValues['type'] ?? null,
+            $type,
             $overrideValues['icon'] ?? $presetValues['icon'] ?? null,
             $overrideValues['model'] ?? $presetValues['model'] ?? null,
             $overrideValues['title'] ?? $presetValues['title'] ?? null,
-            $overrideValues['timeout'] ?? $presetValues['timeout'] ?? null
+            $overrideValues['timeout'] ?? ($presetValues['timeout'] ?? $this->timeout($type))
         );
 
         return $this;
