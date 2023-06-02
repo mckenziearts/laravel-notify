@@ -100,33 +100,33 @@ Laravel Notify actually display 5 types of notifications
 1. `toast` notification, (The default notification for Laravel Notify)
 
 ```php
-notify()->success('Welcome to Laravel Notify ⚡️') or notify()->success('Welcome to Laravel Notify ⚡️', 'My custom title')
+notify()->success('Welcome to Laravel Notify ⚡️') or notify()->success('Welcome to Laravel Notify ⚡️', 'My custom title') or notify()->success('Welcome to Laravel Notify ⚡️', 'My custom title', 5000)
 ```
 
 2. `connectify` notification, example of basic usage
 
 ```php
-connectify('success', 'Connection Found', 'Success Message Here')
+connectify('success', 'Connection Found', 'Success Message Here') or connectify('success', 'Connection Found', 'Success Message Here', 5000)
 ```
 
 3. `drakify` (😎) notification, displays an alert only
 
 ```php
-drakify('success') // for success alert
+drakify('success') or drakify('success', 5000) // for success alert
 or
-drakify('error') // for error alert
+drakify('error') or drakify('error', 5000) // for error alert
 ```
 
 4. `smilify` notification, displays a simple custom toast notification using the smiley (😊) emoticon
 
 ```php
-smilify('success', 'You are successfully reconnected')
+smilify('success', 'You are successfully reconnected') or smilify('success', 'You are successfully reconnected', 5000)
 ```
 
 5. `emotify` notification, displays a simple custom toast notification using a vector emoticon
 
 ```php
-emotify('success', 'You are awesome, your data was successfully created')
+emotify('success', 'You are awesome, your data was successfully created') or emotify('success', 'You are awesome, your data was successfully created', 5000)
 ```
 
 #### Preset Notifications
@@ -173,12 +173,14 @@ You can define preset notifications in the config file using the following struc
         'type'    => 'success',
         'model'   => 'connect',
         'title'   => 'User Updated',
+        'timeout' => 5000,
     ],
     'user-deleted' => [
         'message' => 'The user has been deleted successfully.',
         'type'    => 'success',
         'model'   => 'connect',
         'title'   => 'User Deleted',
+        'timeout' => 5000,
     ],
 ],
 ```
