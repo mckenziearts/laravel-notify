@@ -119,7 +119,7 @@ final class LaravelNotify
             'icon' => $icon,
             'model' => $model,
             'title' => $title,
-            'timeout' => $timeout ?? $this->timeout($type)
+            'timeout' => is_null($timeout) ? $this->timeout($type) : $timeout,
         ];
 
         $this->session->flash('notify', $notifications);
