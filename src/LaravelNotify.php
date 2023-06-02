@@ -15,65 +15,65 @@ final class LaravelNotify
         $this->session = $session;
     }
 
-    public function info(string $message, string $title = null): self
+    public function info(string $message, string $title = null, ?int $timeout = null): self
     {
-        $this->flash($message, 'info', 'flaticon-exclamation-1', 'toast', $title);
+        $this->flash($message, 'info', 'flaticon-exclamation-1', 'toast', $title, $timeout);
 
         return $this;
     }
 
-    public function success(string $message, string $title = null): self
+    public function success(string $message, string $title = null, ?int $timeout = null): self
     {
-        $this->flash($message, 'success', 'flaticon2-check-mark', 'toast', $title);
+        $this->flash($message, 'success', 'flaticon2-check-mark', 'toast', $title, $timeout);
 
         return $this;
     }
 
-    public function error(string $message, string $title = null): self
+    public function error(string $message, string $title = null, ?int $timeout = null): self
     {
-        $this->flash($message, 'error', 'flaticon2-delete', 'toast', $title);
+        $this->flash($message, 'error', 'flaticon2-delete', 'toast', $title, $timeout);
 
         return $this;
     }
 
-    public function warning(string $message, string $title = null): self
+    public function warning(string $message, string $title = null, ?int $timeout = null): self
     {
-        $this->flash($message, 'warning', 'flaticon-warning-sign', 'toast', $title);
+        $this->flash($message, 'warning', 'flaticon-warning-sign', 'toast', $title, $timeout);
 
         return $this;
     }
 
-    public function connect(string $type, string $title, string $message): self
+    public function connect(string $type, string $title, string $message, ?int $timeout = null): self
     {
         $icon = ($type === 'success') ? 'flaticon-like' : 'flaticon-cancel';
 
-        $this->flash($message, $type, $icon, 'connect', $title);
+        $this->flash($message, $type, $icon, 'connect', $title, $timeout);
 
         return $this;
     }
 
-    public function smiley(string $type, string $message): self
+    public function smiley(string $type, string $message, ?int $timeout): self
     {
         $icon = ($type === 'success') ? '👍' : '🙅🏽‍♂';
 
-        $this->flash($message, $type, $icon, 'smiley');
+        $this->flash($message, $type, $icon, 'smiley', null, $timeout);
 
         return $this;
     }
 
-    public function emotify(string $type, string $message): self
+    public function emotify(string $type, string $message, ?int $timeout = null): self
     {
-        $this->flash($message, $type, null, 'emotify');
+        $this->flash($message, $type, null, 'emotify', null, $timeout);
 
         return $this;
     }
 
-    public function drake(string $type): self
+    public function drake(string $type, ?int $timeout = null): self
     {
         $icon = ($type === 'success') ? 'flaticon2-check-mark' : 'flaticon2-cross';
         $message = ($type === 'success') ? __('Success') : __('Try Again');
 
-        $this->flash($message, $type, $icon, 'drake');
+        $this->flash($message, $type, $icon, 'drake', null, $timeout);
 
         return $this;
     }
@@ -104,13 +104,14 @@ final class LaravelNotify
             $overrideValues['type'] ?? $presetValues['type'] ?? null,
             $overrideValues['icon'] ?? $presetValues['icon'] ?? null,
             $overrideValues['model'] ?? $presetValues['model'] ?? null,
-            $overrideValues['title'] ?? $presetValues['title'] ?? null
+            $overrideValues['title'] ?? $presetValues['title'] ?? null,
+            $overrideValues['timeout'] ?? $presetValues['timeout'] ?? null
         );
 
         return $this;
     }
 
-    public function flash(string $message, string $type = null, string $icon = null, string $model = null, string $title = null): void
+    public function flash(string $message, string $type = null, string $icon = null, string $model = null, string $title = null, ?int $timeout = null): void
     {
         $notifications = [
             'message' => $message,
@@ -118,6 +119,7 @@ final class LaravelNotify
             'icon' => $icon,
             'model' => $model,
             'title' => $title,
+            'timeout' => $timeout ?? $this->timeout($type)
         ];
 
         $this->session->flash('notify', $notifications);
@@ -131,5 +133,20 @@ final class LaravelNotify
     public function type(): string
     {
         return $this->session->get('notify.type');
+    }
+
+    public function timeout(?string $type = null): ?int
+    {
+        $timeout = config('notify.timeout');
+
+        if(is_int($timeout)) {
+            $timeout = [
+                'default' => $timeout
+            ];
+        }
+        
+        if(!$type) return data_get($timeout, 'default');
+
+        return data_get($timeout, $type, data_get($timeout, 'default'));
     }
 }

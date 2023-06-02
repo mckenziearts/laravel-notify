@@ -1,5 +1,5 @@
 @if (session()->get('notify.model') === 'drake')
-    <div class="notify fixed inset-0 flex items-end justify-end px-4 py-6 pointer-events-none sm:p-6 sm:items-start sm:justify-end">
+    <div class="notify fixed inset-0 flex items-end justify-end px-4 py-6 pointer-events-none sm:p-6 sm:items-start sm:justify-end" @if(session()->get('notify.timeout')) data-timeout="{{ session()->get('notify.timeout') }}" @endif>
         <div
             x-data="{ show: @if(session()->get('notify.model') === 'drake') true @else false @endif }"
             x-transition:enter="transform ease-out duration-300 transition"
