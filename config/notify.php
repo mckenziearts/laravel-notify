@@ -24,7 +24,7 @@ return [
     |
     | You can also define an array of timeout for each type of notification such as:
     | ['error' => 10000, 'default' => 5000]
-    | Here the error notification will be visible for 10 seconds and all other 
+    | Here the error notification will be visible for 10 seconds and all other
     | notifications type for 5 seconds.
     |
     */

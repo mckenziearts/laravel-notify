@@ -141,13 +141,15 @@ final class LaravelNotify
     {
         $timeout = config('notify.timeout');
 
-        if(is_int($timeout)) {
+        if (is_int($timeout)) {
             $timeout = [
-                'default' => $timeout
+                'default' => $timeout,
             ];
         }
-        
-        if(!$type) return data_get($timeout, 'default');
+
+        if (! $type) {
+            return data_get($timeout, 'default');
+        }
 
         return data_get($timeout, $type, data_get($timeout, 'default'));
     }
