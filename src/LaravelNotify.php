@@ -52,7 +52,7 @@ final class LaravelNotify
         return $this;
     }
 
-    public function smiley(string $type, string $message, ?int $timeout): self
+    public function smiley(string $type, string $message, ?int $timeout = null): self
     {
         $icon = ($type === 'success') ? '👍' : '🙅🏽‍♂';
 
