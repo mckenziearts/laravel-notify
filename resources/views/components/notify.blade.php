@@ -14,10 +14,4 @@
     @endif
 
     {{ session()->forget('notify.message') }}
-
-    <script>
-        var notify = {
-            timeout: "{{ config('notify.timeout') }}",
-        }
-    </script>
 </div>
