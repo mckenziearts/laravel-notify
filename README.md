@@ -19,6 +19,10 @@ A diverse range of notification design is available.
 
 If you need Android version please try this package [Aesthetic Dialogs](https://github.com/gabriel-TheCode/AestheticDialogs). Happy Coding 👨🏾‍💻
 
+## :film_strip: Video Tutorial 
+
+ [<img src="https://img.youtube.com/vi/Kq5VXLex7DU/0.jpg" width="250">](https://youtu.be/Kq5VXLex7DU)
+ 
 ## Installation
 
 You can install the package using composer
