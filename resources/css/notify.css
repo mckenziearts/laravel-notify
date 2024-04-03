@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+#laravel-notify{
+  z-index: 9999 !important;
+}
