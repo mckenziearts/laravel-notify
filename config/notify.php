@@ -8,8 +8,7 @@ return [
     |--------------------------------------------------------------------------
     |
     | You can change the theme of notifications by specifying the desired theme.
-    | By default the theme light is activated, but you can change it by
-    | specifying the dark mode. To change theme, update the global variable to `dark`
+    | Default themes available: light, dark, colorful, minimal.
     |
     */
 
@@ -21,10 +20,11 @@ return [
     |--------------------------------------------------------------------------
     |
     | Defines the number of seconds during which the notification will be visible.
+    | You can set a default timeout or customize for each message type.
     |
     */
 
-    'timeout' => 5000,
+    'timeout' => env('NOTIFY_TIMEOUT', 5000),
 
     /*
     |--------------------------------------------------------------------------
@@ -37,13 +37,53 @@ return [
     */
 
     'preset-messages' => [
-        // An example preset 'user updated' Connectify notification.
         'user-updated' => [
             'message' => 'The user has been updated successfully.',
             'type' => 'success',
             'model' => 'connect',
             'title' => 'User Updated',
+            'timeout' => 5000, // Specific timeout for this message
         ],
+        'user-deleted' => [
+            'message' => 'The user has been deleted successfully.',
+            'type' => 'error',
+            'model' => 'toast',
+            'title' => 'User Deleted',
+            'timeout' => 3000, // Shorter timeout for error messages
+        ],
+        'info-message' => [
+            'message' => 'This is an informational message.',
+            'type' => 'info',
+            'model' => 'drake',
+            'title' => 'Information',
+        ],
+    ],
+
+    /*
+    |--------------------------------------------------------------------------
+    | Sound Notifications
+    |--------------------------------------------------------------------------
+    |
+    | Define whether to enable sound notifications for alerts.
+    | This can enhance user experience by providing audible alerts.
+    |
+    */
+
+    'sound' => env('NOTIFY_SOUND', true), // Default to true
+
+    /*
+    |--------------------------------------------------------------------------
+    | Localization Support
+    |--------------------------------------------------------------------------
+    |
+    | Enable localization support for notifications.
+    | Specify the default language for messages.
+    |
+    */
+
+    'localization' => [
+        'default' => env('NOTIFY_LANGUAGE', 'en'),
+        'supported' => ['en', 'tr', 'fr', 'es'], // Add more languages as needed
     ],
 
 ];
