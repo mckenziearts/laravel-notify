@@ -1,17 +1,24 @@
 <?php
 
-use Mckenziearts\Notify\LaravelNotify;
-use PHPUnit\Framework\TestCase;
+declare(strict_types=1);
 
-class NotifyTest extends TestCase
+namespace Tests;
+
+use Mckenziearts\Notify\LaravelNotify;
+use Mockery;
+use Orchestra\Testbench\TestCase as Orchestra;
+
+class TestCase extends Orchestra
 {
     protected $session;
 
     protected $notify;
 
-    public function setUp(): void
+    protected function setUp(): void
     {
         parent::setUp();
+
+        config()->set('app.key', '6rE9Nz59bGRbeMATftriyQjrpF7DcOQm');
 
         $this->session = Mockery::spy('Mckenziearts\Notify\Storage\Session');
         $this->notify = new LaravelNotify($this->session);

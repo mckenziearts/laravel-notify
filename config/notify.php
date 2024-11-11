@@ -1,5 +1,9 @@
 <?php
 
+declare(strict_types=1);
+
+use Mckenziearts\Notify\Position;
+
 return [
 
     /*
@@ -24,7 +28,23 @@ return [
     |
     */
 
-    'timeout' => 5000,
+    'timeout' => env('NOTIFY_TIMEOUT', 5000),
+
+    /*
+    |--------------------------------------------------------------------------
+    | Notification Position
+    |--------------------------------------------------------------------------
+    |
+    | Defines the position of the notification in the layout.
+    | Available values:
+    |   - Position::TopRight
+    |   - Position::TopLeft
+    |   - Position::BottomRight
+    |   - Position::BottomLeft
+    |
+    */
+
+    'position' => Position::TopRight,
 
     /*
     |--------------------------------------------------------------------------
