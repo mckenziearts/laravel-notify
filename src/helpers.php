@@ -3,7 +3,7 @@
 use Mckenziearts\Notify\LaravelNotify;
 
 if (! function_exists('notify')) {
-    function notify(string $message = null, string $title = null): LaravelNotify
+    function notify(?string $message = null, ?string $title = null): LaravelNotify
     {
         $notify = app('notify');
 
