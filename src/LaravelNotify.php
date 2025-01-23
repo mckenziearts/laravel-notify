@@ -15,28 +15,28 @@ final class LaravelNotify
         $this->session = $session;
     }
 
-    public function info(string $message, string $title = null): self
+    public function info(string $message, ?string $title = null): self
     {
         $this->flash($message, 'info', 'flaticon-exclamation-1', 'toast', $title);
 
         return $this;
     }
 
-    public function success(string $message, string $title = null): self
+    public function success(string $message, ?string $title = null): self
     {
         $this->flash($message, 'success', 'flaticon2-check-mark', 'toast', $title);
 
         return $this;
     }
 
-    public function error(string $message, string $title = null): self
+    public function error(string $message, ?string $title = null): self
     {
         $this->flash($message, 'error', 'flaticon2-delete', 'toast', $title);
 
         return $this;
     }
 
-    public function warning(string $message, string $title = null): self
+    public function warning(string $message, ?string $title = null): self
     {
         $this->flash($message, 'warning', 'flaticon-warning-sign', 'toast', $title);
 
@@ -110,7 +110,7 @@ final class LaravelNotify
         return $this;
     }
 
-    public function flash(string $message, string $type = null, string $icon = null, string $model = null, string $title = null): void
+    public function flash(string $message, ?string $type = null, ?string $icon = null, ?string $model = null, ?string $title = null): void
     {
         $notifications = [
             'message' => $message,
