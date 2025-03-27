@@ -63,7 +63,7 @@ $ composer dump-autoload
 If you are on Laravel 8 or greater, you can use the tag syntax.
 
 ```html
-<x:notify-messages />
+<x-notify::notify />
 ```
 
 ### Basic
