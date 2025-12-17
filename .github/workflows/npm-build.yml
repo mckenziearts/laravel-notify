@@ -25,7 +25,7 @@ jobs:
       - name: Pull changes
         run: git pull
       - name: Commit changes
-        uses: stefanzweifel/git-auto-commit-action@v4
+        uses: stefanzweifel/git-auto-commit-action@v7
         with:
           branch: 3.x
           commit_message: >
