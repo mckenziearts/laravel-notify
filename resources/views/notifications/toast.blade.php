@@ -27,7 +27,7 @@
                 ])
             />
 
-            <div class="ml-3 w-0 flex-1 pt-0.5">
+            <div class="ms-3 w-0 flex-1">
                 <x-notify::title :title="session()->get('notify.title')" />
 
                 @if (session()->get('notify.message'))
@@ -36,7 +36,7 @@
 
                 <x-notify::actions />
             </div>
-            <div class="ml-4 flex shrink-0">
+            <div class="ms-4 flex shrink-0">
                 <x-notify::button x-on:click="show = false;" />
             </div>
         </div>

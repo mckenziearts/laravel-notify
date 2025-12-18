@@ -4,6 +4,7 @@
 
 @php
     use Mckenziearts\Notify\Enums\NotificationModel;
+    use Mckenziearts\Notify\Helpers\DirectionHelper;
 
     $timeout = ($model instanceof NotificationModel && $model === NotificationModel::Toast)
         || $model === 'toast'
@@ -11,7 +12,7 @@
         : 750;
 @endphp
 
-<div class="notify">
+<div class="notify" dir="{{ DirectionHelper::getDirection() }}">
     <div aria-live="assertive" class="pointer-events-none fixed inset-0 flex items-end px-4 py-6 sm:items-start">
         <div class="flex w-full flex-col items-center space-y-4 sm:items-end">
             <div

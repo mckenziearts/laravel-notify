@@ -45,7 +45,7 @@
                 @endif
             @endif
 
-            <div class="ml-3 w-0 flex-1 pt-0.5">
+            <div class="ms-3 w-0 flex-1 pt-0.5">
                 <p class="text-sm leading-5 font-medium text-white">
                     {{ session()->get('notify.title') }}
                 </p>
@@ -58,7 +58,7 @@
 
                 <x-notify::actions class="mt-3 flex gap-6 [&_a]:text-white [&_a:hover]:text-zinc-200" />
             </div>
-            <div class="ml-4 shrink-0 flex">
+            <div class="ms-4 shrink-0 flex">
                 <x-notify::button x-on:click="show = false;" class="text-white! hover:text-zinc-200!" />
             </div>
         </div>

@@ -21,6 +21,21 @@ return [
 
     /*
     |--------------------------------------------------------------------------
+    | Text Direction
+    |--------------------------------------------------------------------------
+    |
+    | Set the text direction for notifications.
+    | Options: 'auto', 'ltr', 'rtl'
+    | - 'auto': Automatically detect from app locale (recommended)
+    | - 'ltr': Force left-to-right
+    | - 'rtl': Force right-to-left
+    |
+    */
+
+    'direction' => env('NOTIFY_DIRECTION', 'auto'),
+
+    /*
+    |--------------------------------------------------------------------------
     | Preset Messages
     |--------------------------------------------------------------------------
     |
