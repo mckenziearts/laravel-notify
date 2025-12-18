@@ -1,4 +1,9 @@
-@import "tailwindcss";
+@layer theme, utilities;
+
+@import "tailwindcss/theme.css" layer(theme);
+@import "tailwindcss/utilities.css" layer(utilities);
+
+*,::after,::before,::backdrop {  box-sizing: border-box;}
 
 @source "../views/**/*.blade.php";
 @source "../js/**/*.js";

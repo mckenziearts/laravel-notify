@@ -3,17 +3,21 @@
   "type": "module",
   "scripts": {
     "dev:js": "node bin/build.js --dev",
-    "dev:css": "npx @tailwindcss/cli -i ./resources/css/notify.css -o ./public/dist/notify.css --watch",
+    "dev:css": "postcss ./resources/css/notify.css -o ./public/dist/notify.css --watch",
     "build:js": "node bin/build.js",
-    "build:css": "npx @tailwindcss/cli -i ./resources/css/notify.css -o ./public/dist/notify.css --minify",
+    "build:css": "NODE_ENV=production postcss ./resources/css/notify.css -o ./public/dist/notify.css",
     "dev": "npm-run-all --parallel dev:*",
     "build": "npm-run-all build:*"
   },
   "devDependencies": {
-    "@tailwindcss/cli": "^4.1.10",
+    "@tailwindcss/postcss": "^4.1.18",
     "alpinejs": "^3.12.0",
+    "cssnano": "^7.1.2",
     "esbuild": "^0.27.2",
     "npm-run-all": "^4.1.5",
+    "postcss": "^8.5.6",
+    "postcss-cli": "^11.0.1",
+    "postcss-prefix-selector": "^2.1.1",
     "tailwindcss": "^4.1.18"
   }
 }
