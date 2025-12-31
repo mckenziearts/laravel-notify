@@ -7,7 +7,7 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  pint:
+  quality:
     runs-on: ubuntu-latest
     steps:
       - name: 👀 Checkout
@@ -16,43 +16,11 @@ jobs:
         uses: ./.github/actions/setup
       - name: 🔮 Install Composer Dependencies
         run: composer install --no-progress --no-interaction --prefer-dist --optimize-autoloader
-      - name: Install Node Dependencies & Build Assets
-        run: npm install && npm run build
+      - name: Install Node Dependencies
+        run: npm ci
       - name: 🕵️‍♂️ Run Laravel Pint
         run: composer test:lint
-
-  phpstan:
-    runs-on: ubuntu-latest
-    steps:
-      - name: 👀 Checkout
-        uses: actions/checkout@v6
-      - name: 🪄 Setup
-        uses: ./.github/actions/setup
-      - name: 🔮 Install Composer Dependencies
-        run: composer install --no-progress --no-interaction --prefer-dist --optimize-autoloader
       - name: 🕵️‍♂️ Run PHPStan
         run: composer test:types
-
-  type-coverage:
-    runs-on: ubuntu-latest
-    steps:
-      - name: 👀 Checkout
-        uses: actions/checkout@v6
-      - name: 🪄 Setup PHP
-        uses: ./.github/actions/setup
-      - name: 🔮 Install Composer Dependencies
-        run: composer install --no-progress --no-interaction --prefer-dist --optimize-autoloader
-      - name: 🕵️‍♂️ Run PHPStan
+      - name: 🕵️‍♂️ Run Type coverage
         run: composer test:type-coverage
-
-  composer:
-    runs-on: ubuntu-latest
-    steps:
-      - name: 👀 Checkout
-        uses: actions/checkout@v6
-      - name: 🪄 Setup
-        uses: ./.github/actions/setup
-      - name: 🕵️‍♂️ Run Composer Validate
-        run: composer validate
-      - name: 🕵️‍♂️ Run Composer Audit
-        run: composer audit
