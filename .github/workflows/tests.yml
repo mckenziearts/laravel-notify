@@ -1,6 +1,8 @@
 name: Tests
 
-on: ['push', 'pull_request']
+on:
+  - push
+  - pull_request
 
 jobs:
   pest:
@@ -11,14 +13,18 @@ jobs:
       matrix:
         os: [ubuntu-latest]
         php: [8.3, 8.4]
-        laravel: [12.*, 11.*]
+        laravel: ['11.*', '12.*', '13.*']
         dependency-version: [prefer-stable]
         include:
           - laravel: 12.*
             testbench: 10.*
           - laravel: 11.*
             testbench: 9.*
+          - laravel: 13.*
+            testbench: 11.*
+
     name: PHP${{ matrix.php }} - ${{ matrix.os }} - ${{ matrix.dependency-version }}
+
     steps:
       - name: Checkout
         uses: actions/checkout@v6
