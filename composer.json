@@ -1,73 +1,73 @@
 {
-  "name": "mckenziearts/laravel-notify",
-  "description": "Flexible flash notifications for Laravel",
-  "keywords": [
-    "Laravel",
-    "laravel-notify",
-    "notification"
-  ],
-  "license": "MIT",
-  "support": {
-    "issues": "https://github.com/mckenziearts/laravel-notify/issues",
-    "source": "https://github.com/mckenziearts/laravel-notify"
-  },
-  "authors": [
-    {
-      "name": "Arthur Monney",
-      "email": "monneylobe@gmail.com",
-      "role": "Developer"
-    }
-  ],
-  "require": {
-    "php": "^8.3",
-    "illuminate/contracts": "^11.0|^12.0",
-    "illuminate/session": "^11.0|^12.0",
-    "illuminate/support": "^11.0|^12.0",
-    "mckenziearts/blade-untitledui-icons": "v1.4.0"
-  },
-  "require-dev": {
-    "laravel/pint": "^1.25.0",
-    "mockery/mockery": "^1.6",
-    "orchestra/testbench": "^10.6.0",
-    "pestphp/pest": "^3.8.4",
-    "pestphp/pest-plugin-type-coverage": "^3.6.1",
-    "phpstan/phpstan": "^2.1.27",
-    "rector/rector": "^2.1.7"
-  },
-  "autoload": {
-    "psr-4": {
-      "Mckenziearts\\Notify\\": "src/"
+    "name": "mckenziearts/laravel-notify",
+    "description": "Flexible flash notifications for Laravel",
+    "keywords": [
+        "Laravel",
+        "laravel-notify",
+        "notification"
+    ],
+    "license": "MIT",
+    "support": {
+        "issues": "https://github.com/mckenziearts/laravel-notify/issues",
+        "source": "https://github.com/mckenziearts/laravel-notify"
     },
-    "files": [
-      "src/helpers.php"
-    ]
-  },
-  "autoload-dev": {
-    "psr-4": {
-      "Tests\\": "tests/"
+    "authors": [
+        {
+            "name": "Arthur Monney",
+            "email": "monneylobe@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^8.3",
+        "illuminate/contracts": "^11.0|^12.0|^13.0",
+        "illuminate/session": "^11.0|^12.0|^13.0",
+        "illuminate/support": "^11.0|^12.0|^13.0",
+        "mckenziearts/blade-untitledui-icons": "v1.4.0"
+    },
+    "require-dev": {
+        "laravel/pint": "^1.25.0",
+        "mockery/mockery": "^1.6",
+        "orchestra/testbench": "^10.6.0|^11.0",
+        "pestphp/pest": "^3.8.4|^4.4",
+        "pestphp/pest-plugin-type-coverage": "^3.6.1|^4.0",
+        "phpstan/phpstan": "^2.1.27",
+        "rector/rector": "^2.1.7"
+    },
+    "autoload": {
+        "psr-4": {
+            "Mckenziearts\\Notify\\": "src/"
+        },
+        "files": [
+            "src/helpers.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "refactor": "rector",
+        "test:refactor": "rector --dry-run",
+        "lint": "pint",
+        "test:lint": "pint --test",
+        "test:types": "phpstan analyse --ansi",
+        "test:type-coverage": "pest --type-coverage --min=98 --memory-limit=-1",
+        "test:unit": "pest --parallel"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Mckenziearts\\Notify\\NotifyServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
     }
-  },
-  "scripts": {
-    "refactor": "rector",
-    "test:refactor": "rector --dry-run",
-    "lint": "pint",
-    "test:lint": "pint --test",
-    "test:types": "phpstan analyse --ansi",
-    "test:type-coverage": "pest --type-coverage --min=98 --memory-limit=-1",
-    "test:unit": "pest --parallel"
-  },
-  "extra": {
-    "laravel": {
-      "providers": [
-        "Mckenziearts\\Notify\\NotifyServiceProvider"
-      ]
-    }
-  },
-  "minimum-stability": "dev",
-  "prefer-stable": true,
-  "config": {
-    "allow-plugins": {
-      "pestphp/pest-plugin": true
-    }
-  }
 }
