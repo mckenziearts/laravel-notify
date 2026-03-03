@@ -20,17 +20,17 @@
   ],
   "require": {
     "php": "^8.3",
-    "illuminate/contracts": "^11.0|^12.0",
-    "illuminate/session": "^11.0|^12.0",
-    "illuminate/support": "^11.0|^12.0",
-    "mckenziearts/blade-untitledui-icons": "v1.4.0"
+    "illuminate/contracts": "^11.0|^12.0|^13.0",
+    "illuminate/session": "^11.0|^12.0|^13.0",
+    "illuminate/support": "^11.0|^12.0|^13.0",
+    "mckenziearts/blade-untitledui-icons": "v1.5.0"
   },
   "require-dev": {
     "laravel/pint": "^1.25.0",
     "mockery/mockery": "^1.6",
-    "orchestra/testbench": "^10.6.0",
-    "pestphp/pest": "^3.8.4",
-    "pestphp/pest-plugin-type-coverage": "^3.6.1",
+    "orchestra/testbench": "^10.6.0|^11.0",
+    "pestphp/pest": "^3.8.4|^4.4",
+    "pestphp/pest-plugin-type-coverage": "^3.6.1|^4.0",
     "phpstan/phpstan": "^2.1.27",
     "rector/rector": "^2.1.7"
   },

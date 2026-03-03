@@ -28,5 +28,4 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v7
         with:
           branch: 3.x
-          commit_message: >
-            chore: build assets
+          commit_message: "chore: build assets"
