@@ -229,8 +229,8 @@ it('works with all supported models (toast, connect, smiley, emotify)', function
             ->once()
             ->with('notify', Mockery::on(function (array $data) use ($model): bool {
                 expect($data['model'])->toBe($model)
-                ->and($data['actions'])->toHaveCount(1)
-                ->and($data['actions'][0]['label'])->toBe('Action');
+                    ->and($data['actions'])->toHaveCount(1)
+                    ->and($data['actions'][0]['label'])->toBe('Action');
 
                 return true;
             }));
