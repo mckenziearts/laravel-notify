@@ -227,9 +227,13 @@ it('works with all supported models (toast, connect, smiley, emotify)', function
 
         $session->shouldReceive('flash')
             ->once()
-            ->with('notify', Mockery::on(fn (array $data): bool => $data['model'] === $model
-                && count($data['actions']) === 1
-                && $data['actions'][0]['label'] === 'Action'));
+            ->with('notify', Mockery::on(function (array $data) use ($model): bool {
+                expect($data['model'])->toBe($model)
+                ->and($data['actions'])->toHaveCount(1)
+                ->and($data['actions'][0]['label'])->toBe('Action');
+
+                return true;
+            }));
 
         $notify
             ->model($model)
